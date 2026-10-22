@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asesor de esquís</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --snow:#F6F9FC; --surface:#FFFFFF; --ink:#16263A; --muted:#55657A; --line:#D7E0EA;
+  --green:#2E9E5B; --blue:#2F6FDE; --red:#D33A2C; --black:#1A1F26; --accent:#2F6FDE;
+  --chip:#EAF1FB;
+  color-scheme: light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --snow:#0F1722; --surface:#172231; --ink:#E8EEF5; --muted:#9AA9BB; --line:#2A3A4E;
+    --green:#4CC27E; --blue:#6E9CF0; --red:#F06A5C; --black:#E8EEF5; --accent:#6E9CF0; --chip:#1E2E44;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --snow:#0F1722; --surface:#172231; --ink:#E8EEF5; --muted:#9AA9BB; --line:#2A3A4E;
+  --green:#4CC27E; --blue:#6E9CF0; --red:#F06A5C; --black:#E8EEF5; --accent:#6E9CF0; --chip:#1E2E44;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.45}
+main{max-width:640px;margin:0 auto;padding:20px 18px 48px}
+h1,h2,.big{font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;letter-spacing:.01em}
+h1{font-size:2.4rem;line-height:1;margin:8px 0 6px}
+.lead{color:var(--muted);margin:0 0 24px}
+fieldset{border:0;margin:0 0 22px;padding:0}
+legend{font-weight:600;margin-bottom:10px;font-size:1.05rem}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;margin:0}
+.opt span{display:flex;align-items:center;gap:8px;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;min-height:46px}
+.opt input:checked+span{border-color:var(--accent);background:var(--chip);font-weight:600}
+.opt input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+.mark{width:16px;height:16px;flex:none;display:inline-block}
+.m-green{background:var(--green);border-radius:50%}
+.m-blue{background:var(--blue)}
+.m-red{background:var(--red)}
+.m-black{background:var(--black);transform:rotate(45deg) scale(.8)}
+.wide .opt{flex:1 1 100%}
+.wide .opt span{flex-direction:column;align-items:flex-start;gap:2px}
+.wide small{color:var(--muted);font-weight:400}
+.h-row{display:flex;align-items:center;gap:12px}
+input[type=number]{font:inherit;font-size:1.3rem;width:120px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+input[type=number]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button{font:inherit;font-weight:600;border:0;border-radius:12px;padding:15px 18px;cursor:pointer}
+.go:disabled{opacity:.6;cursor:wait}
+.go{width:100%;background:var(--accent);color:#fff;font-size:1.1rem}
+.go:focus-visible,.reset:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.err{color:var(--red);min-height:1.4em;margin:8px 0 0;font-weight:500}
+#out{margin-top:30px}
+.size{border-left:6px solid var(--accent);background:var(--surface);padding:14px 16px;border-radius:0 12px 12px 0;margin-bottom:26px}
+.big{font-size:2.6rem;line-height:1;font-weight:700}
+.size p{margin:6px 0 0;color:var(--muted)}
+h2{font-size:1.6rem;margin:24px 0 10px}
+.pick{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.pick.top{border:2px solid var(--accent)}
+.pick h3{margin:0;font-size:1.12rem}
+.brand{color:var(--muted);font-weight:500}
+.facts{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0;color:var(--muted);font-size:.95rem}
+.facts b{color:var(--ink);font-weight:600}
+.why{margin:6px 0 10px}
+.pick a{color:var(--accent);font-weight:600}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:6px;margin-bottom:6px}
+.note{color:var(--muted);font-size:.92rem}
+.reset{background:transparent;color:var(--accent);border:1.5px solid var(--accent);width:100%;margin-top:18px}
+@media (prefers-reduced-motion:no-preference){#out.show{animation:in .35s ease-out}@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<main>
+<h1>Asesor de esquís</h1>
+<p class="lead">Cinco preguntas al cliente y te propongo los esquís con fijaciones que mejor encajan.</p>
+<p class="note" id="upd"></p>
+
+<form id="f" novalidate>
+<fieldset><legend>¿Para quién es el esquí?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="g" value="Hombre"><span>Hombre</span></label>
+<label class="opt"><input type="radio" name="g" value="Mujer"><span>Mujer</span></label>
+</div></fieldset>
+
+<fieldset><legend><label for="h">Altura (cm)</label></legend>
+<div class="h-row"><input id="h" type="number" inputmode="numeric" min="130" max="215" placeholder="175"></div>
+</fieldset>
+
+<fieldset><legend>Nivel de esquí</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="l" value="0"><span><i class="mark m-green"></i>Debutante</span></label>
+<label class="opt"><input type="radio" name="l" value="1"><span><i class="mark m-blue"></i>Intermedio</span></label>
+<label class="opt"><input type="radio" name="l" value="2"><span><i class="mark m-red"></i>Avanzado</span></label>
+<label class="opt"><input type="radio" name="l" value="3"><span><i class="mark m-black"></i>Experto</span></label>
+</div>
+<p class="note">Verde: empieza o baja solo verdes. Azul: azules con soltura. Rojo: rojas y alguna negra. Negro: cualquier pista con técnica.</p>
+</fieldset>
+
+<fieldset class="wide"><legend>¿Cómo se imagina su día ideal esquiando?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="s" value="control"><span>Ir seguro y con control<small>Quiere sentir que el esquí obedece y no se escapa</small></span></label>
+<label class="opt"><input type="radio" name="s" value="velocidad"><span>Bajar rápido y sentir la velocidad<small>Le gusta apretar y que el esquí vaya firme</small></span></label>
+<label class="opt"><input type="radio" name="s" value="equilibrio"><span>Un punto intermedio entre control y velocidad<small>Disfruta de todo sin ir al límite</small></span></label>
+<label class="opt"><input type="radio" name="s" value="surf"><span>Giros amplios, como surfear la nieve<small>Busca fluidez más que velocidad</small></span></label>
+<label class="opt"><input type="radio" name="s" value="paisaje"><span>Ir tranquilo y disfrutar del paisaje<small>Esquí cómodo, sin exigencias</small></span></label>
+<label class="opt"><input type="radio" name="s" value="hijos"><span>Acompañar a sus hijos<small>Esquí fácil, cómodo y a buen precio</small></span></label>
+</div></fieldset>
+
+<fieldset class="wide"><legend>¿Por dónde quiere esquiar?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="c" value="Pista"><span>Pista<small>Siempre en pistas pisadas</small></span></label>
+<label class="opt"><input type="radio" name="c" value="All mountain"><span>All mountain<small>Sobre todo pista, con salidas fuera de vez en cuando</small></span></label>
+<label class="opt"><input type="radio" name="c" value="Freeride"><span>Freeride<small>Nieve virgen y fuera de pista</small></span></label>
+</div></fieldset>
+
+<button class="go" type="submit" id="goBtn" disabled>Cargando catálogo…</button>
+<p class="err" id="err" role="alert"></p>
+</form>
+
+<section id="out" aria-live="polite"></section>
+</main>
+
+<script>
+let SKIS=[];let UPD="";
+const LV=["Debutante","Intermedio","Avanzado","Experto"];
+const SENS={
+ control:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
+ velocidad:{"Velocidad":3,"Control + velocidad":2,"Surf / flotación":1,"Control":0},
+ equilibrio:{"Control + velocidad":3,"Control":2,"Velocidad":2,"Surf / flotación":1},
+ surf:{"Surf / flotación":3,"Control + velocidad":2,"Control":1,"Velocidad":1},
+ paisaje:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
+ hijos:{"Control":3,"Control + velocidad":1,"Surf / flotación":1,"Velocidad":0}
+};
+const SENS_TXT={control:"control y seguridad",velocidad:"velocidad",equilibrio:"equilibrio entre control y velocidad",surf:"giros amplios y fluidos",paisaje:"esquiar tranquilo",hijos:"acompañar a sus hijos"};
+function range(lv){const p=(lv||"").split("-").map(x=>LV.indexOf(x.trim())).filter(x=>x>=0);return p.length?[Math.min(...p),Math.max(...p)]:[1,2]}
+function own(m){return /wedze|quechua/i.test(m)}
+function clean(s){return s.n.replace(new RegExp("^("+s.m+"\\s+)+","i"),"").trim()}
+// Clave de modelo para no repetir: marca + 3 primeras palabras del modelo (sin colores ni "pack")
+const KEY_SKIP=/^(azul|gris|negro|rojo|rouge|blanc|beige|vert|verde|teal|naranja|anthracite|noir|hombre|mujer|demo|pack|de|esquis|esqui|skis|con|fijacion)$/;
+function key(s){const n=clean(s).split("+")[0].replace(/\(.*?\)/g,"").toLowerCase();const t=n.split(/\s+/).filter(w=>w&&!KEY_SKIP.test(w)).slice(0,3).join("");return (s.m+t).toLowerCase().replace(/[^a-z0-9]/g,"")}
+function radTxt(r){if(!r)return "";if(r<=15)return ` Radio de ${r} m: giros cortos y ágiles.`;if(r<=17)return ` Radio de ${r} m: giros medios.`;return ` Radio de ${r} m: giros largos y estables.`}
+function wideShort(s){return s.w>80&&s.r&&s.r<=15}
+function patinTxt(w,c){
+ if(!w) return "Ancho de patín por confirmar en la ficha.";
+ if(w<76) return `Patín de ${w} mm: cambia de canto rápido y es muy preciso en pista dura.`;
+ if(w<85) return `Patín de ${w} mm: polivalente, cómodo en pista y estable si la nieve está tocada.`;
+ if(w<95) return `Patín de ${w} mm: más estable en nieve blanda y para salir de pista.`;
+ return `Patín de ${w} mm: flota en nieve polvo.`;
+}
+function score(s,q){
+ const [a,b]=range(s.lv);let lvs;
+ if(q.l>=a&&q.l<=b) lvs=3; else if((q.s==="hijos"||q.s==="paisaje")&&q.l-b===1) lvs=2.5; else if(Math.abs(q.l-(q.l<a?a:b))===1) lvs=1; else return -1;
+ let sc=lvs*2+(SENS[q.s][s.s]??1)*1.5;
+ if(s.p===q.g||s.p==="Unisex") sc+=.3;
+ if(s.w) sc+=.4;
+ if(q.s==="surf"&&s.w) sc+=Math.min(1,(s.w-70)/30);
+ if(q.s==="velocidad"&&s.w) sc+=Math.max(0,(80-s.w)/20);
+ if(q.s==="hijos") sc+=Math.max(0,(700-s.pr)/700);
+ if(q.c==="Pista"&&wideShort(s)&&q.s==="velocidad") sc-=1;
+ if(q.c==="Pista"&&s.w&&s.w<80) sc+=.8;
+ if(s.r&&q.s!=="velocidad"&&s.r<=16) sc+=.3;
+ return sc;
+}
+function fitSize(s,q){if(!s.z||!s.z.length)return null;const [a,b]=length(q),c=(a+b)/2;const ok=s.z.filter(x=>x>=a-3&&x<=b+3);if(!ok.length)return -1;return ok.reduce((p,x)=>Math.abs(x-c)<Math.abs(p-c)?x:p)}
+function pick(list,n){
+ const seen=new Set(),out=[];
+ for(const s of list){const k=key(s);if(seen.has(k))continue;seen.add(k);out.push(s);if(out.length===n)break}
+ return out;
+}
+function length(q){
+ const off={"Pista":[-15,-10,-6,-2],"All mountain":[-12,-8,-3,2],"Freeride":[-5,0,4,8]}[q.c][q.l];
+ let adj=0; if(q.s==="velocidad")adj=3; if(["control","paisaje","hijos"].includes(q.s)&&q.l>0)adj=-3;
+ const c=Math.round((q.h+off+adj)/2)*2; return [c-3,c+3];
+}
+const eur=v=>v.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
+function card(s,top){
+ const [a,b]=range(s.lv);const lvl=a===b?LV[a]:LV[a]+"–"+LV[b].toLowerCase();
+ return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}
+ <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
+ <div class="facts"><span><b>${eur(s.pr)}</b></span><span>Patín <b>${s.w?s.w+" mm":"por confirmar"}</b></span><span>Talla <b>${s.t?s.t+" cm":"por confirmar"}</b></span><span>Radio <b>${s.r?s.r+" m":"por confirmar"}</b></span><span>Nivel <b>${lvl}</b></span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
+ <p class="why">${wideShort(s)&&s.c!=="Pista"?"Patín ancho con radio corto: gira ágil en pista y aguanta bien la nieve tocada. ":""}${patinTxt(s.w,s.c)}${radTxt(s.r)} Sensación: ${s.s.toLowerCase()}.</p>
+ <span class="note">${s.z&&s.z.length?"Tallas a la venta: "+s.z.join(", ")+" cm. ":"Tallas por confirmar en la ficha. "}Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
+}
+document.getElementById("f").addEventListener("submit",e=>{
+ e.preventDefault();
+ const fd=new FormData(e.target),err=document.getElementById("err");
+ const q={g:fd.get("g"),h:+document.getElementById("h").value,l:fd.get("l")===null?null:+fd.get("l"),s:fd.get("s"),c:fd.get("c")};
+ const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(q.l===null)miss.push("el nivel");if(!q.s)miss.push("la sensación");if(!q.c)miss.push("dónde quiere esquiar");
+ if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
+ err.textContent="";
+ const pool=SKIS.filter(s=>(s.c===q.c||(q.c==="Pista"&&wideShort(s)))&&(s.p===q.g||s.p==="Unisex")).map(s=>{const t=fitSize(s,q);return {...s,t,sc:score(s,q)-(t===null?1:0)}}).filter(s=>s.sc>=0&&s.t!==-1).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+ const o=pick(pool.filter(s=>own(s.m)),3), x=pick(pool.filter(s=>!own(s.m)),5);
+ const [lmin,lmax]=length(q);
+ const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
+ const out=document.getElementById("out");
+ let h=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.h} cm de altura, nivel ${LV[q.l].toLowerCase()} y ${SENS_TXT[q.s]}. Ajusta unos centímetros según peso y forma física.</p></div>`;
+ h+=`<h2>Marca Decathlon</h2>`;
+ h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">No hay esquís Wedze o Quechua de ${q.c.toLowerCase()} para este perfil. Prueba con otra zona de esquí.</p>`;
+ if(o.length&&o.length<3) h+=`<p class="note">Solo hay ${o.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
+ if(x.length&&x.length<5) h+="";
+ h+=`<h2>Otras marcas</h2>`;
+ h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
+ if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
+ h+=`<p class="note">Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla disponible antes de cerrar la venta.</p><button class="reset" type="button" id="again">Nuevo cliente</button>`;
+ out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
+ out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+ document.getElementById("again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
+});
+const DATA_URL="https://raw.githubusercontent.com/jsuberyzf-blip/Asesor-Esquis/main/esquis.json";
+fetch(DATA_URL+"?t="+Date.now(),{cache:"no-store"})
+ .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+ .then(d=>{SKIS=(d.filas||[]).filter(s=>s.disp!==false);UPD=d.actualizado||"";const b=document.getElementById("goBtn");b.disabled=false;b.textContent="Ver esquís recomendados";document.getElementById("upd").textContent=(UPD?"Catálogo actualizado: "+UPD+". ":"")+SKIS.length+" esquís disponibles.";})
+ .catch(()=>{document.getElementById("goBtn").textContent="No se pudo cargar el catálogo";document.getElementById("err").textContent="No se pudieron cargar los datos. Recarga la página en unos minutos.";});
+</script>
+</body>
+</html>
