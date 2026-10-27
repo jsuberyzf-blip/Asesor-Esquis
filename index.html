@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Asesor de esquís</title>
+<title>Asesor Decathlon: esquí y snow</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -50,7 +50,8 @@ legend{font-weight:600;margin-bottom:10px;font-size:1.05rem}
 .wide .opt{flex:1 1 100%}
 .wide .opt span{flex-direction:column;align-items:flex-start;gap:2px}
 .wide small{color:var(--muted);font-weight:400}
-.h-row{display:flex;align-items:center;gap:12px}
+.nums{display:flex;flex-wrap:wrap;gap:18px}
+.num label{display:block;font-weight:600;margin-bottom:8px;font-size:1.05rem}
 input[type=number]{font:inherit;font-size:1.3rem;width:120px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
 input[type=number]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 button{font:inherit;font-weight:600;border:0;border-radius:12px;padding:15px 18px;cursor:pointer}
@@ -58,7 +59,7 @@ button{font:inherit;font-weight:600;border:0;border-radius:12px;padding:15px 18p
 .go{width:100%;background:var(--accent);color:#fff;font-size:1.1rem}
 .go:focus-visible,.reset:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .err{color:var(--red);min-height:1.4em;margin:8px 0 0;font-weight:500}
-#out{margin-top:30px}
+.out{margin-top:30px}
 .size{border-left:6px solid var(--accent);background:var(--surface);padding:14px 16px;border-radius:0 12px 12px 0;margin-bottom:26px}
 .big{font-size:2.6rem;line-height:1;font-weight:700}
 .size p{margin:6px 0 0;color:var(--muted)}
@@ -71,27 +72,50 @@ h2{font-size:1.6rem;margin:24px 0 10px}
 .facts b{color:var(--ink);font-weight:600}
 .why{margin:6px 0 10px}
 .pick a{color:var(--accent);font-weight:600}
-.badge{display:inline-block;background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:6px;margin-bottom:6px}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:6px;margin:0 6px 6px 0}
+.badge.alt{background:var(--muted)}
 .note{color:var(--muted);font-size:.92rem}
 .reset{background:transparent;color:var(--accent);border:1.5px solid var(--accent);width:100%;margin-top:18px}
-@media (prefers-reduced-motion:no-preference){#out.show{animation:in .35s ease-out}@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
+@media (prefers-reduced-motion:no-preference){.out.show{animation:in .35s ease-out}@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
+
+.h-row{display:flex;align-items:center;gap:12px}
+h2.sec{font-size:2rem;line-height:1.05;margin:6px 0 6px}
+.app[hidden]{display:none}
+.pickapp{margin:0 0 26px}
+.pickapp legend{font-size:1.05rem}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0}
+.seg span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:84px;border:2px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer;font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;font-weight:700;font-size:1.9rem}
+.seg small{font-family:"Barlow",system-ui,sans-serif;font-weight:400;font-size:.85rem;color:var(--muted)}
+.seg input:checked+span{border-color:var(--accent);background:var(--chip);color:var(--accent)}
+.seg input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
 </style>
 </head>
 <body>
 <main>
-<h1>Asesor de esquís</h1>
+<h1>Asesor Decathlon</h1>
+<p class="lead">Elige el deporte del cliente y te propongo el material que mejor encaja.</p>
+<fieldset class="pickapp"><legend>¿Qué busca el cliente?</legend>
+<div class="seg">
+<label><input type="radio" name="app" value="ski"><span>Esquí<small>esquís con fijaciones</small></span></label>
+<label><input type="radio" name="app" value="snow"><span>Snow<small>tablas de snowboard</small></span></label>
+</div></fieldset>
+<hr class="sep" id="sep" hidden>
+<div class="app" id="app-ski" hidden><h2 class="sec">Asesor de esquís</h2>
 <p class="lead">Cinco preguntas al cliente y te propongo los esquís con fijaciones que mejor encajan.</p>
-<p class="note" id="upd"></p>
+<p class="note" id="sk-upd"></p>
 
-<form id="f" novalidate>
+<form id="sk-f" novalidate>
 <fieldset><legend>¿Para quién es el esquí?</legend>
 <div class="opts">
 <label class="opt"><input type="radio" name="g" value="Hombre"><span>Hombre</span></label>
 <label class="opt"><input type="radio" name="g" value="Mujer"><span>Mujer</span></label>
 </div></fieldset>
 
-<fieldset><legend><label for="h">Altura (cm)</label></legend>
-<div class="h-row"><input id="h" type="number" inputmode="numeric" min="130" max="215" placeholder="175"></div>
+<fieldset><legend><label for="sk-h">Altura (cm)</label></legend>
+<div class="h-row"><input id="sk-h" type="number" inputmode="numeric" min="130" max="215" placeholder="175"></div>
 </fieldset>
 
 <fieldset><legend>Nivel de esquí</legend>
@@ -121,104 +145,307 @@ h2{font-size:1.6rem;margin:24px 0 10px}
 <label class="opt"><input type="radio" name="c" value="Freeride"><span>Freeride<small>Nieve virgen y fuera de pista</small></span></label>
 </div></fieldset>
 
-<button class="go" type="submit" id="goBtn" disabled>Cargando catálogo…</button>
-<p class="err" id="err" role="alert"></p>
+<button class="go" type="submit" id="sk-goBtn" disabled>Cargando catálogo…</button>
+<p class="err" id="sk-err" role="alert"></p>
 </form>
 
-<section id="out" aria-live="polite"></section>
-</main>
+<section id="sk-out" class="out" aria-live="polite"></section>
+</div>
+<div class="app" id="app-snow" hidden>
+<h2 class="sec">Asesor de tablas de snow</h2>
+<p class="lead">Siete preguntas al cliente y te propongo las tablas que mejor encajan, con la talla y el ancho adecuados.</p>
+<p class="note" id="sn-upd"></p>
 
+<form id="sn-f" novalidate>
+<fieldset><legend>¿Para quién es la tabla?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="g" value="Hombre"><span>Hombre</span></label>
+<label class="opt"><input type="radio" name="g" value="Mujer"><span>Mujer</span></label>
+</div></fieldset>
+
+<fieldset><legend>Medidas del cliente</legend>
+<div class="nums">
+<div class="num"><label for="sn-h">Altura (cm)</label><input id="sn-h" type="number" inputmode="numeric" min="130" max="215" placeholder="175"></div>
+<div class="num"><label for="sn-kg">Peso (kg)</label><input id="sn-kg" type="number" inputmode="numeric" min="30" max="150" placeholder="70"></div>
+<div class="num"><label for="sn-ft">Talla de pie (EU)</label><input id="sn-ft" type="number" inputmode="decimal" step="0.5" min="34" max="50" placeholder="42"></div>
+</div>
+<p class="note">La talla de pie decide si hace falta una tabla ancha (wide): a partir del 44 conviene wide para que la bota no sobresalga.</p>
+</fieldset>
+
+<fieldset><legend>Nivel de snow</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="l" value="0"><span><i class="mark m-green"></i>Debutante</span></label>
+<label class="opt"><input type="radio" name="l" value="1"><span><i class="mark m-blue"></i>Intermedio</span></label>
+<label class="opt"><input type="radio" name="l" value="2"><span><i class="mark m-red"></i>Avanzado</span></label>
+<label class="opt"><input type="radio" name="l" value="3"><span><i class="mark m-black"></i>Experto</span></label>
+</div>
+<p class="note">Debutante: aprende o baja pistas verdes. Intermedio: azules con soltura y empieza a probar rojas. Avanzado: rojas y negras, fuera de pista ocasional. Experto: cualquier terreno con técnica.</p>
+</fieldset>
+
+<fieldset class="wide"><legend>¿Por dónde quiere hacer snow?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="c" value="All-mountain"><span>All-mountain<small>Pista y fuera de pista, un poco de todo</small></span></label>
+<label class="opt"><input type="radio" name="c" value="Freestyle"><span>Freestyle<small>Parque, saltos y cajas, también pista</small></span></label>
+<label class="opt"><input type="radio" name="c" value="Freeride"><span>Freeride<small>Nieve virgen y fuera de pista</small></span></label>
+</div></fieldset>
+
+<fieldset class="wide"><legend>¿Qué sensación busca en la tabla?</legend>
+<div class="opts">
+<label class="opt"><input type="radio" name="s" value="permisiva"><span>Permisiva<small>Blanda y cómoda: perdona errores y no cansa</small></span></label>
+<label class="opt"><input type="radio" name="s" value="equilibrio"><span>Equilibrio<small>Un poco de todo: estable y a la vez juguetona</small></span></label>
+<label class="opt"><input type="radio" name="s" value="agarre"><span>Agarre y velocidad<small>Firme y precisa: agarra en hielo y aguanta a velocidad</small></span></label>
+<label class="opt"><input type="radio" name="s" value="fluido"><span>Fluido y flotación<small>Giros amplios y flotar en nieve blanda</small></span></label>
+</div></fieldset>
+
+<button class="go" type="submit" id="sn-goBtn" disabled>Cargando catálogo…</button>
+<p class="err" id="sn-err" role="alert"></p>
+</form>
+
+<section id="sn-out" class="out" aria-live="polite"></section>
+</div>
+</main>
 <script>
+(function(){
+const apps={ski:document.getElementById("app-ski"),snow:document.getElementById("app-snow")};
+document.querySelectorAll('input[name="app"]').forEach(r=>r.addEventListener("change",()=>{
+ apps.ski.hidden=r.value!=="ski";apps.snow.hidden=r.value!=="snow";document.getElementById("sep").hidden=false;
+ apps[r.value].scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+}));
+})();
+</script>
+<script>
+(function(){
 let SKIS=[];let UPD="";
 const LV=["Debutante","Intermedio","Avanzado","Experto"];
 const SENS={
- control:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
- velocidad:{"Velocidad":3,"Control + velocidad":2,"Surf / flotación":1,"Control":0},
- equilibrio:{"Control + velocidad":3,"Control":2,"Velocidad":2,"Surf / flotación":1},
- surf:{"Surf / flotación":3,"Control + velocidad":2,"Control":1,"Velocidad":1},
- paisaje:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
- hijos:{"Control":3,"Control + velocidad":1,"Surf / flotación":1,"Velocidad":0}
+control:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
+velocidad:{"Velocidad":3,"Control + velocidad":2,"Surf / flotación":1,"Control":0},
+equilibrio:{"Control + velocidad":3,"Control":2,"Velocidad":2,"Surf / flotación":1},
+surf:{"Surf / flotación":3,"Control + velocidad":2,"Control":1,"Velocidad":1},
+paisaje:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
+hijos:{"Control":3,"Control + velocidad":1,"Surf / flotación":1,"Velocidad":0}
 };
 const SENS_TXT={control:"control y seguridad",velocidad:"velocidad",equilibrio:"equilibrio entre control y velocidad",surf:"giros amplios y fluidos",paisaje:"esquiar tranquilo",hijos:"acompañar a sus hijos"};
 function range(lv){const p=(lv||"").split("-").map(x=>LV.indexOf(x.trim())).filter(x=>x>=0);return p.length?[Math.min(...p),Math.max(...p)]:[1,2]}
 function own(m){return /wedze|quechua/i.test(m)}
 function clean(s){return s.n.replace(new RegExp("^("+s.m+"\\s+)+","i"),"").trim()}
-// Clave de modelo para no repetir: marca + 3 primeras palabras del modelo (sin colores ni "pack")
 const KEY_SKIP=/^(azul|gris|negro|rojo|rouge|blanc|beige|vert|verde|teal|naranja|anthracite|noir|hombre|mujer|demo|pack|de|esquis|esqui|skis|con|fijacion)$/;
-function key(s){const n=clean(s).split("+")[0].replace(/\(.*?\)/g,"").toLowerCase();const t=n.split(/\s+/).filter(w=>w&&!KEY_SKIP.test(w)).slice(0,3).join("");return (s.m+t).toLowerCase().replace(/[^a-z0-9]/g,"")}
+function key(s){const n=clean(s).split("+")[0].replace(/\(.*?\)/g,"").toLowerCase();const t=[];for(const x of n.split(/\s+/)){if(!x||KEY_SKIP.test(x)||x===s.m.toLowerCase())continue;t.push(x);if(/\d/.test(x)||t.length===3)break}return (s.m+t.join("")).toLowerCase().replace(/[^a-z0-9]/g,"")}
 function radTxt(r){if(!r)return "";if(r<=15)return ` Radio de ${r} m: giros cortos y ágiles.`;if(r<=17)return ` Radio de ${r} m: giros medios.`;return ` Radio de ${r} m: giros largos y estables.`}
 function wideShort(s){return s.w>80&&s.r&&s.r<=15}
 function patinTxt(w,c){
- if(!w) return "Ancho de patín por confirmar en la ficha.";
- if(w<76) return `Patín de ${w} mm: cambia de canto rápido y es muy preciso en pista dura.`;
- if(w<85) return `Patín de ${w} mm: polivalente, cómodo en pista y estable si la nieve está tocada.`;
- if(w<95) return `Patín de ${w} mm: más estable en nieve blanda y para salir de pista.`;
- return `Patín de ${w} mm: flota en nieve polvo.`;
+if(!w) return "Ancho de patín por confirmar en la ficha.";
+if(w<76) return `Patín de ${w} mm: cambia de canto rápido y es muy preciso en pista dura.`;
+if(w<85) return `Patín de ${w} mm: polivalente, cómodo en pista y estable si la nieve está tocada.`;
+if(w<95) return `Patín de ${w} mm: más estable en nieve blanda y para salir de pista.`;
+return `Patín de ${w} mm: flota en nieve polvo.`;
 }
-function score(s,q){
- const [a,b]=range(s.lv);let lvs;
- if(q.l>=a&&q.l<=b) lvs=3; else if((q.s==="hijos"||q.s==="paisaje")&&q.l-b===1) lvs=2.5; else if(Math.abs(q.l-(q.l<a?a:b))===1) lvs=1; else return -1;
- let sc=lvs*2+(SENS[q.s][s.s]??1)*1.5;
- if(s.p===q.g||s.p==="Unisex") sc+=.3;
- if(s.w) sc+=.4;
- if(q.s==="surf"&&s.w) sc+=Math.min(1,(s.w-70)/30);
- if(q.s==="velocidad"&&s.w) sc+=Math.max(0,(80-s.w)/20);
- if(q.s==="hijos") sc+=Math.max(0,(700-s.pr)/700);
- if(q.c==="Pista"&&wideShort(s)&&q.s==="velocidad") sc-=1;
- if(q.c==="Pista"&&s.w&&s.w<80) sc+=.8;
- if(s.r&&q.s!=="velocidad"&&s.r<=16) sc+=.3;
- return sc;
+const IDEAL_R={control:14,equilibrio:15,velocidad:17,surf:18,paisaje:14,hijos:13};
+function score(s,q,t){
+const [a,b]=range(s.lv);let lvs;
+if(q.l>=a&&q.l<=b) lvs=3; else if((q.s==="hijos"||q.s==="paisaje")&&q.l-b===1) lvs=2.5; else if(Math.abs(q.l-(q.l<a?a:b))===1) lvs=1; else return -1;
+let sc=lvs*2+(SENS[q.s][s.s]??1)*1.5;
+if(s.p===q.g||s.p==="Unisex") sc+=.3;
+if(s.w) sc+=.4;
+if(q.s==="surf"&&s.w) sc+=Math.min(1,(s.w-70)/30);
+if(q.s==="velocidad"&&s.w) sc+=Math.max(0,(80-s.w)/20);
+if(q.s==="hijos") sc+=Math.max(0,(700-s.pr)/700);
+if(q.c==="Pista"&&wideShort(s)&&q.s==="velocidad") sc-=1;
+if(q.c==="Pista"&&s.w&&s.w<80) sc+=.8;
+if(s.r) sc+=Math.max(0,.4-Math.abs(s.r-IDEAL_R[q.s])/20);
+if(lvs===3) sc+=.15/(b-a+1);
+if(t>0){const [lo,hi]=length(q);sc-=Math.abs(t-(lo+hi)/2)/60}
+return sc;
 }
 function fitSize(s,q){if(!s.z||!s.z.length)return null;const [a,b]=length(q),c=(a+b)/2;const ok=s.z.filter(x=>x>=a-3&&x<=b+3);if(!ok.length)return -1;return ok.reduce((p,x)=>Math.abs(x-c)<Math.abs(p-c)?x:p)}
+function pick(list,n){
+const seen=new Set(),out=[];
+for(const s of list){const k=key(s);if(seen.has(k))continue;seen.add(k);out.push(s);if(out.length===n)break}
+return out;
+}
+function length(q){
+const off={"Pista":[-15,-10,-6,-2],"All mountain":[-12,-8,-3,2],"Freeride":[-5,0,4,8]}[q.c][q.l];
+let adj=0; if(q.s==="velocidad")adj=3; if(["control","paisaje","hijos"].includes(q.s)&&q.l>0)adj=-3;
+const c=Math.round((q.h+off+adj)/2)*2; return [c-3,c+3];
+}
+const eur=v=>v.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
+function card(s,top){
+const [a,b]=range(s.lv);const lvl=a===b?LV[a]:LV[a]+"–"+LV[b].toLowerCase();
+return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}
+<h3>${clean(s)} <span class="brand">${s.m}</span></h3>
+<div class="facts"><span><b>${eur(s.pr)}</b></span><span>Patín <b>${s.w?s.w+" mm":"por confirmar"}</b></span><span>Talla <b>${s.t?s.t+" cm":"por confirmar"}</b></span><span>Radio <b>${s.r?s.r+" m":"por confirmar"}</b></span><span>Nivel <b>${lvl}</b></span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
+<p class="why">${wideShort(s)&&s.c!=="Pista"?"Patín ancho con radio corto: gira ágil en pista y aguanta bien la nieve tocada. ":""}${patinTxt(s.w,s.c)}${radTxt(s.r)} Sensación: ${s.s.toLowerCase()}.</p>
+<span class="note">${s.z&&s.z.length?"Tallas a la venta: "+s.z.join(", ")+" cm. ":"Tallas por confirmar en la ficha. "}Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
+}
+document.getElementById("sk-f").addEventListener("submit",e=>{
+e.preventDefault();
+const fd=new FormData(e.target),err=document.getElementById("sk-err");
+const q={g:fd.get("g"),h:+document.getElementById("sk-h").value,l:fd.get("l")===null?null:+fd.get("l"),s:fd.get("s"),c:fd.get("c")};
+const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(q.l===null)miss.push("el nivel");if(!q.s)miss.push("la sensación");if(!q.c)miss.push("dónde quiere esquiar");
+if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
+err.textContent="";
+const pool=SKIS.filter(s=>(s.c===q.c||(q.c==="Pista"&&wideShort(s)))&&(s.p===q.g||s.p==="Unisex")).map(s=>{const t=fitSize(s,q);return {...s,t,sc:score(s,q,t)-(t===null?1:0)}}).filter(s=>s.sc>=0&&s.t!==-1).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+const o=pick(pool.filter(s=>own(s.m)),3), x=pick(pool.filter(s=>!own(s.m)),5);
+const [lmin,lmax]=length(q);
+const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
+const out=document.getElementById("sk-out");
+let h=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.h} cm de altura, nivel ${LV[q.l].toLowerCase()} y ${SENS_TXT[q.s]}. Ajusta unos centímetros según peso y forma física.</p></div>`;
+h+=`<h2>Marca Decathlon</h2>`;
+h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">No hay esquís Wedze o Quechua de ${q.c.toLowerCase()} para este perfil. Prueba con otra zona de esquí.</p>`;
+if(o.length&&o.length<3) h+=`<p class="note">Solo hay ${o.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
+h+=`<h2>Otras marcas</h2>`;
+h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
+if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
+h+=`<p class="note">Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla disponible antes de cerrar la venta.</p><button class="reset" type="button" id="sk-again">Nuevo cliente</button>`;
+out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
+out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+document.getElementById("sk-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
+});
+const DATA_URL="https://raw.githubusercontent.com/jsuberyzf-blip/Asesor-Esquis/main/esquis.json";
+fetch(DATA_URL+"?t="+Date.now(),{cache:"no-store"})
+.then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+.then(d=>{SKIS=(d.filas||[]).filter(s=>s.disp!==false);UPD=d.actualizado||"";const b=document.getElementById("sk-goBtn");b.disabled=false;b.textContent="Ver esquís recomendados";document.getElementById("sk-upd").textContent=(UPD?"Catálogo actualizado: "+UPD+". ":"")+SKIS.length+" esquís disponibles.";})
+.catch(()=>{document.getElementById("sk-goBtn").textContent="No se pudo cargar el catálogo";document.getElementById("sk-err").textContent="No se pudieron cargar los datos. Recarga la página en unos minutos.";});
+
+})();
+</script>
+<script>
+(function(){
+
+let TABLAS=[];let UPD="";
+const LV=["Debutante","Intermedio","Avanzado","Experto"];
+// Puntos según la sensación pedida y la sensación asignada a cada tabla
+const SENS={
+ permisiva:{"Permisiva":3,"Equilibrio":2,"Fluido y flotación":1,"Agarre y velocidad":0},
+ equilibrio:{"Equilibrio":3,"Permisiva":2,"Agarre y velocidad":2,"Fluido y flotación":1},
+ agarre:{"Agarre y velocidad":3,"Equilibrio":2,"Fluido y flotación":1,"Permisiva":0},
+ fluido:{"Fluido y flotación":3,"Equilibrio":2,"Permisiva":1.5,"Agarre y velocidad":1}
+};
+const SENS_NAME={permisiva:"Permisiva",equilibrio:"Equilibrio",agarre:"Agarre y velocidad",fluido:"Fluido y flotación"};
+const SENS_TXT={permisiva:"una tabla permisiva",equilibrio:"equilibrio entre agarre y diversión",agarre:"agarre y velocidad",fluido:"giros fluidos y flotación"};
+const FLEX_IDEAL={permisiva:3,equilibrio:5,agarre:8,fluido:5};
+const ADJ_ZONE={"All-mountain":0,"Freestyle":-3,"Freeride":3};
+const ADJ_LV=[-3,0,1,2];
+const ADJ_SENS={permisiva:-1,equilibrio:0,agarre:1,fluido:2};
+
+function range(lv){const p=(lv||"").split("-").map(x=>LV.indexOf(x.trim())).filter(x=>x>=0);return p.length?[Math.min(...p),Math.max(...p)]:[1,2]}
+function own(s){return s.v==="Decathlon"}
+function clean(s){return s.n.replace(new RegExp("^("+s.m+"\\s+)+","i"),"").trim()}
+// Clave de modelo para no repetir variantes de color o talla
+const KEY_SKIP=/^(azul|gris|negro|negra|rojo|blanco|beige|verde|violeta|rosa|naranja|madera|amarillo|morado|adulto|hombre|mujer|wide|w|midwide|pro)$/;
+function key(s){const n=clean(s).replace(/\(.*?\)/g,"").toLowerCase();const t=[];for(const x of n.split(/\s+/)){if(!x||KEY_SKIP.test(x))continue;t.push(x);if(t.length===3)break}return (s.m+t.join("")).toLowerCase().replace(/[^a-z0-9]/g,"")}
+
+// Tallas de una tabla: [{l:cm, wide:bool, mid:bool}]
+function sizes(s){
+ const out=[];
+ const add=(txt,isWide)=>{(txt||"").split(",").map(x=>x.trim()).filter(Boolean).forEach(x=>{
+  const m=x.match(/(\d{3})/);if(!m)return;
+  const w=/W/.test(x.replace(/midwide/i,""))||isWide;const mid=/midwide/i.test(x);
+  out.push({l:+m[1],wide:w&&!mid,mid});});};
+ add(s.z,false);add(s.zw,true);
+ return out;
+}
+// Longitud recomendada a partir del peso (tabla base) y ajustes por altura, nivel, zona y sensación
+function length(q){
+ const kg=q.kg;
+ let base=kg<45?140-(45-kg)*0.7:kg<=100?140+(kg-45)*0.5:167.5+(kg-100)*0.3;
+ const exp=100*Math.sqrt(kg/23);
+ const hAdj=Math.max(-3,Math.min(3,(q.h-exp)*0.2));
+ const c=Math.round(base+hAdj+ADJ_LV[q.l]+ADJ_ZONE[q.c]+ADJ_SENS[q.s]);
+ return [c-3,c+3];
+}
+// Elige la talla más cercana respetando la regla de ancho según el pie
+function fitSize(s,q){
+ const [a,b]=length(q),c=(a+b)/2;
+ let ok=sizes(s).filter(x=>x.l>=a-3&&x.l<=b+3);
+ if(!ok.length) return null;
+ let pen=0;
+ if(q.ft>=44.5){ok=ok.filter(x=>x.wide||x.mid);if(!ok.length)return null;const wd=ok.filter(x=>x.wide);if(wd.length)ok=wd;else pen=0.8}
+ else if(q.ft>=43){const wd=ok.filter(x=>x.wide);if(wd.length){ok=wd;pen=-0.4}}
+ else if(q.ft<=41.5){const rg=ok.filter(x=>!x.wide&&!x.mid);if(rg.length)ok=rg;else pen=1}
+ const best=ok.reduce((p,x)=>Math.abs(x.l-c)<Math.abs(p.l-c)?x:p);
+ return {...best,pen};
+}
+function score(s,q,f){
+ const [a,b]=range(s.lv);let lvs;
+ if(q.l>=a&&q.l<=b) lvs=3; else if(Math.abs(q.l-(q.l<a?a:b))===1) lvs=1; else return -1;
+ let sc=lvs*2+(SENS[q.s][s.s]??1)*1.5;
+ if(s.c!==q.c) sc-=2; // categoría vecina (solo entra si hay pocas)
+ if(s.p===q.g||s.p==="Unisex") sc+=.3;
+ if(s.w) sc+=.2;
+ sc-=Math.abs((s.fx||5)-FLEX_IDEAL[q.s])*.15;
+ if(lvs===3) sc+=.15/(b-a+1);
+ const [lo,hi]=length(q);sc-=Math.abs(f.l-(lo+hi)/2)/60;
+ sc-=f.pen; // penalización por ancho no ideal (positiva=peor, negativa=mejor)
+ return sc;
+}
 function pick(list,n){
  const seen=new Set(),out=[];
  for(const s of list){const k=key(s);if(seen.has(k))continue;seen.add(k);out.push(s);if(out.length===n)break}
  return out;
 }
-function length(q){
- const off={"Pista":[-15,-10,-6,-2],"All mountain":[-12,-8,-3,2],"Freeride":[-5,0,4,8]}[q.c][q.l];
- let adj=0; if(q.s==="velocidad")adj=3; if(["control","paisaje","hijos"].includes(q.s)&&q.l>0)adj=-3;
- const c=Math.round((q.h+off+adj)/2)*2; return [c-3,c+3];
-}
 const eur=v=>v.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
+function flexTxt(fx){
+ if(!fx) return "";
+ if(fx<=3) return `Flex ${fx}/10, blanda: perdona errores y es cómoda al aprender.`;
+ if(fx<=5) return `Flex ${fx}/10, medio-blanda: fácil de girar y juguetona.`;
+ if(fx<=7) return `Flex ${fx}/10, media: equilibrada entre comodidad y respuesta.`;
+ return `Flex ${fx}/10, rígida: precisa y estable a velocidad, exige más técnica.`;
+}
 function card(s,top){
  const [a,b]=range(s.lv);const lvl=a===b?LV[a]:LV[a]+"–"+LV[b].toLowerCase();
- return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}
+ const sz=s.f.l+(s.f.wide?" W":"")+(s.f.mid?" (midwide)":"");
+ const todas=sizes(s).sort((x,y)=>x.l-y.l).map(x=>x.l+(x.wide?"W":x.mid?" midwide":"")).join(", ");
+ const shape=[s.fm,s.pf].filter(Boolean).join(", ");
+ return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${s.c!==s._q?'<span class="badge alt">Alternativa '+s.c.toLowerCase()+'</span>':""}
  <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
- <div class="facts"><span><b>${eur(s.pr)}</b></span><span>Patín <b>${s.w?s.w+" mm":"por confirmar"}</b></span><span>Talla <b>${s.t?s.t+" cm":"por confirmar"}</b></span><span>Radio <b>${s.r?s.r+" m":"por confirmar"}</b></span><span>Nivel <b>${lvl}</b></span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
- <p class="why">${wideShort(s)&&s.c!=="Pista"?"Patín ancho con radio corto: gira ágil en pista y aguanta bien la nieve tocada. ":""}${patinTxt(s.w,s.c)}${radTxt(s.r)} Sensación: ${s.s.toLowerCase()}.</p>
- <span class="note">${s.z&&s.z.length?"Tallas a la venta: "+s.z.join(", ")+" cm. ":"Tallas por confirmar en la ficha. "}Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
+ <div class="facts"><span><b>${eur(s.pr)}</b></span><span>Talla <b>${sz} cm</b></span><span>Flex <b>${s.fx?s.fx+"/10":"por confirmar"}</b></span>${s.w?`<span>Cintura <b>${s.w} mm</b></span>`:""}<span>Nivel <b>${lvl}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
+ <p class="why">${flexTxt(s.fx)} Sensación: ${s.s.toLowerCase()}.${shape?" "+shape+".":""}${s.f.wide?" Talla ancha: encaja con un pie grande.":""}</p>
+ <span class="note">Tallas a la venta: ${todas} cm. Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
 }
-document.getElementById("f").addEventListener("submit",e=>{
+function run(q){
+ const pool=TABLAS.filter(s=>(s.p===q.g||s.p==="Unisex")).map(s=>{const f=fitSize(s,q);if(!f)return null;const sc=score(s,q,f);return sc<0?null:{...s,f,_q:q.c,sc}}).filter(Boolean);
+ // Primero la categoría pedida; si hay pocas, completa con la vecina (All-mountain) con penalización
+ const main=pool.filter(s=>s.c===q.c).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+ const alt=pool.filter(s=>s.c!==q.c&&(s.c==="All-mountain"||q.c==="All-mountain")).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+ const take=(isOwn,n)=>{
+  const m=pick(main.filter(s=>own(s)===isOwn),n);
+  if(m.length<n){const seen=new Set(m.map(key));for(const s of alt.filter(s=>own(s)===isOwn)){const k=key(s);if(seen.has(k))continue;seen.add(k);m.push(s);if(m.length===n)break}}
+  return m;
+ };
+ return {o:take(true,3),x:take(false,5)};
+}
+document.getElementById("sn-f").addEventListener("submit",e=>{
  e.preventDefault();
- const fd=new FormData(e.target),err=document.getElementById("err");
- const q={g:fd.get("g"),h:+document.getElementById("h").value,l:fd.get("l")===null?null:+fd.get("l"),s:fd.get("s"),c:fd.get("c")};
- const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(q.l===null)miss.push("el nivel");if(!q.s)miss.push("la sensación");if(!q.c)miss.push("dónde quiere esquiar");
+ const fd=new FormData(e.target),err=document.getElementById("sn-err");
+ const q={g:fd.get("g"),h:+document.getElementById("sn-h").value,kg:+document.getElementById("sn-kg").value,ft:+document.getElementById("sn-ft").value,l:fd.get("l")===null?null:+fd.get("l"),s:fd.get("s"),c:fd.get("c")};
+ const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(!(q.kg>=30&&q.kg<=150))miss.push("el peso (entre 30 y 150 kg)");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de pie (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.s)miss.push("la sensación");
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
- const pool=SKIS.filter(s=>(s.c===q.c||(q.c==="Pista"&&wideShort(s)))&&(s.p===q.g||s.p==="Unisex")).map(s=>{const t=fitSize(s,q);return {...s,t,sc:score(s,q)-(t===null?1:0)}}).filter(s=>s.sc>=0&&s.t!==-1).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
- const o=pick(pool.filter(s=>own(s.m)),3), x=pick(pool.filter(s=>!own(s.m)),5);
- const [lmin,lmax]=length(q);
+ const {o,x}=run(q);
  const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
- const out=document.getElementById("out");
- let h=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.h} cm de altura, nivel ${LV[q.l].toLowerCase()} y ${SENS_TXT[q.s]}. Ajusta unos centímetros según peso y forma física.</p></div>`;
+ const [lmin,lmax]=length(q);
+ const out=document.getElementById("sn-out");
+ const ancho=q.ft>=44.5?"Con el pie del "+q.ft+" hace falta tabla wide (ancha).":q.ft>=43?"Con el pie del "+q.ft+" conviene una tabla wide si la hay; si no, una normal vale.":"Con ese pie sirve una tabla de ancho normal.";
+ let h=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.kg} kg, ${q.h} cm, nivel ${LV[q.l].toLowerCase()}, ${q.c.toLowerCase()} y ${SENS_TXT[q.s]}. ${ancho}</p></div>`;
  h+=`<h2>Marca Decathlon</h2>`;
- h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">No hay esquís Wedze o Quechua de ${q.c.toLowerCase()} para este perfil. Prueba con otra zona de esquí.</p>`;
+ h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">No hay tablas de marca Decathlon para este perfil. Mira las de otras marcas.</p>`;
  if(o.length&&o.length<3) h+=`<p class="note">Solo hay ${o.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
- if(x.length&&x.length<5) h+="";
  h+=`<h2>Otras marcas</h2>`;
  h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
  if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
- h+=`<p class="note">Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla disponible antes de cerrar la venta.</p><button class="reset" type="button" id="again">Nuevo cliente</button>`;
+ h+=`<p class="note">Nivel, flex y sensación son orientativos; los de otras marcas están pendientes de validar. Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sn-again">Nuevo cliente</button>`;
  out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
  out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
- document.getElementById("again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
+ document.getElementById("sn-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
 });
-const DATA_URL="https://raw.githubusercontent.com/jsuberyzf-blip/Asesor-Esquis/main/esquis.json";
+const DATA_URL="https://raw.githubusercontent.com/jsuberyzf-blip/Asesor-Esquis/main/Tablas_Snow.json";
 fetch(DATA_URL+"?t="+Date.now(),{cache:"no-store"})
  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
- .then(d=>{SKIS=(d.filas||[]).filter(s=>s.disp!==false);UPD=d.actualizado||"";const b=document.getElementById("goBtn");b.disabled=false;b.textContent="Ver esquís recomendados";document.getElementById("upd").textContent=(UPD?"Catálogo actualizado: "+UPD+". ":"")+SKIS.length+" esquís disponibles.";})
- .catch(()=>{document.getElementById("goBtn").textContent="No se pudo cargar el catálogo";document.getElementById("err").textContent="No se pudieron cargar los datos. Recarga la página en unos minutos.";});
+ .then(d=>{TABLAS=(d.filas||[]).filter(s=>s.disp!==false);UPD=d.actualizado||"";const b=document.getElementById("sn-goBtn");b.disabled=false;b.textContent="Ver tablas recomendadas";document.getElementById("sn-upd").textContent=(UPD?"Catálogo actualizado: "+UPD+". ":"")+TABLAS.length+" tablas disponibles.";})
+ .catch(()=>{document.getElementById("sn-goBtn").textContent="No se pudo cargar el catálogo";document.getElementById("sn-err").textContent="No se pudieron cargar los datos. Recarga la página en unos minutos.";});
+
+})();
 </script>
 </body>
 </html>
