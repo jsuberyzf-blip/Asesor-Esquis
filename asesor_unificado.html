@@ -243,7 +243,10 @@ return `Patín de ${w} mm: flota en nieve polvo.`;
 const IDEAL_R={control:14,equilibrio:15,velocidad:17,surf:18,paisaje:14,hijos:13};
 function score(s,q,t){
 const [a,b]=range(s.lv);let lvs;
-if(q.l>=a&&q.l<=b) lvs=3; else if((q.s==="hijos"||q.s==="paisaje")&&q.l-b===1) lvs=2.5; else if(Math.abs(q.l-(q.l<a?a:b))===1) lvs=1; else return -1;
+// Regla de nivel: solo salen esquís cuyo nivel de partida coincide con el del cliente
+// (Debutante -> Debutante; Intermedio -> Intermedio o Intermedio-Avanzado; Avanzado -> Avanzado o Avanzado-Experto; Experto -> Experto)
+if(a!==q.l) return -1;
+lvs=3;
 let sc=lvs*2+(SENS[q.s][s.s]??1)*1.5;
 if(s.p===q.g||s.p==="Unisex") sc+=.3;
 if(s.w) sc+=.4;
@@ -273,7 +276,7 @@ function card(s,top){
 const [a,b]=range(s.lv);const lvl=a===b?LV[a]:LV[a]+"–"+LV[b].toLowerCase();
 return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}
 <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
-<div class="facts"><span><b>${eur(s.pr)}</b></span><span>Patín <b>${s.w?s.w+" mm":"por confirmar"}</b></span><span>Talla <b>${s.t?s.t+" cm":"por confirmar"}</b></span><span>Radio <b>${s.r?s.r+" m":"por confirmar"}</b></span><span>Nivel <b>${lvl}</b></span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
+<div class="facts"><span><b>${eur(s.pr)}</b></span><span>Patín <b>${s.w?s.w+" mm":"por confirmar"}</b></span><span>Talla <b>${s.t?s.t+" cm":"por confirmar"}</b></span><span>Radio <b>${s.rt?s.rt:(s.r?s.r+" m":"por confirmar")}</b></span><span>Nivel <b>${lvl}</b></span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
 <p class="why">${wideShort(s)&&s.c!=="Pista"?"Patín ancho con radio corto: gira ágil en pista y aguanta bien la nieve tocada. ":""}${patinTxt(s.w,s.c)}${radTxt(s.r)} Sensación: ${s.s.toLowerCase()}.</p>
 <span class="note">${s.z&&s.z.length?"Tallas a la venta: "+s.z.join(", ")+" cm. ":"Tallas por confirmar en la ficha. "}Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
 }
