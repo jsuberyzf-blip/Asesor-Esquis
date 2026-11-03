@@ -287,7 +287,7 @@ const q={g:fd.get("g"),h:+document.getElementById("sk-h").value,l:fd.get("l")===
 const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(q.l===null)miss.push("el nivel");if(!q.s)miss.push("la sensación");if(!q.c)miss.push("dónde quiere esquiar");
 if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
 err.textContent="";
-const pool=SKIS.filter(s=>(s.c===q.c||(q.c==="Pista"&&wideShort(s)&&s.s!=="Surf / flotación"))&&(s.p===q.g||s.p==="Unisex")).map(s=>{const t=fitSize(s,q);return {...s,t,sc:score(s,q,t)-(t===null?1:0)}}).filter(s=>s.sc>=0&&s.t!==-1).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+const pool=SKIS.filter(s=>(s.c===q.c||(q.c==="Pista"&&wideShort(s)&&s.s!=="Surf / flotación"))&&(s.p===q.g||s.p==="Unisex")&&!(q.s==="surf"&&q.c==="Pista"&&!(s.r>15))).map(s=>{const t=fitSize(s,q);return {...s,t,sc:score(s,q,t)-(t===null?1:0)}}).filter(s=>s.sc>=0&&s.t!==-1).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
 const o=pick(pool.filter(s=>own(s.m)),3), x=pick(pool.filter(s=>!own(s.m)),5);
 const [lmin,lmax]=length(q);
 const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
