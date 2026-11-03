@@ -307,7 +307,7 @@ document.getElementById("sk-again").onclick=()=>{e.target.reset();out.innerHTML=
 const DATA_URL="https://raw.githubusercontent.com/jsuberyzf-blip/Asesor-Esquis/main/esquis.json";
 fetch(DATA_URL+"?t="+Date.now(),{cache:"no-store"})
 .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
-.then(d=>{SKIS=(d.filas||[]).filter(s=>s.disp!==false);UPD=d.actualizado||"";const b=document.getElementById("sk-goBtn");b.disabled=false;b.textContent="Ver esquís recomendados";document.getElementById("sk-upd").textContent=(UPD?"Catálogo actualizado: "+UPD+". ":"")+SKIS.length+" esquís disponibles.";})
+.then(d=>{SKIS=(d.filas||[]).filter(s=>s.disp!==false&&!s.hide);UPD=d.actualizado||"";const b=document.getElementById("sk-goBtn");b.disabled=false;b.textContent="Ver esquís recomendados";document.getElementById("sk-upd").textContent=(UPD?"Catálogo actualizado: "+UPD+". ":"")+SKIS.length+" esquís disponibles.";})
 .catch(()=>{document.getElementById("sk-goBtn").textContent="No se pudo cargar el catálogo";document.getElementById("sk-err").textContent="No se pudieron cargar los datos. Recarga la página en unos minutos.";});
 
 })();
