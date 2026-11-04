@@ -531,7 +531,7 @@ function fRun(q){
 const FLEXTXT={"Blando":"blanda: perdona errores y es cómoda al aprender","Blando-medio":"blanda-media: fácil y cómoda, muy permisiva","Medio":"media: equilibrada entre comodidad y respuesta","Medio-rígido":"media-rígida: respuesta directa, para quien ya domina la tabla","Rígido":"rígida: máxima respuesta y precisión a velocidad"};
 function fCard(s,top){
  const talla=s.bz?s.tl+" · bota EU "+bootTxt(s):"por confirmar en la ficha";
- const sizeNote=s.fit===true?(s.bzs==="marca"?" Encaja con su talla de bota.":" Encaja con su talla de bota (según tabla "+(s.bzs==="tienda"?"de tienda, orientativa":"genérica, orientativa")+")."):" Comprueba la talla de fijación para su bota en la ficha.";
+ const sizeNote=s.fit===true?(s.bzs==="marca"?" Encaja con su talla de bota.":s.bzs==="modelo"?" Encaja con su talla de bota (tallas que fabrica la marca para este modelo: comprueba cuál hay en stock).":" Encaja con su talla de bota (según tabla "+(s.bzs==="tienda"?"de tienda, orientativa":"genérica, orientativa")+")."):" Comprueba la talla de fijación para su bota en la ficha.";
  return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${s.auto?'<span class="badge alt">Flex por validar</span>':""}
  <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
  <div class="facts"><span><b>${eur(s.pr)}${s.prmax&&s.prmax>s.pr?" – "+eur(s.prmax):""}</b></span><span>Flex <b>${s.fx}</b></span><span>Sistema <b>${s.sis}</b></span><span>Talla <b>${talla}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
