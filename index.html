@@ -204,7 +204,6 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
 
 <fieldset class="wide"><legend>¿Qué tipo de fijación quiere?</legend>
 <div class="opts">
-<label class="opt"><input type="radio" name="bt" value="any" checked><span>Me da igual<small>Se muestran todas menos las Step On</small></span></label>
 <label class="opt"><input type="radio" name="bt" value="clasica"><span>Clásica, con correas<small>La más habitual: dos correas y se calza sentado</small></span></label>
 <label class="opt"><input type="radio" name="bt" value="trasera"><span>Entrada trasera<small>Se abre el respaldo y se entra de pie (Flow)</small></span></label>
 <label class="opt"><input type="radio" name="bt" value="rapida"><span>Automática o de acceso rápido<small>Fastec, Supermatic o FASE: valen con botas normales</small></span></label>
@@ -241,7 +240,6 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
 </div></fieldset>
 <fieldset class="wide"><legend>¿Qué tipo de fijación quiere?</legend>
 <div class="opts">
-<label class="opt"><input type="radio" name="bt" value="any" checked><span>Me da igual<small>Se muestran todas menos las Step On</small></span></label>
 <label class="opt"><input type="radio" name="bt" value="clasica"><span>Clásica, con correas<small>La más habitual: dos correas y se calza sentado</small></span></label>
 <label class="opt"><input type="radio" name="bt" value="trasera"><span>Entrada trasera<small>Se abre el respaldo y se entra de pie (Flow)</small></span></label>
 <label class="opt"><input type="radio" name="bt" value="rapida"><span>Automática o de acceso rápido<small>Fastec, Supermatic o FASE: valen con botas normales</small></span></label>
@@ -470,8 +468,8 @@ function run(q){
 document.getElementById("sn-f").addEventListener("submit",e=>{
  e.preventDefault();
  const fd=new FormData(e.target),err=document.getElementById("sn-err");
- const q={g:fd.get("g"),h:+document.getElementById("sn-h").value,kg:+document.getElementById("sn-kg").value,ft:+document.getElementById("sn-ft").value,l:fd.get("l")===null?null:+fd.get("l"),s:fd.get("s"),c:fd.get("c"),bt:fd.get("bt")||"any"};
- const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(!(q.kg>=30&&q.kg<=150))miss.push("el peso (entre 30 y 150 kg)");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de pie (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.s)miss.push("la sensación");
+ const q={g:fd.get("g"),h:+document.getElementById("sn-h").value,kg:+document.getElementById("sn-kg").value,ft:+document.getElementById("sn-ft").value,l:fd.get("l")===null?null:+fd.get("l"),s:fd.get("s"),c:fd.get("c"),bt:fd.get("bt")};
+ const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(!(q.kg>=30&&q.kg<=150))miss.push("el peso (entre 30 y 150 kg)");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de pie (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.s)miss.push("la sensación");if(!q.bt)miss.push("el tipo de fijación");
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
  const {o,x}=run(q);
@@ -501,14 +499,14 @@ const FSEC={0:[1],1:[0],2:[2],3:[3]};
 const FSYS={clasica:["Correas clásicas"],trasera:["Entrada trasera (Flow)"],rapida:["Multientrada (Fastec)","Entrada rápida (Supermatic)","Entrada rápida (FASE)"],stepon:["Step On"]};
 const FSKIP=/^(azul|gris|negro|negra|black|white|blanco|blancas|blancos|verde|rosa|noire|plata|amarillo|mens|womens|men's|women's|hombre|mujer|unisex|para|de|adulto|all|mountain|talla|unica|única|w|matt|2024|2025|2026|2027|s\/m\/l|s\/m|m\/l)$/i;
 function fkey(s){const n=clean(s).replace(/\(.*?\)/g,"").toLowerCase();for(const x of n.split(/\s+/)){if(!x||FSKIP.test(x)||x===s.m.toLowerCase())continue;return (s.m+x).toLowerCase().replace(/[^a-z0-9]/g,"")}return (s.m+s.id).toLowerCase()}
-function bootSizes(ft){const a=[];if(ft<=40.5)a.push("S");if(ft>=39.5&&ft<=44)a.push("M");if(ft>=42.5&&ft<=47)a.push("L");if(ft>=45.5)a.push("XL");return a}
-// devuelve true (encaja), false (no encaja) o null (sin dato de talla)
 function fitBinding(s,ft){
- const t=(s.tl||"").trim();if(!t||/^[úu]nica$/i.test(t))return null;
- const eu=[...t.matchAll(/(\d{2})\s*-\s*(\d{2})/g)];
- if(eu.length)return eu.some(m=>ft>=+m[1]-0.5&&ft<=+m[2]+0.5);
- const set=new Set((t.toUpperCase().match(/XL|S|M|L/g)||[]));if(!set.size)return null;
- return bootSizes(ft).some(x=>set.has(x));
+ if(!s.bz||!s.bz.length)return null;
+ return s.bz.some(r=>ft>=r[0]-0.25&&ft<=r[1]+0.25);
+}
+function bootTxt(s){
+ if(!s.bz||!s.bz.length)return "";
+ const f=x=>String(x).replace(".",",");
+ return s.bz.map(r=>f(r[0])+"–"+f(r[1])).join(" y ");
 }
 function fScore(s,q,fit){
  const r=FR[s.fx];if(r===undefined)return -1;
@@ -521,8 +519,8 @@ function fScore(s,q,fit){
  return sc;
 }
 function fRun(q){
- const sys=q.bt==="any"?null:FSYS[q.bt];
- const pool=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&(s.p===q.g||s.p==="Unisex")&&(sys?sys.includes(s.sis):s.sis!=="Step On")).map(s=>{const fit=fitBinding(s,q.ft);if(fit===false)return null;const sc=fScore(s,q,fit);return sc<0?null:{...s,fit,sc}}).filter(Boolean).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+ const sys=FSYS[q.bt];
+ const pool=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&(s.p===q.g||s.p==="Unisex")&&sys.includes(s.sis)).map(s=>{const fit=fitBinding(s,q.ft);if(fit===false)return null;const sc=fScore(s,q,fit);return sc<0?null:{...s,fit,sc}}).filter(Boolean).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
  const pickF=(list,n,cap)=>{const seen=new Set(),cnt={},out=[];
   for(const s of list){const k=fkey(s);if(seen.has(k))continue;if(cap&&(cnt[s.m]||0)>=cap)continue;seen.add(k);cnt[s.m]=(cnt[s.m]||0)+1;out.push(s);if(out.length===n)return out}
   if(cap){for(const s of list){const k=fkey(s);if(seen.has(k))continue;seen.add(k);out.push(s);if(out.length===n)break}}
@@ -532,8 +530,8 @@ function fRun(q){
 }
 const FLEXTXT={"Blando":"blanda: perdona errores y es cómoda al aprender","Blando-medio":"blanda-media: fácil y cómoda, muy permisiva","Medio":"media: equilibrada entre comodidad y respuesta","Medio-rígido":"media-rígida: respuesta directa, para quien ya domina la tabla","Rígido":"rígida: máxima respuesta y precisión a velocidad"};
 function fCard(s,top){
- const talla=s.tl&&!/^[úu]nica$/i.test(s.tl)?s.tl:(/^[úu]nica$/i.test(s.tl||"")?"única":"por confirmar");
- const sizeNote=s.fit===true?" Encaja con su talla de bota.":(s.fit===null?" Comprueba que la talla de fijación sirve para su bota.":"");
+ const talla=s.bz?s.tl+" · bota EU "+bootTxt(s):"por confirmar en la ficha";
+ const sizeNote=s.fit===true?(s.bzs==="marca"?" Encaja con su talla de bota.":" Encaja con su talla de bota (según tabla "+(s.bzs==="tienda"?"de tienda, orientativa":"genérica, orientativa")+")."):" Comprueba la talla de fijación para su bota en la ficha.";
  return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${s.auto?'<span class="badge alt">Flex por validar</span>':""}
  <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
  <div class="facts"><span><b>${eur(s.pr)}${s.prmax&&s.prmax>s.pr?" – "+eur(s.prmax):""}</b></span><span>Flex <b>${s.fx}</b></span><span>Sistema <b>${s.sis}</b></span><span>Talla <b>${talla}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
@@ -559,8 +557,8 @@ document.querySelectorAll('input[name="snmode"]').forEach(r=>r.addEventListener(
 document.getElementById("sf-f").addEventListener("submit",e=>{
  e.preventDefault();
  const fd=new FormData(e.target),err=document.getElementById("sf-err");
- const q={g:fd.get("g"),ft:+document.getElementById("sf-ft").value,l:fd.get("l")===null?null:+fd.get("l"),c:fd.get("c"),bt:fd.get("bt")||"any"};
- const miss=[];if(!q.g)miss.push("para quién es");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de bota (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");
+ const q={g:fd.get("g"),ft:+document.getElementById("sf-ft").value,l:fd.get("l")===null?null:+fd.get("l"),c:fd.get("c"),bt:fd.get("bt")};
+ const miss=[];if(!q.g)miss.push("para quién es");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de bota (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.bt)miss.push("el tipo de fijación");
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
  const out=document.getElementById("sf-out");
