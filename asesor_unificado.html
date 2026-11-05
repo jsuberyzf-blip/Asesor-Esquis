@@ -134,8 +134,7 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
 <label class="opt"><input type="radio" name="s" value="velocidad"><span>Bajar rápido y sentir la velocidad<small>Le gusta apretar y que el esquí vaya firme</small></span></label>
 <label class="opt"><input type="radio" name="s" value="equilibrio"><span>Un punto intermedio entre control y velocidad<small>Disfruta de todo sin ir al límite</small></span></label>
 <label class="opt"><input type="radio" name="s" value="surf"><span>Giros amplios, como surfear la nieve<small>Busca fluidez más que velocidad</small></span></label>
-<label class="opt"><input type="radio" name="s" value="paisaje"><span>Ir tranquilo y disfrutar del paisaje<small>Esquí cómodo, sin exigencias</small></span></label>
-<label class="opt"><input type="radio" name="s" value="hijos"><span>Acompañar a sus hijos<small>Esquí fácil, cómodo y a buen precio</small></span></label>
+<label class="opt"><input type="radio" name="s" value="tranquilo"><span>Ir tranquilo, disfrutar del paisaje y acompañar hijos<small>Esquí cómodo, fácil y sin exigencias</small></span></label>
 </div></fieldset>
 
 <fieldset class="wide"><legend>¿Por dónde quiere esquiar?</legend>
@@ -269,10 +268,9 @@ control:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0
 velocidad:{"Velocidad":3,"Control + velocidad":2,"Surf / flotación":1,"Control":0},
 equilibrio:{"Control + velocidad":3,"Control":2,"Velocidad":2,"Surf / flotación":1},
 surf:{"Surf / flotación":3,"Control + velocidad":2,"Control":1,"Velocidad":1},
-paisaje:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0},
-hijos:{"Control":3,"Control + velocidad":1,"Surf / flotación":1,"Velocidad":0}
+tranquilo:{"Control":3,"Control + velocidad":2,"Surf / flotación":1,"Velocidad":0}
 };
-const SENS_TXT={control:"control y seguridad",velocidad:"velocidad",equilibrio:"equilibrio entre control y velocidad",surf:"giros amplios y fluidos",paisaje:"esquiar tranquilo",hijos:"acompañar a sus hijos"};
+const SENS_TXT={control:"control y seguridad",velocidad:"velocidad",equilibrio:"equilibrio entre control y velocidad",surf:"giros amplios y fluidos",tranquilo:"esquiar tranquilo, disfrutar del paisaje o acompañar a sus hijos"};
 function range(lv){const p=(lv||"").split("-").map(x=>LV.indexOf(x.trim())).filter(x=>x>=0);return p.length?[Math.min(...p),Math.max(...p)]:[1,2]}
 function own(m){return /wedze|quechua/i.test(m)}
 function clean(s){return s.n.replace(new RegExp("^("+s.m+"\\s+)+","i"),"").trim()}
@@ -287,25 +285,28 @@ if(w<85) return `Patín de ${w} mm: polivalente, cómodo en pista y estable si l
 if(w<95) return `Patín de ${w} mm: más estable en nieve blanda y para salir de pista.`;
 return `Patín de ${w} mm: flota en nieve polvo.`;
 }
-const IDEAL_R={control:14,equilibrio:15,velocidad:17,surf:18,paisaje:14,hijos:13};
+const IDEAL_R={control:14,equilibrio:15,velocidad:17,surf:18,tranquilo:14};
 function score(s,q,t){
 const [a,b]=range(s.lv);let lvs;
 // Regla de nivel: solo salen esquís cuyo nivel de partida coincide con el del cliente
 // (Debutante -> Debutante; Intermedio -> Intermedio o Intermedio-Avanzado; Avanzado -> Avanzado o Avanzado-Experto; Experto -> Experto)
-if(a!==q.l) return -1;
+// Excepción "Ir tranquilo...": cliente Avanzado/Experto -> primero Intermedio-Avanzado (prioridad) y, si faltan huecos, Avanzado
+let pri=0;
+if(q.s==="tranquilo"&&q.l>=2){if(s.lv==="Intermedio-Avanzado")pri=100;else if(!(a===2&&b===2))return -1}
+else if(a!==q.l) return -1;
 lvs=3;
 let sc=lvs*2+(SENS[q.s][s.s]??1)*1.5;
 if(s.p===q.g||s.p==="Unisex") sc+=.3;
 if(s.w) sc+=.4;
 if(q.s==="surf"&&s.w) sc+=Math.min(1,(s.w-70)/30);
 if(q.s==="velocidad"&&s.w) sc+=Math.max(0,(80-s.w)/20);
-if(q.s==="hijos") sc+=Math.max(0,(700-s.pr)/700);
+if(q.s==="tranquilo") sc+=Math.max(0,(700-s.pr)/700)*.5;
 if(q.c==="Pista"&&wideShort(s)&&q.s==="velocidad") sc-=1;
 if(q.c==="Pista"&&s.w&&s.w<80) sc+=.8;
 if(s.r) sc+=Math.max(0,.4-Math.abs(s.r-IDEAL_R[q.s])/20);
 if(lvs===3) sc+=.15/(b-a+1);
 if(t>0){const [lo,hi]=length(q);sc-=Math.abs(t-(lo+hi)/2)/60}
-return sc;
+return sc+pri;
 }
 function fitSize(s,q){if(!s.z||!s.z.length)return null;const [a,b]=length(q),c=(a+b)/2;const ok=s.z.filter(x=>x>=a-3&&x<=b+3);if(!ok.length)return -1;return ok.reduce((p,x)=>Math.abs(x-c)<Math.abs(p-c)?x:p)}
 function pick(list,n){
@@ -315,7 +316,7 @@ return out;
 }
 function length(q){
 const off={"Pista":[-15,-10,-6,-2],"All mountain":[-12,-8,-3,2],"Freeride":[-5,0,4,8]}[q.c][q.l];
-let adj=0; if(q.s==="velocidad")adj=3; if(["control","paisaje","hijos"].includes(q.s)&&q.l>0)adj=-3;
+let adj=0; if(q.s==="velocidad")adj=3; if(["control","tranquilo"].includes(q.s)&&q.l>0)adj=-3;
 const c=Math.round((q.h+off+adj)/2)*2; return [c-3,c+3];
 }
 const eur=v=>v.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
