@@ -449,7 +449,7 @@ function card(s,top){
  const shape=[s.fm,s.pf].filter(Boolean).join(", ");
  return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${s.c!==s._q?'<span class="badge alt">Alternativa '+s.c.toLowerCase()+'</span>':""}
  <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
- <div class="facts"><span><b>${eur(s.pr)}</b></span><span>Talla <b>${sz} cm</b></span><span>Flex <b>${s.fx?s.fx+"/10":"por confirmar"}</b></span>${s.w?`<span>Cintura <b>${s.w} mm</b></span>`:""}<span>Nivel <b>${lvl}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
+ <div class="facts"><span><b>${eur(s.pr)}</b></span><span>Talla <b>${sz} cm</b></span><span>Flex <b>${s.fx?s.fx+"/10":"por confirmar"}</b></span><span>Anclaje <b>${s.pat&&s.pat.length?patTxt(s.pat)+(s.patc===false?" (por confirmar)":""):"por confirmar"}</b></span>${s.w?`<span>Cintura <b>${s.w} mm</b></span>`:""}<span>Nivel <b>${lvl}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
  <p class="why">${flexTxt(s.fx)} Sensación: ${s.s.toLowerCase()}.${shape?" "+shape+".":""}${s.f.wide?" Talla ancha: encaja con un pie grande.":""}</p>
  <span class="note">Tallas a la venta: ${todas} cm. Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
 }
@@ -484,13 +484,26 @@ document.getElementById("sn-f").addEventListener("submit",e=>{
  h+=`<h2>Otras marcas</h2>`;
  h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
  if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
- h+=fijBlock({g:q.g,ft:q.ft,l:q.l,c:q.c.replace("-"," "),bt:q.bt});
+ h+=fijBlock({g:q.g,ft:q.ft,l:q.l,c:q.c.replace("-"," "),bt:q.bt,bp:(best&&best.pat&&best.pat[0])||null,bpUnk:!!(best&&best.patc===false)});
  h+=`<p class="note">Nivel, flex y sensación son orientativos; los de otras marcas están pendientes de validar. Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sn-again">Nuevo cliente</button>`;
  out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
  out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
  document.getElementById("sn-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
 });
 
+/* ===== Patrones de anclaje (tabla y fijación) ===== */
+const PATINFO={"4x4":["4x4 (estándar clásico)","4 tornillos M6 (Phillips o Torx) por fijación, en un cuadrado de 4 x 4 cm; disco central redondo con ranuras para ajustar el ángulo"],"2x4":["2x4 (estándar moderno)","4 tornillos M6 por fijación sobre un disco de ajuste milimétrico; las filas de agujeros están a 2 cm y permiten afinar la distancia entre pies"],"3D":["Burton 3D (antiguo)","3 tornillos específicos por fijación, en triángulo o estrella"],"Channel":["Burton The Channel","2 tornillos especiales con arandelas o anclajes en T que corren por dos raíles; ajuste continuo sin discos tradicionales"]};
+function patTxt(a){return (a||[]).map(p=>PATINFO[p]?PATINFO[p][0]:p).join(", ")}
+function fitsPat(bp,pats){if(!bp||!pats||!pats.length)return true;if(bp==="2x4")return pats.includes("2x4")||pats.includes("4x4");return pats.includes(bp)}
+function ancTxt(s,bp){const pats=s.pat||[];const unk=s.patc===false||!pats.length;
+ const sh=(pats.length?patTxt(pats):"por confirmar")+(unk&&pats.length?" (por confirmar)":"");
+ let lg="";
+ if(bp){const used=pats.includes(bp)?bp:(bp==="2x4"&&pats.includes("4x4")?"4x4":bp);
+  if(PATINFO[used])lg=` Tornillería para su tabla (${bp==="2x4"&&used==="4x4"?"2x4, con disco 4x4":bp}): ${PATINFO[used][1]}.`}
+ else{lg=pats.map(p=>PATINFO[p]?` ${PATINFO[p][0]}: ${PATINFO[p][1]}.`:"").join("")}
+ if(s.disco==="Mini")lg+=" Lleva mini-disco: disco pequeño (2x4 o compatible 4x4) que deja flexar más la tabla.";
+ if(unk)lg+=" Anclaje por confirmar: comprueba en la ficha del fabricante.";
+ return{short:sh,long:lg}}
 /* ===== Fijaciones de snow ===== */
 let FIJ=[];let FIJ_ERR=false;
 const FR={"Blando":0,"Blando-medio":1,"Medio":2,"Medio-rígido":3,"Rígido":4};
@@ -516,11 +529,12 @@ function fScore(s,q,fit){
  if(q.c==="Freestyle")sc-=.2*r;if(q.c==="Freeride")sc+=.2*r;
  if(fit===null)sc-=.2;
  if(s.auto)sc-=.3;
+ if(s.patc===false)sc-=.3;
  return sc;
 }
 function fRun(q){
  const sys=FSYS[q.bt];
- const pool=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&(s.p===q.g||s.p==="Unisex")&&sys.includes(s.sis)).map(s=>{const fit=fitBinding(s,q.ft);if(fit===false)return null;const sc=fScore(s,q,fit);return sc<0?null:{...s,fit,sc}}).filter(Boolean).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+ const pool=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&(s.p===q.g||s.p==="Unisex")&&sys.includes(s.sis)&&(s.patc===false||fitsPat(q.bp,s.pat))).map(s=>{const fit=fitBinding(s,q.ft);if(fit===false)return null;const sc=fScore(s,q,fit);return sc<0?null:{...s,fit,sc}}).filter(Boolean).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
  const pickF=(list,n,cap)=>{const seen=new Set(),cnt={},out=[];
   for(const s of list){const k=fkey(s);if(seen.has(k))continue;if(cap&&(cnt[s.m]||0)>=cap)continue;seen.add(k);cnt[s.m]=(cnt[s.m]||0)+1;out.push(s);if(out.length===n)return out}
   if(cap){for(const s of list){const k=fkey(s);if(seen.has(k))continue;seen.add(k);out.push(s);if(out.length===n)break}}
@@ -529,23 +543,24 @@ function fRun(q){
  return {o:pickF(own,2,0),x:pickF(ext,8,2)};
 }
 const FLEXTXT={"Blando":"blanda: perdona errores y es cómoda al aprender","Blando-medio":"blanda-media: fácil y cómoda, muy permisiva","Medio":"media: equilibrada entre comodidad y respuesta","Medio-rígido":"media-rígida: respuesta directa, para quien ya domina la tabla","Rígido":"rígida: máxima respuesta y precisión a velocidad"};
-function fCard(s,top){
+function fCard(s,top,bp){
+ const anc=ancTxt(s,bp);
  const talla=s.bz?s.tl+" · bota EU "+bootTxt(s):"por confirmar en la ficha";
  const sizeNote=s.fit===true?(s.bzs==="marca"?" Encaja con su talla de bota.":s.bzs==="modelo"?" Encaja con su talla de bota (tallas que fabrica la marca para este modelo: comprueba cuál hay en stock).":" Encaja con su talla de bota (según tabla "+(s.bzs==="tienda"?"de tienda, orientativa":"genérica, orientativa")+")."):" Comprueba la talla de fijación para su bota en la ficha.";
  return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${s.auto?'<span class="badge alt">Flex por validar</span>':""}
  <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
- <div class="facts"><span><b>${eur(s.pr)}${s.prmax&&s.prmax>s.pr?" – "+eur(s.prmax):""}</b></span><span>Flex <b>${s.fx}</b></span><span>Sistema <b>${s.sis}</b></span><span>Talla <b>${talla}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
- <p class="why">Flex ${FLEXTXT[s.fx]}.${sizeNote}${s.sis==="Step On"?" Solo vale con botas Step On.":""}</p>
+ <div class="facts"><span><b>${eur(s.pr)}${s.prmax&&s.prmax>s.pr?" – "+eur(s.prmax):""}</b></span><span>Flex <b>${s.fx}</b></span><span>Sistema <b>${s.sis}</b></span><span>Anclaje <b>${anc.short}</b></span><span>Talla <b>${talla}</b></span><span>${s.c}</span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
+ <p class="why">Flex ${FLEXTXT[s.fx]}.${sizeNote}${s.sis==="Step On"?" Solo vale con botas Step On.":""}${anc.long}</p>
  <span class="note">Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
 }
 function fijBlock(q){
  if(!FIJ.length)return FIJ_ERR?'<h2>Fijaciones</h2><p class="note">No se pudieron cargar las fijaciones. Recarga la página en unos minutos.</p>':"";
  const {o,x}=fRun(q);const best=[...o,...x].sort((a,b)=>b.sc-a.sc)[0];
- let h='<h2>Fijaciones recomendadas</h2><p class="note">Según nivel, flex, zona y talla de bota. Comprueba que el anclaje de la fijación (discos 4x4, 2x4 o The Channel) es compatible con la tabla.</p>';
+ let h='<h2>Fijaciones recomendadas</h2><p class="note">'+(q.bp?`Según nivel, flex, zona y talla de bota. Solo salen fijaciones compatibles con el anclaje de la tabla recomendada (${q.bp}${q.bpUnk?", por confirmar":""}); las que tienen el anclaje por confirmar salen con aviso. Si el cliente elige otra tabla, comprueba su anclaje.`:'Según nivel, flex, zona y talla de bota. Comprueba que el anclaje de la fijación (4x4, 2x4, 3D o The Channel) es compatible con la tabla.')+'</p>';
  h+='<h2>Marca Decathlon</h2>';
- h+=o.length?o.map(s=>fCard(s,s===best)).join(""):'<p class="note">No hay fijaciones de marca Decathlon para este perfil. Mira las de otras marcas.</p>';
+ h+=o.length?o.map(s=>fCard(s,s===best,q.bp)).join(""):'<p class="note">No hay fijaciones de marca Decathlon para este perfil. Mira las de otras marcas.</p>';
  h+='<h2>Otras marcas</h2>';
- h+=x.length?x.map(s=>fCard(s,s===best)).join(""):'<p class="note">No hay fijaciones de otras marcas para este perfil. Prueba con otro tipo de fijación.</p>';
+ h+=x.length?x.map(s=>fCard(s,s===best,q.bp)).join(""):'<p class="note">No hay fijaciones de otras marcas para este perfil. Prueba con otro tipo de fijación.</p>';
  if(x.length&&x.length<8)h+=`<p class="note">Solo hay ${x.length} fijaciones de otras marcas que encajen con este perfil.</p>`;
  return h;
 }
