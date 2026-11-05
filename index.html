@@ -484,7 +484,7 @@ document.getElementById("sn-f").addEventListener("submit",e=>{
  h+=`<h2>Otras marcas</h2>`;
  h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
  if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
- h+=fijBlock({g:q.g,ft:q.ft,l:q.l,c:q.c.replace("-"," "),bt:q.bt,bp:(best&&best.pat&&best.pat[0])||null,bpUnk:!!(best&&best.patc===false)});
+ h+=fijBlock({g:q.g,ft:q.ft,l:q.l,c:q.c.replace("-"," "),bt:q.bt,bp:(best&&best.pat&&best.pat.length<4&&best.pat[0])||null,bpUnk:!!(best&&best.patc===false)});
  h+=`<p class="note">Nivel, flex y sensación son orientativos; los de otras marcas están pendientes de validar. Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sn-again">Nuevo cliente</button>`;
  out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
  out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
@@ -493,7 +493,7 @@ document.getElementById("sn-f").addEventListener("submit",e=>{
 
 /* ===== Patrones de anclaje (tabla y fijación) ===== */
 const PATINFO={"4x4":["4x4 (estándar clásico)","4 tornillos M6 (Phillips o Torx) por fijación, en un cuadrado de 4 x 4 cm; disco central redondo con ranuras para ajustar el ángulo"],"2x4":["2x4 (estándar moderno)","4 tornillos M6 por fijación sobre un disco de ajuste milimétrico; las filas de agujeros están a 2 cm y permiten afinar la distancia entre pies"],"3D":["Burton 3D (antiguo)","3 tornillos específicos por fijación, en triángulo o estrella"],"Channel":["Burton The Channel","2 tornillos especiales con arandelas o anclajes en T que corren por dos raíles; ajuste continuo sin discos tradicionales"]};
-function patTxt(a){return (a||[]).map(p=>PATINFO[p]?PATINFO[p][0]:p).join(", ")}
+function patTxt(a){if((a||[]).length>=4)return "cualquier fijación (rail deslizante)";return (a||[]).map(p=>PATINFO[p]?PATINFO[p][0]:p).join(", ")}
 function fitsPat(bp,pats){if(!bp||!pats||!pats.length)return true;if(bp==="2x4")return pats.includes("2x4")||pats.includes("4x4");return pats.includes(bp)}
 function ancTxt(s,bp){const pats=s.pat||[];const unk=s.patc===false||!pats.length;
  const sh=(pats.length?patTxt(pats):"por confirmar")+(unk&&pats.length?" (por confirmar)":"");
