@@ -1,0 +1,52 @@
+# Novedades fijaciones snow — 19/11/2026
+54 productos del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (todos marketplace). Pendiente que Javier valide flex, talla y anclaje. Enlaces: buscar el título en el listado (aún no se han volcado las URLs).
+
+- RAVEN Fastec FTM450 Multientry — 169,90 €
+- UNION Force Classic Team HB White 2026 — 292,50 €
+- JONES Sangle Comfort Flex Mujer Negro — 23,60 €
+- NIDECKER Magic Unifittrap 2025 Negro — 22 €
+- NIDECKER OG Supermatic 2027 — 418 €
+- BURTON Genesis Negro (all mountain hombre) — 402,99 €
+- DRAKE Fifty Hombre Negro — 166,99 €
+- K2 Formula Grey Hombre — 287 €
+- BURTON Step On Cartel X Negro — 406,99 € (x2 fichas)
+- DRAKE Fifty Unisex Gris-Naranja — 166,75 €
+- BURTON Step On Genesis Re:Flex Negro — 459,99 € (x2)
+- DRAKE Jade Mujer Blanco-Lila — 166,75 €
+- RIDE CL-4 Pink Mujer — 247 €
+- BURTON Step On Genesis Re:Flex Verde — 459,99 €
+- RIDE Drone Silver Hombre / Mujer — 336 €
+- K2 Indy Grey Hombre — 237 €
+- BURTON Step On Re:Flex Bear Hug Brown — 332,99 € (x2)
+- DRAKE Fifty Hombre Negro-Verde — 169,99 €
+- DRAKE Reload Gris Lima — 149,99 €
+- NIDECKER LT Supermatic Negro — 468 €
+- RIDE Specter Purple/Grey Mujer — 277 €
+- DRAKE SuperSport Mujer Negro — 214,25 €
+- BURTON Step On Genesis Negro — 459,99 €
+- SP BINDINGS sLab Multientry Fastec plata — 432,15 €
+- DRAKE GT Negras — 144,99 €
+- SP BINDINGS Kiddo Black — 139,90 € (junior)
+- SP BINDINGS Core Fastec+Strap in blue — 260,90 €
+- BURTON Step On Genesis EST Plata — 459,99 €
+- RIDE Specter Red Hombre — 277 €
+- RIDE Drone Red Hombre — 336 €
+- K2 Sonic Grey Hombre — 217 €
+- BURTON Cartel X Azul — 406,99 €
+- BURTON Step On Cartel X EST Amarillo/Negro — 366,25 €
+- SP BINDINGS Core Black — 289,90 €
+- DRAKE SuperSport Negro — 241,99 €
+- RIDE Specter Chrome Hombre — 277 €
+- BURTON Step On Genesis Blanc — 459,99 €
+- DRAKE SuperSport mujer negro carbono — 241,75 €
+- NITRO Rambler Reactiva Blood — 234,99 €
+- SP BINDINGS Core Multientry Azul — 300,55 €
+- BURTON Step On Cartel X Azul — 406,99 €
+- DRAKE Jade Mujer Negro — 166,75 €
+- DRAKE Reload Hombre Negro — 191,75 €
+- RIDE Drone White Hombre — 336 €
+- RIDE Specter Gun Metal Hombre — 277 €
+- K2 Sonic All Mountain Hombre — 217 €
+- CROXER MP180 — 89,90 €
+- RAVEN Fastec FTM500 Multientry — 189,90 €
+- K2 Far Out 2023 (splitboard, no se recomienda) — 524,49 €
