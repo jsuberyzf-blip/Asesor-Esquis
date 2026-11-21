@@ -25,3 +25,62 @@
 - Fijaciones listadas como tabla: Nitro One Sunrise (2 anuncios), Bataleon Gata, Astro AW, Blaster AW Fase, Bataleon Z200 / Donna (fijación de mujer).
 - Splitboard: Nitro Nomad (2 anuncios), K2 Isolator.
 - Tablas de niño o júnior: Rossignol Alias, Jibfluence, Scan, Rome SDS Minishred, K2 Lil Kat y Lil Mini.
+- (21/11/2026) DRAKE Snowboard Hombre Drake League All-Mountain Freestyle Versátil | 292,25 € | /es/p/mp/snowboard-hombre-drake-league-all-mountain-freestyle-versatil/087f5fd4-0e43-4c0b-8eca-ae7cf890e4c0/c1
+- (21/11/2026) K2 Tabla de snowboard hombre | 379 € | /es/p/mp/tabla-de-snowboard-hombre/cde7743a-f0df-45ff-80a3-aafa7951de14/c251
+- (21/11/2026) RAVEN Snowboard Pure Negro | 239,9 € | /es/p/mp/snowboard-pure-negro/13d7886b-6232-4c0a-b7af-d81dc8a45375/c1c2c3
+- (21/11/2026) DRAKE Snowboard Hombre Drake Tao of Drake 145 cm Wide Freestyle Twin Tip 2025 | 349,75 € | /es/p/mp/snowboard-hombre-drake-tao-of-drake-145-cm-wide-freestyle-twin-tip-2025/d5d7e68a-7a91-4498-85a0-145289d4f7c2/c4
+- (21/11/2026) BATALEON Tabla de snowboard - All mountain - Unisex - Gata - Azul - Talla S | 275,99 € | /es/p/mp/tabla-de-snowboard-all-mountain-unisex-gata-azul-talla-s/af600390-23aa-45cf-8fa9-8500c1a504af/c5
+- (21/11/2026) NITRO SNOWBOARDS Tablas Snowboard Hombre Nitro Snowboard Nomad | 602,99 € | /es/p/mp/tablas-snowboard-hombre-nitro-snowboard-nomad/771677a3-0ee1-44cf-a9c1-6ac196fcdc39/c255
+- (21/11/2026) DRAKE Snowboard Mujer Drake DFL Pro 142cm All-Mountain Performance Carbono Kevlar | 384,75 € | /es/p/mp/snowboard-mujer-drake-dfl-pro-142cm-all-mountain-performance-carbono-kevlar/5ae3a12b-7e98-4099-b4e5-1d6446367c8b/c4
+- (21/11/2026) K2 Tabla de snowboard K2 Isolator verde para hombre | 674 € | /es/p/mp/tabla-de-snowboard-k2-isolator-verde-para-hombre/42afa653-3dec-4380-9d68-dd3f39517dfe/c9
+- (21/11/2026) DRAKE Snowboard Hombre Drake Battle Rusty Wide Freestyle All-Mountain | 377,25 € | /es/p/mp/snowboard-hombre-drake-battle-rusty-wide-freestyle-all-mountain/173392d1-d937-4398-8a00-34ed956ae9ab/c4
+- (21/11/2026) DRAKE Snowboard Hombre Drake Billboard 162 cm Directional Freeride Carving Board | 417,25 € | /es/p/mp/snowboard-hombre-drake-billboard-162-cm-directional-freeride-carving-board/09b8a4d9-f51f-4043-8832-8a20e6a98070/c9
+- (21/11/2026) NITRO SNOWBOARDS Tabla Snowboard Hombre Nitro Snowboard Nomad | 505,01 € | /es/p/mp/tabla-snowboard-hombre-nitro-snowboard-nomad/d4e022db-0409-447c-b319-4ee5f4e60b2a/c255
+- (21/11/2026) BATALEON Hombre snowboard freeride polivalente Thunderstorm | 708,99 € | /es/p/mp/hombre-snowboard-freeride-polivalente-thunderstorm/bf8e5bc1-6608-4cfb-8388-caa8c61ac401/novar
+- (21/11/2026) DRAKE Snowboard Mujer Drake DFL 148cm Classic Camber Directional Twin Performance | 369,75 € | /es/p/mp/snowboard-mujer-drake-dfl-148cm-classic-camber-directional-twin-performance/059f43c7-e5fa-424c-8bb0-dde3e0f48923/c24
+- (21/11/2026) BATALEON Hombre Snowboard all-mountain versátil direccional Goliath | 741,99 € | /es/p/mp/hombre-snowboard-all-mountain-versatil-direccional-goliath/8b1a2d7f-8aeb-4efd-944b-2907e5890112/novar
+- (21/11/2026) DRAKE Snowboard Mujer Drake DFL 148cm All-Mountain Performance Camber Carbono Kevlar | 367,25 € | /es/p/mp/snowboard-mujer-drake-dfl-148cm-all-mountain-performance-camber-carbono-kevlar/bd1af1ba-ead0-40f8-9990-b4952f249211/c24
+- (21/11/2026) RIDE Tabla De Snowboard Deep Fake Wide Free Hombre | 719 € | /es/p/mp/tabla-de-snowboard-deep-fake-wide-free-hombre/83ab78a6-305e-4d67-aaba-5405ad481224/c1
+- (21/11/2026) DRAKE Snowboard Hombre Drake Team All-Mountain Freestyle Camber | 417,25 € | /es/p/mp/snowboard-hombre-drake-team-all-mountain-freestyle-camber/4c17f22e-4bf6-46f2-8cc2-a64625de22e8/c5
+- (21/11/2026) DRAKE Snowboard Hombre Drake Battle 155 cm WIDE All-Mountain Freestyle Camber Board | 349,75 € | /es/p/mp/snowboard-hombre-drake-battle-155-cm-wide-all-mountain-freestyle-camber-board/3f2f35c1-ebb9-43c1-ba12-59bbfe066a67/c1
+- (21/11/2026) BATALEON Tabla - Snowboard - Adulto - Reactiva all-mountain - Astro AW - Negro | 394,99 € | /es/p/mp/tabla-snowboard-adulto-reactiva-all-mountain-astro-aw-negro/35ca0e82-0069-4fa4-982b-af4909431594/c1
+- (21/11/2026) DRAKE Snowboard Mujer Drake DFL Pro 148cm All-Mountain Performance Carbono Camber | 397,99 € | /es/p/mp/snowboard-mujer-drake-dfl-pro-148cm-all-mountain-performance-carbono-camber/adde0ff1-bd25-4ef9-aa1d-8cb5e00b6377/c16
+- (21/11/2026) BATALEON Tabla de snowboard Bataleon Cameleon | 820,99 € | /es/p/mp/tabla-de-snowboard-bataleon-cameleon/87abc5cc-327f-457f-9238-9fc3d4652c28/c251
+- (21/11/2026) K2 Tabla de snowboard Dreamsicle para mujer | 467 € | /es/p/mp/tabla-de-snowboard-dreamsicle-para-mujer/61da82dc-8677-473a-b9d6-d60967e42f8b/c4
+- (21/11/2026) ROSSIGNOL Tabla de snowboard Airis para mujer | 519,3 € | /es/p/mp/tabla-de-snowboard-airis-para-mujer/0a833243-36f8-45df-8e9b-1a20f5bfc55c/c255
+- (21/11/2026) AIRTRACKS Tabla de snowboard Hombre NORTH SOUTH 4 Camber Wide | 259 € | /es/p/mp/tabla-de-snowboard-hombre-north-south-4-camber-wide/aa5cf093-0aae-4475-9b27-d599a4f2b04a/c5
+- (21/11/2026) DRAKE Snowboard Hombre Drake DF Pro Twin Tip Camber Performance | 417,25 € | /es/p/mp/snowboard-hombre-drake-df-pro-twin-tip-camber-performance/09d60bd6-6ec7-4670-ac6f-5f5af7125f7a/c1
+- (21/11/2026) DRAKE Snowboard Hombre Drake Squad 156cm All-Mountain Freestyle Micro Camber Núcleo | 349,75 € | /es/p/mp/snowboard-hombre-drake-squad-156cm-all-mountain-freestyle-micro-camber-nucleo/a94823a6-9888-4b7c-8699-4739f73c9ccc/c1
+- (21/11/2026) RIDE Tabla De Snowboard Deep Fake Hombre | 592,99 € | /es/p/mp/tabla-de-snowboard-deep-fake-hombre/9a4f84ff-0da2-445b-a644-d7e8a79ed6d1/c1
+- (21/11/2026) ROSSIGNOL Snowboard Rossignol Alias | 327 € | /es/p/mp/snowboard-rossignol-alias/ba8f8b4c-e845-47c6-909c-0bfb27c08db9/c16
+- (21/11/2026) K2 Tabla De Snowboard Metropolitan Mujer | 467 € | /es/p/mp/tabla-de-snowboard-metropolitan-mujer/b3588e33-b9ae-43b4-8ee8-4c565dc16d0b/c9
+- (21/11/2026) DRAKE Snowboard Hombre Drake Battle Rusty 151cm Wide Freestyle All-Mountain Camber | 349,75 € | /es/p/mp/snowboard-hombre-drake-battle-rusty-151cm-wide-freestyle-all-mountain-camber/c05df94f-c1b5-4148-9381-d18b9b8fc8d7/c4
+- (21/11/2026) BATALEON Hombre snowboard tabla rendimiento Cameleon | 820,99 € | /es/p/mp/hombre-snowboard-tabla-rendimiento-cameleon/6f8e3891-d294-455b-95c6-3d044de56f1d/novar
+- (21/11/2026) DRAKE Snowboard Drake DF Pro Premium Freestyle Twin-Tip | 417,25 € | /es/p/mp/snowboard-drake-df-pro-premium-freestyle-twin-tip/cb2cf176-4faa-42f4-b860-ddbe4f4cba71/c1
+- (21/11/2026) BATALEON Tabla de Snowboard Bataleon Thunderstorm para Hombre | 708,99 € | /es/p/mp/tabla-de-snowboard-bataleon-thunderstorm-para-hombre/7caa24d8-cc09-4c3a-8154-4cf292707f70/c5
+- (21/11/2026) DRAKE Snowboard Mujer Drake Misty All-Mountain Freestyle True Twin Camber | 334,75 € | /es/p/mp/snowboard-mujer-drake-misty-all-mountain-freestyle-true-twin-camber/26c24e99-5109-4e27-86f4-bf0d60eb03d9/c4
+- (21/11/2026) BATALEON Tabla de snowboard freestyle azul Bataleon Thunderstorm | 708,99 € | /es/p/mp/tabla-de-snowboard-freestyle-azul-bataleon-thunderstorm/009349e4-ac90-4ccc-81fd-4e133a82329c/c5
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Icona Mono | 999,95 € | /es/p/mp/tabla-de-snowboard-whitespace-icona-mono/01973354-8556-46cf-a5d6-1613aa491590/c2
+- (21/11/2026) NIDECKER Tabla de snowboard Nidecker Astral Default | 429,95 € | /es/p/mp/tabla-de-snowboard-nidecker-astral-default/076fa5e4-0f3b-4a0c-9720-3d4a7961f7de/c4
+- (21/11/2026) RAVEN Snowboard Raven TT | 249,9 € | /es/p/mp/snowboard-raven-tt/1e595793-55e0-440f-b9ce-9a862f871566/c1c78
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace AMF Twin Afterglow | 519,95 € | /es/p/mp/tabla-de-snowboard-whitespace-amf-twin-afterglow/2088d478-6bdf-42c7-b8ab-ba0059206762/c3
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Freestyle Shaun White Pro Mud | 589,95 € | /es/p/mp/tabla-de-snowboard-whitespace-freestyle-shaun-white-pro-mud/2f0666ef-d372-46f4-8850-cf90eeb0bea0/c3
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace MAAX Ember | 629,95 € | /es/p/mp/tabla-de-snowboard-whitespace-maax-ember/3468ff94-0547-45ff-97c3-ffe0cf9923f9/c251
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Freestyle Shaun White Pro Summit | 589,95 € | /es/p/mp/tabla-de-snowboard-whitespace-freestyle-shaun-white-pro-summit/4069a106-59e8-45ce-99c1-3be06c5c1a61/c2c84
+- (21/11/2026) BATALEON Tabla de snowboard Bataleon Goliath | 741,99 € | /es/p/mp/tabla-de-snowboard-bataleon-goliath/59a87ac5-6777-42f9-9bf2-83da4f27af6c/c2
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Montano Spectrum | 619,95 € | /es/p/mp/tabla-de-snowboard-whitespace-montano-spectrum/6187f686-e93f-468d-987a-5638c05a67ba/c251
+- (21/11/2026) BURTON Tabla de Snowboard Hombre BURTON Throwback Marrón | 210,6 € | /es/p/mp/tabla-de-snowboard-hombre-burton-throwback-marron/667d9bdc-8d86-4288-80fd-5b60ec9d9226/c27c1
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Freestyle Shaun White Pro Onyx | 589,95 € | /es/p/mp/tabla-de-snowboard-whitespace-freestyle-shaun-white-pro-onyx/76ddc6fa-6386-4403-928a-763c93212e3b/c1
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace AMF Twin Current Afterglow | 519,95 € | /es/p/mp/tabla-de-snowboard-whitespace-amf-twin-current-afterglow/84ec78f8-3122-4079-afc4-7feec2320297/c3
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Overwide Twin Amethyst | 539,95 € | /es/p/mp/tabla-de-snowboard-whitespace-overwide-twin-amethyst/8d7d870a-bce4-4e2e-a7c0-3b79357c0b5d/c1
+- (21/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Alpha Gold | 409,9 € | /es/p/mp/tabla-de-snowboard-pro-carbon-series-alpha-gold/8e6ba1d8-8026-4fb6-a280-c72e73514147/c1c250
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace AMF Twin Overcast | 519,95 € | /es/p/mp/tabla-de-snowboard-whitespace-amf-twin-overcast/918154b2-5d16-4b82-a680-83b3cd4a0d20/c251c30
+- (21/11/2026) NITRO Adulto Snowboard Freeride direccional Slash | 749,99 € | /es/p/mp/adulto-snowboard-freeride-direccional-slash/9f430c64-657e-4781-818e-3784ac844618/novar
+- (21/11/2026) NITRO SNOWBOARDS Tabla Snowboard Hombre Nitro Snowboards PRIME View W | 515,99 € | /es/p/mp/tabla-snowboard-hombre-nitro-snowboards-prime-view-w/a3d9f6f7-37d0-4a7f-a1a1-44aa01eae494/c1
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Montano Glacial | 619,95 € | /es/p/mp/tabla-de-snowboard-whitespace-montano-glacial/a8427871-1707-4d42-97e3-3ad086b86f98/c251
+- (21/11/2026) WHITESPACE Tabla de snowboard Whitespace Icona Redline | 859,95 € | /es/p/mp/tabla-de-snowboard-whitespace-icona-redline/ae3b83aa-0320-49e7-9eac-38fa51ece419/c14
+- (21/11/2026) RAVEN Snowboard Natalie Ultra Light | 249,9 € | /es/p/mp/snowboard-natalie-ultra-light/c1bbda9b-4ad2-4ae8-a7d3-68b8793c8cb3/c24c16c5
+- (21/11/2026) NITRO Snowboard NITRO Prime Raw Wide | 469,35 € | /es/p/mp/snowboard-nitro-prime-raw-wide/d1870324-6be2-4823-a1fa-d58b74bd126e/c255
+- (21/11/2026) BURTON Tabla de snowboard Burton Custom Camber Faded | 700 € | /es/p/mp/tabla-de-snowboard-burton-custom-camber-faded/e45a2f6e-3c81-4994-bc44-c77f565a21cd/c1c8
+- (21/11/2026) NITRO SNOWBOARDS NITRO SNOWBOARDS Tabla de snowboard Nitro Phase X Motörhead 2027 | 597,25 € | /es/p/mp/nitro-snowboards-tabla-de-snowboard-nitro-phase-x-motorhead-2027/f790c56e-a691-4ab6-af9f-876cc066ee57/c255
+- (21/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Beta Gold | 379,9 € | /es/p/mp/tabla-de-snowboard-pro-carbon-series-beta-gold/fb47e13e-f030-404a-9b07-4be805bd87ac/c1c250
