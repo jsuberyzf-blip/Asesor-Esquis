@@ -2,19 +2,13 @@
 
 ## Pendientes de datos (tablas de adulto)
 - Ninguna. Burton Family Tree High Fidelity, Roxy Xoxo, Nidecker Megalight y Rossignol Ultraviolet ya están en Tablas_Snow.json.
-- (04/11/2026) Rossignol XV Wide | 765 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-xv-wide-negra-para-hombre/2c49e5e2-a4c3-470e-9eb5-06a444e01fe4/c1
-- (04/11/2026) Rossignol After Hours (mujer) | 602 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-after-hours-negra-para-mujer/4ccb0378-f99d-489b-bce5-4b481d41c068/c1
 - (04/11/2026) Rossignol One | 636 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-one-negra-para-hombre/91bcd069-8a0a-46d3-a408-504ef1107db2/c1
-- (04/11/2026) Rossignol XV | 765 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-xv-negra-para-hombre/9d258be2-ebda-4633-8306-fe3475da63c8/c1
 - (04/11/2026) Rossignol XV Slashimi | 711 € | id a6794d28-2544-462c-8fee-c338b1188549
-- (04/11/2026) Rossignol One Wide | 636 € | id a78974eb-72c1-4a83-96de-5f09f5c28b35
-- (04/11/2026) Dreamscape Endzone 500 (mujer) | 139,99 € | https://www.decathlon.es/es/p/tabla-de-snowboard-freestyle-all-mountain-mujer-dreamscape-endzone-500/309495/c106c9m8539996
 - (04/11/2026) Dreamscape Endzone 500 Q Caillat | 149,99 € | id 8872189
 - (04/11/2026) Dreamscape Endzone 500 Brokovich | 149,99 € | id 8735787
 - (04/11/2026) Dreamscape Endzone 500 (otra versión) | 114,99 € | id 8808162
 - (04/11/2026) Dreamscape Endzone 500 amarillo | 229,99 € | id 8996565
 - (05/11/2026) Rossignol Wu-ji | 477 € | https://www.decathlon.es/es/p/mp/snowboard-rossignol-wu-ji-negro/f73e7864-4eeb-4480-a895-683cae608134/c1
-- (05/11/2026) Rossignol Ampage Vol.1 Wide | 357 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-ampage-vol-1-wide-negra-para-hombre/70d5bfda-a903-4d4a-8845-b397fb893a73/c1
 - (05/11/2026) Rossignol Ampage Vol.2 Wide | 357 € | https://www.decathlon.es/es/p/mp/snowboard-rossignol-ampage-vol-2-wide-azul/bb80bead-911a-4cfc-8068-d70b3828f997/c5
 - (05/11/2026) Ride Compact W (mujer) | 464,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-para-mujer-ride-compact-w/90646995-8af6-48a3-a968-41cfc1fc2da4/c1
 - (05/11/2026) Ride Moderator Wide | 591 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-moderator-wide-free-hombre/7b9ab502-d6de-4031-8b2a-5c9dc1a91068/c1
@@ -84,3 +78,93 @@
 - (21/11/2026) BURTON Tabla de snowboard Burton Custom Camber Faded | 700 € | /es/p/mp/tabla-de-snowboard-burton-custom-camber-faded/e45a2f6e-3c81-4994-bc44-c77f565a21cd/c1c8
 - (21/11/2026) NITRO SNOWBOARDS NITRO SNOWBOARDS Tabla de snowboard Nitro Phase X Motörhead 2027 | 597,25 € | /es/p/mp/nitro-snowboards-tabla-de-snowboard-nitro-phase-x-motorhead-2027/f790c56e-a691-4ab6-af9f-876cc066ee57/c255
 - (21/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Beta Gold | 379,9 € | /es/p/mp/tabla-de-snowboard-pro-carbon-series-beta-gold/fb47e13e-f030-404a-9b07-4be805bd87ac/c1c250
+
+## Detectadas el 22/11/2026 (pendientes de validar flex, nivel, sensación y anclaje)
+- (22/11/2026) DRAKE Snowboard Hombre Drake League All-Mountain Freestyle Versátil | 292,25 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-league-all-mountain-freestyle-versatil/087f5fd4-0e43-4c0b-8eca-ae7cf890e4c0/c1
+- (22/11/2026) HEAD Tabla De Snowboard Shine Lyt MujerDesde | 364 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-shine-lyt-mujer/f4ab6dfa-2ad7-4d5a-b8dc-a5096f71111c/c4
+- (22/11/2026) K2 Tabla de snowboard hombre | 379 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-hombre/cde7743a-f0df-45ff-80a3-aafa7951de14/c251
+- (22/11/2026) RAVEN Snowboard Pure Negro5(2) | 239,9 € | https://www.decathlon.es/es/p/mp/snowboard-pure-negro/13d7886b-6232-4c0a-b7af-d81dc8a45375/c1
+- (22/11/2026) NITRO Snowboard NITRO Prime Raw WideDesde | 456,65 € | https://www.decathlon.es/es/p/mp/snowboard-nitro-prime-raw-wide/d1870324-6be2-4823-a1fa-d58b74bd126e/c255
+- (22/11/2026) EVIDSEN EVIDSEN SNOWBOARDS – Tabla de Snowboard FJORD SERIES – Boreal – 153 cm | 359,9 € | https://www.decathlon.es/es/p/mp/evidsen-snowboards-tabla-de-snowboard-fjord-series-boreal-153-cm/fd745bca-a1e1-4bfa-ba4a-6c28b3f4afc3/c5
+- (22/11/2026) BATALEON Tabla de snowboard - All mountain - Unisex - Gata - Azul - Talla S | 275,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-all-mountain-unisex-gata-azul-talla-s/af600390-23aa-45cf-8fa9-8500c1a504af/c5
+- (22/11/2026) RAVEN Snowboard Solid Classic Wood/Negro | 249,9 € | https://www.decathlon.es/es/p/mp/snowboard-solid-classic-wood-negro/fa6c60c5-9964-4283-abcc-effe4936ca99/c1c314
+- (22/11/2026) DRAKE Snowboard Hombre Drake Tao of Drake 145 cm Wide Freestyle Twin Tip 2025 | 349,75 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-tao-of-drake-145-cm-wide-freestyle-twin-tip-2025/d5d7e68a-7a91-4498-85a0-145289d4f7c2/c4
+- (22/11/2026) RIDE Tabla De Snowboard Twinpig Freestyle Hombre | 546 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-twinpig-freestyle-hombre/5c4dddb2-adc5-4855-ae7e-c43ac2d62c22/c255
+- (22/11/2026) DRAKE Snowboard Drake Shot 157cm Hombre Directional Surf-Style All-Mountain Freeride | 349,75 € | https://www.decathlon.es/es/p/mp/snowboard-drake-shot-157cm-hombre-directional-surf-style-all-mountain-freeride/29eb54a8-8574-4aa0-8b85-10c58ee8a9e2/c1
+- (22/11/2026) NITRO SNOWBOARDS Tablas Snowboard Hombre Nitro Snowboard Nomad | 556,2 € | https://www.decathlon.es/es/p/mp/tablas-snowboard-hombre-nitro-snowboard-nomad/771677a3-0ee1-44cf-a9c1-6ac196fcdc39/c255c1
+- (22/11/2026) DRAKE Snowboard Mujer Drake DFL Pro 142cm All-Mountain Performance Carbono Kevlar | 384,75 € | https://www.decathlon.es/es/p/mp/snowboard-mujer-drake-dfl-pro-142cm-all-mountain-performance-carbono-kevlar/5ae3a12b-7e98-4099-b4e5-1d6446367c8b/c4
+- (22/11/2026) K2 Tabla De Snowboard Manifest Wide Hombre Design | 649 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-manifest-wide-hombre-design/1326e8be-980b-4f61-986f-57bf7a3f150b/c9
+- (22/11/2026) DRAKE Snowboard Hombre Drake Battle Rusty Wide Freestyle All-Mountain | 377,25 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-battle-rusty-wide-freestyle-all-mountain/173392d1-d937-4398-8a00-34ed956ae9ab/c4
+- (22/11/2026) RAVEN Snowboard Natalie Ultra Light | 249,9 € | https://www.decathlon.es/es/p/mp/snowboard-natalie-ultra-light/c1bbda9b-4ad2-4ae8-a7d3-68b8793c8cb3/c24c16c5
+- (22/11/2026) K2 Tabla de snowboard K2 Isolator verde para hombre | 674 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-k2-isolator-verde-para-hombre/42afa653-3dec-4380-9d68-dd3f39517dfe/c9
+- (22/11/2026) RIDE Tabla De Snowboard Heartbreaker Freestyle Mujer | 447 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-heartbreaker-freestyle-mujer/3082596f-4482-4ccc-9359-42d5f7e77763/c1
+- (22/11/2026) NITRO SNOWBOARDS NITRO SNOWBOARDS Tabla de snowboard Nitro Phase X Motörhead 2027 | 582,35 € | https://www.decathlon.es/es/p/mp/nitro-snowboards-tabla-de-snowboard-nitro-phase-x-motorhead-2027/f790c56e-a691-4ab6-af9f-876cc066ee57/c255
+- (22/11/2026) DRAKE Snowboard Hombre Drake Billboard 162 cm Directional Freeride Carving Board | 417,25 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-billboard-162-cm-directional-freeride-carving-board/09b8a4d9-f51f-4043-8832-8a20e6a98070/c9
+- (22/11/2026) RAVEN Snowboard Raven TT | 249,9 € | https://www.decathlon.es/es/p/mp/snowboard-raven-tt/1e595793-55e0-440f-b9ce-9a862f871566/c1c78
+- (22/11/2026) NITRO SNOWBOARDS Tabla Snowboard Hombre Nitro Snowboard Nomad | 505,01 € | https://www.decathlon.es/es/p/mp/tabla-snowboard-hombre-nitro-snowboard-nomad/d4e022db-0409-447c-b319-4ee5f4e60b2a/c255
+- (22/11/2026) ROSSIGNOL Tabla De Snowboard Jibsaw Wide Hombre | 532 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-jibsaw-wide-hombre/9dca387d-296e-4d9c-a9c0-483f6b79c85d/c1
+- (22/11/2026) RIDE Tabla de snowboard Shadowban Wide All Mountain para hombre | 566 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-shadowban-wide-all-mountain-para-hombre/9eb13a9d-35de-4212-b327-dc19191d07ca/c1
+- (22/11/2026) BATALEON Hombre snowboard freeride polivalente Thunderstorm | 708,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-freeride-polivalente-thunderstorm/bf8e5bc1-6608-4cfb-8388-caa8c61ac401/novar
+- (22/11/2026) RIDE Tabla De Snowboard Kink Wide Freestyle Hombre | 496 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-kink-wide-freestyle-hombre/322e4a04-c818-417d-ab3a-b069846f12e6/c5
+- (22/11/2026) K2 Tabla De Snowboard Metropolitan Mujer | 467 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-metropolitan-mujer/b3588e33-b9ae-43b4-8ee8-4c565dc16d0b/c9
+- (22/11/2026) K2 Tabla de snowboard geométrica K2 | 483,01 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-geometrica-k2/35276c83-7d6d-44ae-85db-8ba26b6a41eb/novar
+- (22/11/2026) ROSSIGNOL Snowboard Rossignol Alias | 327 € | https://www.decathlon.es/es/p/mp/snowboard-rossignol-alias/ba8f8b4c-e845-47c6-909c-0bfb27c08db9/c16
+- (22/11/2026) DRAKE Snowboard Hombre Drake Team All-Mountain Freestyle Camber | 417,25 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-team-all-mountain-freestyle-camber/4c17f22e-4bf6-46f2-8cc2-a64625de22e8/c5
+- (22/11/2026) AIRTRACKS Tabla de snowboard Hombre NORTH SOUTH 4 Camber Wide | 259 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-hombre-north-south-4-camber-wide/aa5cf093-0aae-4475-9b27-d599a4f2b04a/c5
+- (22/11/2026) DRAKE Snowboard Mujer Drake DFL Pro 148cm All-Mountain Performance Carbono Camber | 397,99 € | https://www.decathlon.es/es/p/mp/snowboard-mujer-drake-dfl-pro-148cm-all-mountain-performance-carbono-camber/adde0ff1-bd25-4ef9-aa1d-8cb5e00b6377/c16
+- (22/11/2026) RIDE Tabla De Snowboard Twinpig Wide Freestyle Hombre | 546 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-twinpig-wide-freestyle-hombre/0f8a5d30-6e26-43c7-b467-04581fd8bd73/c1
+- (22/11/2026) BATALEON Tabla de snowboard Bataleon Cameleon | 820,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-bataleon-cameleon/87abc5cc-327f-457f-9238-9fc3d4652c28/c251
+- (22/11/2026) DRAKE Snowboard Hombre Drake Squad 156cm All-Mountain Freestyle Micro Camber Núcleo | 349,75 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-squad-156cm-all-mountain-freestyle-micro-camber-nucleo/a94823a6-9888-4b7c-8699-4739f73c9ccc/c1
+- (22/11/2026) BATALEON Hombre Snowboard all-mountain versátil direccional Goliath | 741,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-all-mountain-versatil-direccional-goliath/8b1a2d7f-8aeb-4efd-944b-2907e5890112/novar
+- (22/11/2026) RIDE Tabla De Snowboard Burnout Wide Freestyle Hombre | 639 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-burnout-wide-freestyle-hombre/f85d6763-92cc-43c6-af13-6b4238c17004/c4
+- (22/11/2026) RIDE Tabla De Snowboard Deep Fake Hombre | 592,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-deep-fake-hombre/9a4f84ff-0da2-445b-a644-d7e8a79ed6d1/c1
+- (22/11/2026) ROSSIGNOL Tabla de snowboard Sawblade para hombre | 441,53 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-sawblade-para-hombre/2ca5575b-7ec5-43ee-b62a-01c7350d8830/c1
+- (22/11/2026) ROSSIGNOL Tabla de snowboard Airis para mujer | 519,3 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-airis-para-mujer/0a833243-36f8-45df-8e9b-1a20f5bfc55c/c255
+- (22/11/2026) RIDE Tabla De Snowboard Zero Wide Freestyle Hombre | 546 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-zero-wide-freestyle-hombre/4f4673ad-796e-4c11-99f5-5c91bc251ce8/c5
+- (22/11/2026) DRAKE Snowboard Mujer Drake DFL 148cm Classic Camber Directional Twin Performance | 369,75 € | https://www.decathlon.es/es/p/mp/snowboard-mujer-drake-dfl-148cm-classic-camber-directional-twin-performance/059f43c7-e5fa-424c-8bb0-dde3e0f48923/c24
+- (22/11/2026) DRAKE Snowboard Hombre Drake Battle Rusty 151cm Wide Freestyle All-Mountain Camber | 349,75 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-battle-rusty-151cm-wide-freestyle-all-mountain-camber/c05df94f-c1b5-4148-9381-d18b9b8fc8d7/c4
+- (22/11/2026) RIDE Tabla De Snowboard Benchwarmer Wide Freestyle Hombre | 596 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-benchwarmer-wide-freestyle-hombre/7ac37feb-2c41-4a4d-a335-203ff8f624c1/c1
+- (22/11/2026) DRAKE Snowboard Mujer Drake DFL 148cm All-Mountain Performance Camber Carbono Kevlar | 367,25 € | https://www.decathlon.es/es/p/mp/snowboard-mujer-drake-dfl-148cm-all-mountain-performance-camber-carbono-kevlar/bd1af1ba-ead0-40f8-9990-b4952f249211/c24
+- (22/11/2026) K2 Tabla de snowboard Passport Wide para hombre | 594 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-passport-wide-para-hombre/99765af6-1110-4fb0-a3db-3959ea780910/c251
+- (22/11/2026) RIDE Tabla De Snowboard Smokescreen Wide All Mountain Hombre | 516 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-smokescreen-wide-all-mountain-hombre/b92d9d65-3617-4ef4-8fb7-263ba100f911/c1
+- (22/11/2026) NITRO Adulto Snowboard Freeride direccional Slash | 749,99 € | https://www.decathlon.es/es/p/mp/adulto-snowboard-freeride-direccional-slash/9f430c64-657e-4781-818e-3784ac844618/novar
+- (22/11/2026) DRAKE Snowboard Mujer Drake Misty All-Mountain Freestyle True Twin CamberDesde | 334,75 € | https://www.decathlon.es/es/p/mp/snowboard-mujer-drake-misty-all-mountain-freestyle-true-twin-camber/26c24e99-5109-4e27-86f4-bf0d60eb03d9/c4
+- (22/11/2026) DRAKE Snowboard Hombre Drake Battle 155 cm WIDE All-Mountain Freestyle Camber Board | 349,75 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-battle-155-cm-wide-all-mountain-freestyle-camber-board/3f2f35c1-ebb9-43c1-ba12-59bbfe066a67/c1
+- (22/11/2026) RIDE Tabla De Snowboard Current Wide All Mountain Hombre | 659 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-current-wide-all-mountain-hombre/9816746d-31b4-457e-bc09-bb7324686df7/c5
+- (22/11/2026) BATALEON Tabla - Snowboard - Adulto - Reactiva all-mountain - Astro AW - Negro | 394,99 € | https://www.decathlon.es/es/p/mp/tabla-snowboard-adulto-reactiva-all-mountain-astro-aw-negro/35ca0e82-0069-4fa4-982b-af4909431594/c1
+- (22/11/2026) DRAKE Snowboard Hombre Drake DF Pro Twin Tip Camber Performance | 417,25 € | https://www.decathlon.es/es/p/mp/snowboard-hombre-drake-df-pro-twin-tip-camber-performance/09d60bd6-6ec7-4670-ac6f-5f5af7125f7a/c1
+- (22/11/2026) RIDE Tabla De Snowboard Current Wide All Mountain Hombre | 659 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-current-wide-all-mountain-hombre/54cc8736-af8f-4b33-a0e9-76d99c7a762b/c5
+- (22/11/2026) K2 Tabla de snowboard Dreamsicle para mujer | 467 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-dreamsicle-para-mujer/61da82dc-8677-473a-b9d6-d60967e42f8b/c4
+- (22/11/2026) RIDE Tabla De Snowboard Deep Fake Wide Free Hombre | 719 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-deep-fake-wide-free-hombre/83ab78a6-305e-4d67-aaba-5405ad481224/c1
+- (22/11/2026) BATALEON Tabla de Snowboard Bataleon Thunderstorm para Hombre | 708,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-bataleon-thunderstorm-para-hombre/7caa24d8-cc09-4c3a-8154-4cf292707f70/c5
+- (22/11/2026) BATALEON Hombre snowboard tabla rendimiento Cameleon | 820,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-tabla-rendimiento-cameleon/6f8e3891-d294-455b-95c6-3d044de56f1d/novar
+- (22/11/2026) DRAKE Snowboard Drake DF Pro Premium Freestyle Twin-TipDesde | 417,25 € | https://www.decathlon.es/es/p/mp/snowboard-drake-df-pro-premium-freestyle-twin-tip/cb2cf176-4faa-42f4-b860-ddbe4f4cba71/c1
+- (22/11/2026) RIDE Tabla De Snowboard Berzerker Wide All Mountain Hombre | 616 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-berzerker-wide-all-mountain-hombre/a17fc483-de24-4723-b055-145b8fe87bfe/c1
+- (22/11/2026) BATALEON Tabla de snowboard freestyle azul Bataleon Thunderstorm | 708,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-freestyle-azul-bataleon-thunderstorm/009349e4-ac90-4ccc-81fd-4e133a82329c/c5
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Icona Mono | 999,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-icona-mono/01973354-8556-46cf-a5d6-1613aa491590/c2
+- (22/11/2026) NIDECKER Tabla de snowboard Nidecker Astral Default | 429,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-nidecker-astral-default/076fa5e4-0f3b-4a0c-9720-3d4a7961f7de/c4
+- (22/11/2026) NITRO Hombre snowboard all-mountain ancho Magnum | 741,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-all-mountain-ancho-magnum/19dc9778-a458-4e7e-ac05-cc972e288afe/c255
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace AMF Twin Afterglow | 519,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-amf-twin-afterglow/2088d478-6bdf-42c7-b8ab-ba0059206762/c3
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Freestyle Shaun White Pro Mud | 589,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-freestyle-shaun-white-pro-mud/2f0666ef-d372-46f4-8850-cf90eeb0bea0/c3
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace MAAX Ember | 629,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-maax-ember/3468ff94-0547-45ff-97c3-ffe0cf9923f9/c251
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Freestyle Shaun White Pro Summit | 589,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-freestyle-shaun-white-pro-summit/4069a106-59e8-45ce-99c1-3be06c5c1a61/c2c84
+- (22/11/2026) DOUBLEDECK SNOWBOARDS Unisex Snowboard Freestyle Rocking D | 849 € | https://www.decathlon.es/es/p/mp/unisex-snowboard-freestyle-rocking-d/555545c1-e24f-4d0e-94b3-357520b0f6ce/c20c1
+- (22/11/2026) BATALEON Tabla de snowboard Bataleon Goliath | 741,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-bataleon-goliath/59a87ac5-6777-42f9-9bf2-83da4f27af6c/c2
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Montano Spectrum | 619,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-montano-spectrum/6187f686-e93f-468d-987a-5638c05a67ba/c251
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace MAAX Ember | 629,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-maax-ember/61f336fe-0724-4196-bd8c-6cde20ad91b8/c3
+- (22/11/2026) BURTON Tabla de Snowboard Hombre BURTON Throwback Marrón | 206,3 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-hombre-burton-throwback-marron/667d9bdc-8d86-4288-80fd-5b60ec9d9226/c27c1
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Freestyle Shaun White Pro Onyx | 589,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-freestyle-shaun-white-pro-onyx/76ddc6fa-6386-4403-928a-763c93212e3b/c1
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace AMF Twin Current Afterglow | 519,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-amf-twin-current-afterglow/84ec78f8-3122-4079-afc4-7feec2320297/c3
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Overwide Twin Amethyst | 539,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-overwide-twin-amethyst/8d7d870a-bce4-4e2e-a7c0-3b79357c0b5d/c1
+- (22/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Alpha Gold | 409,9 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-pro-carbon-series-alpha-gold/8e6ba1d8-8026-4fb6-a280-c72e73514147/c1c250
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace AMF Twin Overcast | 519,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-amf-twin-overcast/918154b2-5d16-4b82-a680-83b3cd4a0d20/c251c30
+- (22/11/2026) FLOW Adulto Snowboard tabla Viper Flow | 409,99 € | https://www.decathlon.es/es/p/mp/adulto-snowboard-tabla-viper-flow/9a5fa17b-ffde-4f44-a00e-094a33624ec7/novar
+- (22/11/2026) NITRO SNOWBOARDS Tabla Snowboard Hombre Nitro Snowboards PRIME View W | 515,99 € | https://www.decathlon.es/es/p/mp/tabla-snowboard-hombre-nitro-snowboards-prime-view-w/a3d9f6f7-37d0-4a7f-a1a1-44aa01eae494/c1
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Montano Glacial | 619,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-montano-glacial/a8427871-1707-4d42-97e3-3ad086b86f98/c251
+- (22/11/2026) NITRO Hombre snowboard all-mountain ancho Magnum | 741,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-all-mountain-ancho-magnum/a8c22f59-44f4-4694-81e1-f8884fd09bb5/c255
+- (22/11/2026) WHITESPACE Tabla de snowboard Whitespace Icona Redline | 859,95 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-whitespace-icona-redline/ae3b83aa-0320-49e7-9eac-38fa51ece419/c14
+- (22/11/2026) DOUBLEDECK SNOWBOARDS Unisex Snowboard All-Mountain Carving D | 949 € | https://www.decathlon.es/es/p/mp/unisex-snowboard-all-mountain-carving-d/b6515b9b-a441-480a-ae73-a42997ff09f5/c1
+- (22/11/2026) NITRO Adulto snowboard tabla rendimiento Wood Carver | 692,99 € | https://www.decathlon.es/es/p/mp/adulto-snowboard-tabla-rendimiento-wood-carver/c160abd0-f075-4bff-b064-45a3c026690d/novar
+- (22/11/2026) BURTON Tabla de snowboard Burton Custom Camber Faded | 700 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-burton-custom-camber-faded/e45a2f6e-3c81-4994-bc44-c77f565a21cd/c1c8
+- (22/11/2026) NITRO Hombre Snowboard Backcountry Freestyle Rígido Alternator | 741,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-backcountry-freestyle-rigido-alternator/ef3b32a4-476f-4985-a563-b74753e4d256/novar
+- (22/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Beta Gold | 379,9 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-pro-carbon-series-beta-gold/fb47e13e-f030-404a-9b07-4be805bd87ac/c1c250

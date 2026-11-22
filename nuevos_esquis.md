@@ -1,9 +1,6 @@
 # Novedades detectadas (esquís con fijaciones no incluidos en esquis.json)
 
-## 20/10/2026
-
-
-## 20/10/2026 (segunda ejecución)
+## Pendientes (revisado el 22/11/2026)
 
 - esquis de descenso infantil nordica team j r 70 90 fijaciones j4 5 fdt | 165 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-de-descenso-infantil-nordica-team-j-r-70-90-fijaciones-j4-5-fdt/83cc5aa7-d6e6-4120-9e12-73e67acf8b76/c1
 - pack de esqui nordica team g fdt 70 90 fijaciones jr 4 5 fdt azul para nino | 182 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-esqui-nordica-team-g-fdt-70-90-fijaciones-jr-4-5-fdt-azul-para-nino/a3693051-a194-46af-8ebd-f2a43f1b2677/c5
@@ -11,7 +8,6 @@
 - pack de ski rossignol hero pro multi event rojo | 333,99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-ski-rossignol-hero-pro-multi-event-rojo/16879485-803e-4cd2-b719-b744919ba166/c14
 - pack de esqui team am fdt 70 90 fijaciones jr 4 5 fdt nino | 182 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-esqui-team-am-fdt-70-90-fijaciones-jr-4-5-fdt-nino/0282cba2-1995-41c0-9d2b-8c59211ff610/c1
 - pack de ski volkl shine jr vmotion negro | 239 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-ski-volkl-shine-jr-vmotion-negro/0e1423b0-5af1-4a87-b470-5326b7fda99d/c1
-- men s rossignol x tour venture wl 52 tour si | 216,99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/men-s-rossignol-x-tour-venture-wl-52-tour-si/29203231-e9dd-44df-bf3b-7af7f83a1dbb/c1
 - pack de esqui de travesia m grand mont fijaciones ht 10 rtl hombre | 836 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-esqui-de-travesia-m-grand-mont-fijaciones-ht-10-rtl-hombre/8c412701-79ab-4a52-bb6f-eb52adaa5473/c1
 - esquis rossignol rallybird jr kid x kid 4 gw | 218,25 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-rossignol-rallybird-jr-kid-x-kid-4-gw/a91fe589-eeb2-4fe8-9e80-2d649e710df2/c5
 - pack esquis dob combi pro s fijaciones j4 5 fdt nino | 338 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-esquis-dob-combi-pro-s-fijaciones-j4-5-fdt-nino/df65a063-127e-419f-bc6f-1d11a78fd748/c1
@@ -25,9 +21,6 @@
 - esqui alpino de ninos con fijacion wedze boost 500 kid player | 129,99 € | vendedor: Decathlon | https://www.decathlon.es/es/p/esqui-alpino-de-ninos-con-fijacion-wedze-boost-500-kid-player/340443/c382c227m8759240
 - esquis alpino con fijaciones ninos wedze boost 500 | 129,99 € | vendedor: Decathlon | https://www.decathlon.es/es/p/esquis-alpino-con-fijaciones-ninos-wedze-boost-500/340495/c195c385m8759242
 - esquis alpino con fijaciones ninos wedze boost 500 | 129,99 € | vendedor: Decathlon | https://www.decathlon.es/es/p/esquis-alpino-con-fijaciones-ninos-wedze-boost-500/340495/c227c381c142m8759244
-
-## 21/11/2026
-
 - volkl pack de esquis peregrine 7 2 anth red fijaciones fdt tp 10 hombre | 360 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-esquis-peregrine-7-2-anth-red-fijaciones-fdt-tp-10-hombre/74483e92-f98c-40d7-bfb4-0e2d17f359f0/c4
 - nordica pack esqui santa ana r tp2 comp10 fdt mujer | 487 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-esqui-santa-ana-r-tp2-comp10-fdt-mujer/18e70451-6d14-4777-8be1-588a76fc49ce/c5
 - k2 esquis hi fi fdt 7 0 | 262 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-hi-fi-fdt-7-0/6fc82ff3-cc19-42cf-93a2-0c8565d13532/c9
@@ -115,9 +108,20 @@
 - nordica esqui nordica team g 70 90 con fijacionesj4 5 fdt | 129,5 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-nordica-team-g-70-90-con-fijacionesj4-5-fdt/84a666d3-8513-4a72-9237-06d02c3e965a/c157
 - dynastar esquis dynastar m cross 82 con fijaciones look nx 12 gw b90 | 673 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-dynastar-m-cross-82-con-fijaciones-look-nx-12-gw-b90/8a393209-43e4-42d7-8541-1a2358571e4e/c20
 - dynastar pack dynastar speed omeglass master sl konect spx 14 konect azul para hombre | 1094 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-dynastar-speed-omeglass-master-sl-konect-spx-14-konect-azul-para-hombre/8eb5960b-b681-4b5d-b071-7339eedbbd54/c5
-- dynastar pack de esqui dynastar speed omeglass master sl r22 | 1272 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-esqui-dynastar-speed-omeglass-master-sl-r22/959ac1ce-69e8-4072-aff9-5547d2b915f2/c5
 - dynastar esquis dynastar speed 563 konect nx 12 konect gw noir | 633,45 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-dynastar-speed-563-konect-nx-12-konect-gw-noir/a2f1c566-b587-4a4c-9769-52c44ac6e5b5/c1
 - nordica pack esquis spitfire dc 68 pro fijaciones comp12 fdt hombre | 686 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-esquis-spitfire-dc-68-pro-fijaciones-comp12-fdt-hombre/abf2b339-f768-49e9-8af4-ed3fe4056b4e/c251
 - nordica esqui nordica spitf prime con fijacionestp2comp10 fdt | 385 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-nordica-spitf-prime-con-fijacionestp2comp10-fdt/bc811e12-52bc-4adf-ac29-42b946f1201a/novar
 - nordica esqui nordica unleashed j con fijacionesj7 0 fdt | 202,99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-nordica-unleashed-j-con-fijacionesj7-0-fdt/f097c8e5-f5c2-441b-9f8e-3d31133403d3/novar
 - nordica esqui nordica team g 70 90 con fijacionesj4 5 fdt | 129,5 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-nordica-team-g-70-90-con-fijacionesj4-5-fdt/f47f36a2-4125-4f2e-9049-d297a813d05e/c255
+
+## 22/11/2026
+
+- ATOMIC Esqui Y Snowboards Unisex - ATOMIC REDSTER MX + M 10 GW - Black / Red | 438,99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-y-snowboards-unisex-atomic-redster-mx-m-10-gw-black-red/dd12f79d-9ea7-4bd5-b077-abae518e52cf/c14c1
+- HEAD Esqui Y Snowboards Unisex - HEAD Discovery 70 Sport + PR11 - Grey/white | 410 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-y-snowboards-unisex-head-discovery-70-sport-pr11-grey-white/7b308fd2-ce39-4718-bb02-a03e156c4cce/c4c251
+- HEAD Esqui Y Snowboards Unisex - HEAD World Cup XR + PR 10 - White/Blue | 535 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-y-snowboards-unisex-head-world-cup-xr-pr-10-white-blue/ecf266fd-3111-4f7f-8dbf-a97490baef41/c5c4
+- ATOMIC Esqui Y Snowboards Unisex - ATOMIC MAVERICK 78 + M 10 GW - Black / Grey | 429,99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-y-snowboards-unisex-atomic-maverick-78-m-10-gw-black-grey/c6f8135b-b48f-4c48-b07d-ff74dd34aab8/c1c251
+- ATOMIC Esqui Y Snowboards Mujer - ATOMIC CLOUD CL + M 10 GW - Black / Violet | 429,99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-y-snowboards-mujer-atomic-cloud-cl-m-10-gw-black-violet/7bc92c33-d64f-401d-92f0-06e2081fa1b9/c1c16
+- HEAD Esqui Y Snowboards Unisex - HEAD Discovery 74 Sport + PR11 - Blue/Yellow | 560 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esqui-y-snowboards-unisex-head-discovery-74-sport-pr11-blue-yellow/704630ae-a9d7-424e-b6ce-6e405109961d/c6c22
+- HEAD Paquete de esquís Head Crux 99 Pro | 865 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/paquete-de-esquis-head-crux-99-pro/8ca2491b-7798-4780-b0bf-202108b2a220/c251c14
+- DYNASTAR Esquís Dynastar M-VERTICAL 88 con fijaciones HT RADICAL 10 | 909 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-dynastar-m-vertical-88-con-fijaciones-ht-radical-10/ad932a63-001c-4d12-8738-4804a68105d0/c9
+- KASTLE Esquís alpinos Kästle MX84 + K12 PRW GW verdes | 1152,7 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-alpinos-kastle-mx84-k12-prw-gw-verdes/eba83656-c594-446f-ae02-2ed7def9563e/c9
