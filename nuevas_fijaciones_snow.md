@@ -1,5 +1,5 @@
-# Novedades fijaciones snow — 21/11/2026
-22 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (todas marketplace). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
+# Novedades fijaciones snow — 22/11/2026
+25 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (todas marketplace). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
 
 - SP BINDINGS SP KIDDO BLACK — 139,90 € — https://www.decathlon.es/es/p/mp/sp-kiddo-black/46529507-3546-402b-b232-5b343f0a2965/c1c5
 - K2 Splitboard Bindings K2 Far Out 2023 — 524,49 € — https://www.decathlon.es/es/p/mp/splitboard-bindings-k2-far-out-2023/e3eec7d8-6df4-4859-a960-1a4659999fce/c1
@@ -23,3 +23,6 @@
 - BURTON Fijaciones de snowboard Burton Step On Re:Flex Gray Green Voltage — 280 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-gray-green-voltage/f577297c-225d-4317-8e5b-c222029b70b6/c251
 - THIRTYTWO Fijaciones de snowboard Thirtytwo Fase negras para hombre — 318 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-fase-negras-para-hombre/f6fd5a41-61b1-48b6-99f6-2ad9810dcefb/c1
 - CLEW Fijaciones de snowboard Clew Independence Purple — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-purple/fff27fee-9425-4a58-a542-c58309f61417/c1
+- ROSSIGNOL Fijación De Snowboard Rookie Xs Niño — 143 € — https://www.decathlon.es/es/p/mp/fijacion-de-snowboard-rookie-xs-nino/7c75547c-eec3-497b-8d41-081a29dc6a07/c1
+- THIRTYTWO Snowboard Bindings Thirtytwo T32M Fase 2027 — 348 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-thirtytwo-t32m-fase-2027/ae087e03-6212-448b-9839-2e9e69b4e088/c1
+- SP BINDINGS Fijaciones SP Core Multientry NEGRO — 347,85 € — https://www.decathlon.es/es/p/mp/fijaciones-sp-core-multientry-negro/fdd0b171-2352-407d-8d0f-421465d4a881/c255
