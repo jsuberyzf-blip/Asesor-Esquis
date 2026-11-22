@@ -91,6 +91,21 @@ h2.sec{font-size:2rem;line-height:1.05;margin:6px 0 6px}
 .seg input:checked+span{border-color:var(--accent);background:var(--chip);color:var(--accent)}
 .seg input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
 hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
+.flt{margin:0 0 22px;border:2px solid var(--accent);border-radius:14px;background:var(--surface);overflow:hidden}
+.flt-btn{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;background:var(--chip);color:var(--accent);border-radius:0;padding:14px 16px;font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;font-size:1.5rem;letter-spacing:.06em}
+.flt-btn .flt-s{font-family:"Barlow",system-ui,sans-serif;font-size:.9rem;font-weight:500;letter-spacing:0;color:var(--muted)}
+.flt-btn .ch{display:inline-block;transition:transform .2s;margin-left:6px}
+.flt-btn[aria-expanded="true"] .ch{transform:rotate(180deg)}
+.flt-btn:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.flt-p{padding:16px}
+.flt-p fieldset{margin-bottom:16px}
+.flt-p .wide .opt{flex:1 1 100%}
+.range{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px}
+.range label{display:block;font-size:.9rem;color:var(--muted);margin-bottom:4px}
+.range input[type=number]{width:110px;font-size:1.15rem}
+.linkbtn{background:transparent;color:var(--accent);padding:10px 4px;text-decoration:underline}
+.count{font-weight:600;margin:4px 0 14px}
+.flt-p[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -322,9 +337,9 @@ let adj=0; if(q.s==="velocidad")adj=3; if(["control","tranquilo"].includes(q.s)&
 const c=Math.round((q.h+off+adj)/2)*2; return [c-3,c+3];
 }
 const eur=v=>v.toLocaleString("es-ES",{style:"currency",currency:"EUR"});
-function card(s,top){
+function card(s,top,tag){
 const [a,b]=range(s.lv);const lvl=a===b?LV[a]:LV[a]+"–"+LV[b].toLowerCase();
-return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}
+return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${tag?'<span class="badge alt">Marca Decathlon</span>':""}
 <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
 <div class="facts"><span><b>${eur(s.pr)}</b></span><span>Patín <b>${s.w?s.w+" mm":"por confirmar"}</b></span><span>Talla <b>${s.t?s.t+" cm":"por confirmar"}</b></span><span>Radio <b>${s.rt?s.rt:(s.r?s.r+" m":"por confirmar")}</b></span><span>Nivel <b>${lvl}</b></span><span>ID <b>${s.id.length>12?s.id.slice(0,8)+"…":s.id}</b></span></div>
 <p class="why">${wideShort(s)&&s.c!=="Pista"?"Patín ancho con radio corto: gira ágil en pista y aguanta bien la nieve tocada. ":""}${patinTxt(s.w,s.c)}${radTxt(s.r)} Sensación: ${s.s.toLowerCase()}.</p>
@@ -342,20 +357,48 @@ const pool=mkPool(q);
 let o=pick(pool.filter(s=>own(s.m)),3), x=pick(pool.filter(s=>!own(s.m)),5);
 // Intermedio: si faltan esquis de su nivel (p. ej. All mountain o Freeride), se completa con Intermedio-Avanzado
 if(q.l===1&&(o.length<3||x.length<5)){const pool2=mkPool({...q,_fb:true}).filter(s=>s.lv==="Intermedio-Avanzado");const fill=(cur,isOwn,n)=>{const seen=new Set(cur.map(key));const r=[...cur];for(const s of pool2.filter(s=>own(s.m)===isOwn)){const k=key(s);if(seen.has(k))continue;seen.add(k);r.push(s);if(r.length===n)break}return r};o=fill(o,true,3);x=fill(x,false,5)}
+const pool2=q.l===1?mkPool({...q,_fb:true}).filter(s=>s.lv==="Intermedio-Avanzado"):[];
 const [lmin,lmax]=length(q);
 const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
+const seenF=new Set(),full=[];
+for(const s of [...pool,...pool2]){const k=key(s);if(seenF.has(k))continue;seenF.add(k);full.push(s)}
+const prices=full.map(s=>s.pr),pMin=Math.floor(Math.min(...prices)),pMax=Math.ceil(Math.max(...prices));
 const out=document.getElementById("sk-out");
-let h=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.h} cm de altura, nivel ${LV[q.l].toLowerCase()} y ${SENS_TXT[q.s]}. Ajusta unos centímetros según peso y forma física.</p></div>`;
-h+=`<h2>Marca Decathlon</h2>`;
-h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">No hay esquís Wedze o Quechua de ${q.c.toLowerCase()} para este perfil. Prueba con otra zona de esquí.</p>`;
-if(o.length&&o.length<3) h+=`<p class="note">Solo hay ${o.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
-h+=`<h2>Otras marcas</h2>`;
-h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
-if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
-h+=`<p class="note">Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla disponible antes de cerrar la venta.</p><button class="reset" type="button" id="sk-again">Nuevo cliente</button>`;
-out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
+const F={open:false};
+const shell=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.h} cm de altura, nivel ${LV[q.l].toLowerCase()} y ${SENS_TXT[q.s]}. Ajusta unos centímetros según peso y forma física.</p></div>
+<div class="flt"><button type="button" class="flt-btn" id="sk-fb" aria-expanded="false" aria-controls="sk-fp"><span>FILTRO</span><span class="flt-s"><span id="sk-fs">Rango de precio</span><span class="ch">▾</span></span></button>
+<div class="flt-p" id="sk-fp" hidden>
+<p class="note" style="margin:0 0 14px">El rango de precio se aplica a Marca Decathlon y a Otras marcas. Las otras marcas salen todas, del esquí más recomendado al menos recomendado.</p>
+<fieldset><legend>Rango de precio</legend><div class="range">
+<div><label for="sk-pmin">Desde (€)</label><input id="sk-pmin" type="number" inputmode="numeric" min="0" placeholder="${pMin}"></div>
+<div><label for="sk-pmax">Hasta (€)</label><input id="sk-pmax" type="number" inputmode="numeric" min="0" placeholder="${pMax}"></div>
+<button type="button" class="linkbtn" id="sk-pclr">Quitar rango</button></div></fieldset>
+</div></div>
+<div id="sk-list"></div>
+<p class="note">Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla disponible antes de cerrar la venta.</p><button class="reset" type="button" id="sk-again">Nuevo cliente</button>`;
+out.innerHTML=shell;
+const $=id=>document.getElementById(id);
+function drawList(){
+ const mn=$("sk-pmin").value===""?-Infinity:+$("sk-pmin").value,mx=$("sk-pmax").value===""?Infinity:+$("sk-pmax").value;
+ const act=isFinite(mn)||isFinite(mx);
+ const rango=act?` entre ${isFinite(mn)?mn:pMin} y ${isFinite(mx)?mx:pMax} €`:"";
+ $("sk-fs").textContent=act?"Rango activo"+rango:(F.open?"Ocultar":"Rango de precio");
+ const L=full.filter(s=>s.pr>=mn&&s.pr<=mx);
+ const O=L.filter(s=>own(s.m)).slice(0,3),X=L.filter(s=>!own(s.m));
+ let h=`<h2>Marca Decathlon</h2>`;
+ h+=O.length?O.map(s=>card(s,s===best)).join(""):`<p class="note">${act?"No hay esquís Wedze o Quechua en ese rango de precio.":"No hay esquís Wedze o Quechua de "+q.c.toLowerCase()+" para este perfil. Prueba con otra zona de esquí."}</p>`;
+ if(!act&&O.length&&O.length<3) h+=`<p class="note">Solo hay ${O.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
+ h+=`<h2>Otras marcas</h2><p class="count">${X.length} esquís${rango} · del más recomendado al menos recomendado</p>`;
+ h+=X.length?X.map(s=>card(s,s===best)).join(""):`<p class="note">${act?"No hay modelos de otras marcas en ese rango de precio. Amplía el rango.":"No hay modelos de otras marcas para este perfil."}</p>`;
+ $("sk-list").innerHTML=h;
+}
+$("sk-fb").onclick=()=>{F.open=!F.open;$("sk-fb").setAttribute("aria-expanded",F.open);$("sk-fp").hidden=!F.open;drawList()};
+$("sk-pmin").oninput=drawList;$("sk-pmax").oninput=drawList;
+$("sk-pclr").onclick=()=>{$("sk-pmin").value="";$("sk-pmax").value="";drawList()};
+drawList();
+out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
 out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
-document.getElementById("sk-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
+$("sk-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
 });
 const DATA_URL="https://raw.githubusercontent.com/jsuberyzf-blip/Asesor-Esquis/main/esquis.json";
 fetch(DATA_URL+"?t="+Date.now(),{cache:"no-store"})
