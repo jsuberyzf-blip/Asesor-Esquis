@@ -125,3 +125,4 @@
 - HEAD Paquete de esquís Head Crux 99 Pro | 865 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/paquete-de-esquis-head-crux-99-pro/8ca2491b-7798-4780-b0bf-202108b2a220/c251c14
 - DYNASTAR Esquís Dynastar M-VERTICAL 88 con fijaciones HT RADICAL 10 | 909 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-dynastar-m-vertical-88-con-fijaciones-ht-radical-10/ad932a63-001c-4d12-8738-4804a68105d0/c9
 - KASTLE Esquís alpinos Kästle MX84 + K12 PRW GW verdes | 1152,7 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-alpinos-kastle-mx84-k12-prw-gw-verdes/eba83656-c594-446f-ae02-2ed7def9563e/c9
+- pack de esquis blur 76 w fijaciones m3 10 compact quikclik mujer | 569 € | vendedor: marketplace Decathlon (Snow Concept) | https://www.decathlon.es/es/p/mp/pack-de-esquis-blur-76-w-fijaciones-m3-10-compact-quikclik-mujer/e4cf5baf-7c42-4cc5-bbbe-9600b6074748/c5

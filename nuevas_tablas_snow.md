@@ -168,3 +168,4 @@
 - (22/11/2026) BURTON Tabla de snowboard Burton Custom Camber Faded | 700 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-burton-custom-camber-faded/e45a2f6e-3c81-4994-bc44-c77f565a21cd/c1c8
 - (22/11/2026) NITRO Hombre Snowboard Backcountry Freestyle Rígido Alternator | 741,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-backcountry-freestyle-rigido-alternator/ef3b32a4-476f-4985-a563-b74753e4d256/novar
 - (22/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Beta Gold | 379,9 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-pro-carbon-series-beta-gold/fb47e13e-f030-404a-9b07-4be805bd87ac/c1c250
+- (22/11/2026) K2 Tabla de snowboard para excavadora K2 | 904,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-para-excavadora-k2/b4237032-1c9a-4d3b-afd2-cd9d78a9b4ee/novar
