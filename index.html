@@ -592,9 +592,20 @@ function fRun(q){
  return {o:pickF(own,2,0),x:pickF(ext,8,2)};
 }
 const FLEXTXT={"Blando":"blanda: perdona errores y es cómoda al aprender","Blando-medio":"blanda-media: fácil y cómoda, muy permisiva","Medio":"media: equilibrada entre comodidad y respuesta","Medio-rígido":"media-rígida: respuesta directa, para quien ya domina la tabla","Rígido":"rígida: máxima respuesta y precisión a velocidad"};
+function tlTxt(s){
+ const tl=String(s.tl||"").split(",").map(x=>x.trim()).filter(Boolean);
+ const tw=Array.isArray(s.tw)?s.tw.map(x=>String(x).trim()).filter(Boolean):[];
+ if(!tw.length||!tl.length)return s.tl;
+ const nz=x=>String(x).toUpperCase().replace(/\s+/g,"");
+ const W=tw.map(nz);
+ if(W.some(x=>/NICA|NICO|ONE/.test(x)))return s.tl+' <small style="color:var(--muted)">(la web solo indica talla única: comprueba la talla en la ficha)</small>';
+ const ok=t=>{const n=nz(t);return W.includes(n)||n.split("/").every(p=>W.includes(p))};
+ const parts=tl.map(t=>ok(t)?'<span style="color:#1a7f37">'+t+' ✓ en la web</span>':'<span style="color:#b42318">'+t+' ✗ no disponible en la web</span>');
+ return parts.join(" · ");
+}
 function fCard(s,top,bp){
  const anc=ancTxt(s,bp);
- const talla=s.bz?s.tl+" · bota EU "+bootTxt(s):"por confirmar en la ficha";
+ const talla=s.bz?tlTxt(s)+" · bota EU "+bootTxt(s):"por confirmar en la ficha";
  const sizeNote=s.fit===true?(s.bzs==="marca"?" Encaja con su talla de bota.":s.bzs==="modelo"?" Encaja con su talla de bota (tallas que fabrica la marca para este modelo: comprueba cuál hay en stock).":" Encaja con su talla de bota (según tabla "+(s.bzs==="tienda"?"de tienda, orientativa":"genérica, orientativa")+")."):" Comprueba la talla de fijación para su bota en la ficha.";
  return `<article class="pick${top?" top":""}">${top?'<span class="badge">Recomendación principal</span>':""}${s.auto?'<span class="badge alt">Flex por validar</span>':""}
  <h3>${clean(s)} <span class="brand">${s.m}</span></h3>
