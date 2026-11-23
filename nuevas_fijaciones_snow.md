@@ -1,5 +1,5 @@
-# Novedades fijaciones snow — 22/11/2026
-25 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (todas marketplace). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
+# Novedades fijaciones snow — 23/11/2026
+33 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (todas marketplace; 8 nuevas el 23/11). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
 
 - SP BINDINGS SP KIDDO BLACK — 139,90 € — https://www.decathlon.es/es/p/mp/sp-kiddo-black/46529507-3546-402b-b232-5b343f0a2965/c1c5
 - K2 Splitboard Bindings K2 Far Out 2023 — 524,49 € — https://www.decathlon.es/es/p/mp/splitboard-bindings-k2-far-out-2023/e3eec7d8-6df4-4859-a960-1a4659999fce/c1
@@ -26,3 +26,11 @@
 - ROSSIGNOL Fijación De Snowboard Rookie Xs Niño — 143 € — https://www.decathlon.es/es/p/mp/fijacion-de-snowboard-rookie-xs-nino/7c75547c-eec3-497b-8d41-081a29dc6a07/c1
 - THIRTYTWO Snowboard Bindings Thirtytwo T32M Fase 2027 — 348 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-thirtytwo-t32m-fase-2027/ae087e03-6212-448b-9839-2e9e69b4e088/c1
 - SP BINDINGS Fijaciones SP Core Multientry NEGRO — 347,85 € — https://www.decathlon.es/es/p/mp/fijaciones-sp-core-multientry-negro/fdd0b171-2352-407d-8d0f-421465d4a881/c255
+- ROME Fijaciones snowboard hombre Trace — 305,99 € — https://www.decathlon.es/es/p/mp/fijaciones-snowboard-hombre-trace/1e23d73e-daa9-456d-9c6b-8387dae8b03c/novar
+- FLOW Snowboard Bindings Flow Micron 2025 — 178 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-flow-micron-2025/2ce3bac2-2ef0-49d3-a5d7-7954bcef5643/c1
+- FLOW Snowboard Bindings Flow Nx2-Carbon 2025 — 468 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-flow-nx2-carbon-2025/3bc2f8fa-e6b1-4540-9eaa-bfaa3a31e46e/c1
+- BURTON Mujer snowboard fijación Re:Flex Step On Orchid — 405,99 € — https://www.decathlon.es/es/p/mp/mujer-snowboard-fijacion-re-flex-step-on-orchid/4c423f2d-c005-4b2e-92c0-23bfa26e45e5/novar
+- UNION Hombre snowboard fijación ajustable Falcor — 405,99 € — https://www.decathlon.es/es/p/mp/hombre-snowboard-fijacion-ajustable-falcor/4f72bda7-e5af-4be4-8cc3-7159c9d79eb6/c1c4
+- NIDECKER Snowboard Bindings Nidecker Kaon Plus 2027 — 298 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-kaon-plus-2027/c86877c6-c9a2-4c83-b306-10be211dd5bb/c4
+- FLOW Snowboard Bindings Nidecker Flow Nx2 2027 — 398 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-flow-nx2-2027/d1b2bb95-e21c-4b9e-8f63-b8a38a6d5e5b/c4
+- BURTON Hombre snowboard fijación Step On Re:Flex Burton — 454,99 € — https://www.decathlon.es/es/p/mp/hombre-snowboard-fijacion-step-on-re-flex-burton/dfd78cd0-a940-4aed-90a9-abc409444117/c1
