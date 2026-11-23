@@ -363,38 +363,36 @@ const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
 const seenF=new Set(),full=[];
 for(const s of [...pool,...pool2]){const k=key(s);if(seenF.has(k))continue;seenF.add(k);full.push(s)}
 const prices=full.map(s=>s.pr),pMin=Math.floor(Math.min(...prices)),pMax=Math.ceil(Math.max(...prices));
+/* ===== Filtros (rango precio / patín) ===== */
+function fltHtml(p,txt,body){return `<div class="flt"><button type="button" class="flt-btn" id="${p}-fb" aria-expanded="false" aria-controls="${p}-fp"><span>FILTRO</span><span class="flt-s"><span id="${p}-fs">${txt}</span><span class="ch">▾</span></span></button><div class="flt-p" id="${p}-fp" hidden>${body}</div></div>`}
+function rngHtml(p,leg,unit,ph1,ph2,lim){const l=lim?` min="${lim[0]}" max="${lim[1]}"`:' min="0"';return `<fieldset style="margin-top:10px"><legend>${leg}</legend><div class="range"><div><label for="${p}-min">Desde (${unit})</label><input id="${p}-min" type="number" inputmode="numeric"${l} placeholder="${ph1}"></div><div><label for="${p}-max">Hasta (${unit})</label><input id="${p}-max" type="number" inputmode="numeric"${l} placeholder="${ph2}"></div><button type="button" class="linkbtn" id="${p}-clr">Quitar rango</button></div></fieldset>`}
+function rngVal(p){const a=document.getElementById(p+"-min").value,b=document.getElementById(p+"-max").value;return [a===""?-Infinity:+a,b===""?Infinity:+b]}
+function fltWire(p,redraw,rngs){const st={open:false};
+ document.getElementById(p+"-fb").onclick=()=>{st.open=!st.open;document.getElementById(p+"-fb").setAttribute("aria-expanded",st.open);document.getElementById(p+"-fp").hidden=!st.open;redraw()};
+ rngs.forEach(r=>{document.getElementById(r+"-min").oninput=redraw;document.getElementById(r+"-max").oninput=redraw;document.getElementById(r+"-clr").onclick=()=>{document.getElementById(r+"-min").value="";document.getElementById(r+"-max").value="";redraw()}});
+ return st}
 const out=document.getElementById("sk-out");
-const F={open:false};
 const shell=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.h} cm de altura, nivel ${LV[q.l].toLowerCase()} y ${SENS_TXT[q.s]}. Ajusta unos centímetros según peso y forma física.</p></div>
-<div class="flt"><button type="button" class="flt-btn" id="sk-fb" aria-expanded="false" aria-controls="sk-fp"><span>FILTRO</span><span class="flt-s"><span id="sk-fs">Rango de precio</span><span class="ch">▾</span></span></button>
-<div class="flt-p" id="sk-fp" hidden>
-<p class="note" style="margin:0 0 14px">El rango de precio se aplica a Marca Decathlon y a Otras marcas. Las otras marcas salen todas, del esquí más recomendado al menos recomendado.</p>
-<fieldset><legend>Rango de precio</legend><div class="range">
-<div><label for="sk-pmin">Desde (€)</label><input id="sk-pmin" type="number" inputmode="numeric" min="0" placeholder="${pMin}"></div>
-<div><label for="sk-pmax">Hasta (€)</label><input id="sk-pmax" type="number" inputmode="numeric" min="0" placeholder="${pMax}"></div>
-<button type="button" class="linkbtn" id="sk-pclr">Quitar rango</button></div></fieldset>
-</div></div>
+${fltHtml("sk","Precio y ancho de patín",`<p class="note" style="margin:0 0 6px">Los filtros se aplican a Marca Decathlon y a Otras marcas. Si no marcas nada, salen todos los esquís recomendados. El ancho de patín va de 65 a 130 mm.</p>${rngHtml("sk-p","Rango de precio","€",pMin,pMax)}${rngHtml("sk-w","Rango de ancho de patín","mm",65,130,[65,130])}`)}
 <div id="sk-list"></div>
 <p class="note">Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla disponible antes de cerrar la venta.</p><button class="reset" type="button" id="sk-again">Nuevo cliente</button>`;
 out.innerHTML=shell;
 const $=id=>document.getElementById(id);
 function drawList(){
- const mn=$("sk-pmin").value===""?-Infinity:+$("sk-pmin").value,mx=$("sk-pmax").value===""?Infinity:+$("sk-pmax").value;
- const act=isFinite(mn)||isFinite(mx);
- const rango=act?` entre ${isFinite(mn)?mn:pMin} y ${isFinite(mx)?mx:pMax} €`:"";
- $("sk-fs").textContent=act?"Rango activo"+rango:(F.open?"Ocultar":"Rango de precio");
- const L=full.filter(s=>s.pr>=mn&&s.pr<=mx);
+ const [mn,mx]=rngVal("sk-p"),[wn,wx]=rngVal("sk-w");
+ const aP=isFinite(mn)||isFinite(mx),aW=isFinite(wn)||isFinite(wx),act=aP||aW;
+ const rango=(aP?` · precio entre ${isFinite(mn)?mn:pMin} y ${isFinite(mx)?mx:pMax} €`:"")+(aW?` · patín entre ${isFinite(wn)?wn:65} y ${isFinite(wx)?wx:130} mm`:"");
+ $("sk-fs").textContent=act?"Filtro activo"+rango:(F.open?"Ocultar":"Precio y ancho de patín");
+ const L=full.filter(s=>s.pr>=mn&&s.pr<=mx&&(!aW||(s.w&&s.w>=wn&&s.w<=wx)));
  const O=L.filter(s=>own(s.m)).slice(0,3),X=L.filter(s=>!own(s.m));
  let h=`<h2>Marca Decathlon</h2>`;
- h+=O.length?O.map(s=>card(s,s===best)).join(""):`<p class="note">${act?"No hay esquís Wedze o Quechua en ese rango de precio.":"No hay esquís Wedze o Quechua de "+q.c.toLowerCase()+" para este perfil. Prueba con otra zona de esquí."}</p>`;
+ h+=O.length?O.map(s=>card(s,s===best)).join(""):`<p class="note">${act?"No hay esquís Wedze o Quechua con ese filtro.":"No hay esquís Wedze o Quechua de "+q.c.toLowerCase()+" para este perfil. Prueba con otra zona de esquí."}</p>`;
  if(!act&&O.length&&O.length<3) h+=`<p class="note">Solo hay ${O.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
  h+=`<h2>Otras marcas</h2><p class="count">${X.length} esquís${rango} · del más recomendado al menos recomendado</p>`;
- h+=X.length?X.map(s=>card(s,s===best)).join(""):`<p class="note">${act?"No hay modelos de otras marcas en ese rango de precio. Amplía el rango.":"No hay modelos de otras marcas para este perfil."}</p>`;
+ h+=X.length?X.map(s=>card(s,s===best)).join(""):`<p class="note">${act?"No hay modelos de otras marcas con ese filtro. Amplía el rango.":"No hay modelos de otras marcas para este perfil."}</p>`;
  $("sk-list").innerHTML=h;
 }
-$("sk-fb").onclick=()=>{F.open=!F.open;$("sk-fb").setAttribute("aria-expanded",F.open);$("sk-fp").hidden=!F.open;drawList()};
-$("sk-pmin").oninput=drawList;$("sk-pmax").oninput=drawList;
-$("sk-pclr").onclick=()=>{$("sk-pmin").value="";$("sk-pmax").value="";drawList()};
+const F=fltWire("sk",drawList,["sk-p","sk-w"]);
 drawList();
 out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
 out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
@@ -502,6 +500,15 @@ function card(s,top){
  <p class="why">${flexTxt(s.fx)} Sensación: ${s.s.toLowerCase()}.${shape?" "+shape+".":""}${s.f.wide?" Talla ancha: encaja con un pie grande.":""}</p>
  <span class="note">Tallas a la venta: ${todas} cm. Vende ${s.v}. </span><a href="${s.u}" target="_blank" rel="noopener">Ver en decathlon.es</a></article>`;
 }
+
+/* ===== Filtros (rango precio / patín) ===== */
+function fltHtml(p,txt,body){return `<div class="flt"><button type="button" class="flt-btn" id="${p}-fb" aria-expanded="false" aria-controls="${p}-fp"><span>FILTRO</span><span class="flt-s"><span id="${p}-fs">${txt}</span><span class="ch">▾</span></span></button><div class="flt-p" id="${p}-fp" hidden>${body}</div></div>`}
+function rngHtml(p,leg,unit,ph1,ph2,lim){const l=lim?` min="${lim[0]}" max="${lim[1]}"`:' min="0"';return `<fieldset style="margin-top:10px"><legend>${leg}</legend><div class="range"><div><label for="${p}-min">Desde (${unit})</label><input id="${p}-min" type="number" inputmode="numeric"${l} placeholder="${ph1}"></div><div><label for="${p}-max">Hasta (${unit})</label><input id="${p}-max" type="number" inputmode="numeric"${l} placeholder="${ph2}"></div><button type="button" class="linkbtn" id="${p}-clr">Quitar rango</button></div></fieldset>`}
+function rngVal(p){const a=document.getElementById(p+"-min").value,b=document.getElementById(p+"-max").value;return [a===""?-Infinity:+a,b===""?Infinity:+b]}
+function fltWire(p,redraw,rngs){const st={open:false};
+ document.getElementById(p+"-fb").onclick=()=>{st.open=!st.open;document.getElementById(p+"-fb").setAttribute("aria-expanded",st.open);document.getElementById(p+"-fp").hidden=!st.open;redraw()};
+ rngs.forEach(r=>{document.getElementById(r+"-min").oninput=redraw;document.getElementById(r+"-max").oninput=redraw;document.getElementById(r+"-clr").onclick=()=>{document.getElementById(r+"-min").value="";document.getElementById(r+"-max").value="";redraw()}});
+ return st}
 function run(q){
  const pool=TABLAS.filter(s=>(s.p===q.g||s.p==="Unisex")).map(s=>{const f=fitSize(s,q);if(!f)return null;const sc=score(s,q,f);return sc<0?null:{...s,f,_q:q.c,sc}}).filter(Boolean);
  // Primero la categoría pedida; si hay pocas, completa con la vecina (All-mountain) con penalización
@@ -512,7 +519,7 @@ function run(q){
   if(m.length<n){const seen=new Set(m.map(key));for(const s of alt.filter(s=>own(s)===isOwn)){const k=key(s);if(seen.has(k))continue;seen.add(k);m.push(s);if(m.length===n)break}}
   return m;
  };
- return {o:take(true,3),x:take(false,5)};
+ return {o:take(true,3),x:take(false,Infinity)};
 }
 document.getElementById("sn-f").addEventListener("submit",e=>{
  e.preventDefault();
@@ -521,21 +528,34 @@ document.getElementById("sn-f").addEventListener("submit",e=>{
  const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(!(q.kg>=30&&q.kg<=150))miss.push("el peso (entre 30 y 150 kg)");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de pie (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.s)miss.push("la sensación");if(!q.bt)miss.push("el tipo de fijación");
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
- const {o,x}=run(q);
- const all=[...o,...x].sort((a,b)=>b.sc-a.sc);const best=all[0];
+ const R=run(q);
  const [lmin,lmax]=length(q);
  const out=document.getElementById("sn-out");
  const ancho=q.ft>=44.5?"Con el pie del "+q.ft+" hace falta tabla wide (ancha).":q.ft>=43?"Con el pie del "+q.ft+" conviene una tabla wide si la hay; si no, una normal vale.":"Con ese pie sirve una tabla de ancho normal.";
- let h=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.kg} kg, ${q.h} cm, nivel ${LV[q.l].toLowerCase()}, ${q.c.toLowerCase()} y ${SENS_TXT[q.s]}. ${ancho}</p></div>`;
- h+=`<h2>Marca Decathlon</h2>`;
- h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">No hay tablas de marca Decathlon para este perfil. Mira las de otras marcas.</p>`;
- if(o.length&&o.length<3) h+=`<p class="note">Solo hay ${o.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
- h+=`<h2>Otras marcas</h2>`;
- h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">No hay modelos de otras marcas para este perfil.</p>`;
- if(x.length&&x.length<5) h+=`<p class="note">Solo hay ${x.length} modelos de otras marcas que encajen con este perfil.</p>`;
- h+=fijBlock({g:q.g,ft:q.ft,l:q.l,c:q.c.replace("-"," "),bt:q.bt,bp:(best&&best.pat&&best.pat.length<4&&best.pat[0])||null,bpUnk:!!(best&&best.patc===false)});
- h+=`<p class="note">Nivel, flex y sensación son orientativos; los de otras marcas están pendientes de validar. Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sn-again">Nuevo cliente</button>`;
- out.innerHTML=h;out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
+ const tp=[...R.o,...R.x].map(s=>s.pr).filter(Number.isFinite),tMin=tp.length?Math.floor(Math.min(...tp)):0,tMax=tp.length?Math.ceil(Math.max(...tp)):0;
+ const fpz=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&Number.isFinite(s.pr)).map(s=>s.pr),fMin=fpz.length?Math.floor(Math.min(...fpz)):0,fMax=fpz.length?Math.ceil(Math.max(...fpz)):0;
+ const hd=`<div class="size"><div class="big">${lmin}–${lmax} cm</div><p>Longitud orientativa para ${q.kg} kg, ${q.h} cm, nivel ${LV[q.l].toLowerCase()}, ${q.c.toLowerCase()} y ${SENS_TXT[q.s]}. ${ancho}</p></div>`;
+ const flt=fltHtml("sn","Rango de precio",`<p class="note" style="margin:0 0 6px">Si no marcas nada, salen todas las tablas y fijaciones recomendadas. Cada rango se aplica solo a su producto.</p>${rngHtml("sn-t","Rango de precio de la tabla","€",tMin,tMax)}${rngHtml("sn-j","Rango de precio de la fijación","€",fMin,fMax)}`);
+ out.innerHTML=hd+flt+`<div id="sn-list"></div><p class="note">Nivel, flex y sensación son orientativos; los de otras marcas están pendientes de validar. Precios y vendedores según decathlon.es${UPD?" (actualizado "+UPD+")":""}. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sn-again">Nuevo cliente</button>`;
+ function drawSnow(){
+  const [tn,tx]=rngVal("sn-t"),[fn,fx]=rngVal("sn-j");
+  const aT=isFinite(tn)||isFinite(tx),aF=isFinite(fn)||isFinite(fx),act=aT||aF;
+  const inT=s=>s.pr>=tn&&s.pr<=tx;
+  const o=R.o.filter(inT),x=R.x.filter(inT);
+  const best=[...o,...x].sort((a,b)=>b.sc-a.sc)[0];
+  const rg=(a,b,mn,mx)=>`entre ${isFinite(a)?a:mn} y ${isFinite(b)?b:mx} €`;
+  document.getElementById("sn-fs").textContent=act?"Filtro activo"+(aT?" · tabla "+rg(tn,tx,tMin,tMax):"")+(aF?" · fijación "+rg(fn,fx,fMin,fMax):""):(st.open?"Ocultar":"Rango de precio");
+  let h=`<h2>Marca Decathlon</h2>`;
+  h+=o.length?o.map(s=>card(s,s===best)).join(""):`<p class="note">${aT?"No hay tablas de marca Decathlon en ese rango de precio.":"No hay tablas de marca Decathlon para este perfil. Mira las de otras marcas."}</p>`;
+  if(!aT&&o.length&&o.length<3) h+=`<p class="note">Solo hay ${o.length===1?"un modelo":"dos modelos"} de marca Decathlon que encajen con este perfil.</p>`;
+  h+=`<h2>Otras marcas</h2><p class="count">${x.length} tablas${aT?" "+rg(tn,tx,tMin,tMax):""} · de la más recomendada a la menos recomendada</p>`;
+  h+=x.length?x.map(s=>card(s,s===best)).join(""):`<p class="note">${aT?"No hay tablas de otras marcas en ese rango de precio. Amplía el rango.":"No hay modelos de otras marcas para este perfil."}</p>`;
+  h+=fijBlock({g:q.g,ft:q.ft,l:q.l,c:q.c.replace("-"," "),bt:q.bt,bp:(best&&best.pat&&best.pat.length<4&&best.pat[0])||null,bpUnk:!!(best&&best.patc===false),pmin:fn,pmax:fx,pact:aF});
+  document.getElementById("sn-list").innerHTML=h;
+ }
+ const st=fltWire("sn",drawSnow,["sn-t","sn-j"]);
+ drawSnow();
+ out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
  out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
  document.getElementById("sn-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
 });
@@ -583,7 +603,7 @@ function fScore(s,q,fit){
 }
 function fRun(q){
  const sys=FSYS[q.bt];
- const pool=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&(s.p===q.g||s.p==="Unisex")&&sys.includes(s.sis)&&(s.patc===false||fitsPat(q.bp,s.pat))).map(s=>{const fit=fitBinding(s,q.ft);if(fit===false)return null;const sc=fScore(s,q,fit);return sc<0?null:{...s,fit,sc}}).filter(Boolean).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
+ const pool=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&(s.p===q.g||s.p==="Unisex")&&sys.includes(s.sis)&&(s.patc===false||fitsPat(q.bp,s.pat))).map(s=>{const fit=fitBinding(s,q.ft);if(fit===false)return null;const sc=fScore(s,q,fit);return sc<0?null:{...s,fit,sc}}).filter(Boolean).filter(s=>s.pr>=(q.pmin===undefined?-Infinity:q.pmin)&&s.pr<=(q.pmax===undefined?Infinity:q.pmax)).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
  const pickF=(list,n,cap)=>{const seen=new Set(),cnt={},out=[];
   for(const s of list){const k=fkey(s);if(seen.has(k))continue;if(cap&&(cnt[s.m]||0)>=cap)continue;seen.add(k);cnt[s.m]=(cnt[s.m]||0)+1;out.push(s);if(out.length===n)return out}
   if(cap){for(const s of list){const k=fkey(s);if(seen.has(k))continue;seen.add(k);out.push(s);if(out.length===n)break}}
@@ -618,10 +638,10 @@ function fijBlock(q){
  const {o,x}=fRun(q);const best=[...o,...x].sort((a,b)=>b.sc-a.sc)[0];
  let h='<h2>Fijaciones recomendadas</h2><p class="note">'+(q.bp?`Según nivel, flex, zona y talla de bota. Solo salen fijaciones compatibles con el anclaje de la tabla recomendada (${q.bp}${q.bpUnk?", por confirmar":""}); las que tienen el anclaje por confirmar salen con aviso. Si el cliente elige otra tabla, comprueba su anclaje.`:'Según nivel, flex, zona y talla de bota. Comprueba que el anclaje de la fijación (4x4, 2x4, 3D o The Channel) es compatible con la tabla.')+'</p>';
  h+='<h2>Marca Decathlon</h2>';
- h+=o.length?o.map(s=>fCard(s,s===best,q.bp)).join(""):'<p class="note">No hay fijaciones de marca Decathlon para este perfil. Mira las de otras marcas.</p>';
+ h+=o.length?o.map(s=>fCard(s,s===best,q.bp)).join(""):(q.pact?'<p class="note">No hay fijaciones de marca Decathlon en ese rango de precio.</p>':'<p class="note">No hay fijaciones de marca Decathlon para este perfil. Mira las de otras marcas.</p>');
  h+='<h2>Otras marcas</h2>';
- h+=x.length?x.map(s=>fCard(s,s===best,q.bp)).join(""):'<p class="note">No hay fijaciones de otras marcas para este perfil. Prueba con otro tipo de fijación.</p>';
- if(x.length&&x.length<8)h+=`<p class="note">Solo hay ${x.length} fijaciones de otras marcas que encajen con este perfil.</p>`;
+ h+=x.length?x.map(s=>fCard(s,s===best,q.bp)).join(""):(q.pact?'<p class="note">No hay fijaciones de otras marcas en ese rango de precio. Amplía el rango.</p>':'<p class="note">No hay fijaciones de otras marcas para este perfil. Prueba con otro tipo de fijación.</p>');
+ if(!q.pact&&x.length&&x.length<8)h+=`<p class="note">Solo hay ${x.length} fijaciones de otras marcas que encajen con este perfil.</p>`;
  return h;
 }
 document.querySelectorAll('input[name="snmode"]').forEach(r=>r.addEventListener("change",()=>{
@@ -637,7 +657,15 @@ document.getElementById("sf-f").addEventListener("submit",e=>{
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
  const out=document.getElementById("sf-out");
- out.innerHTML=fijBlock(q)+`<p class="note">Flex y nivel de las fijaciones de otras marcas son orientativos. Precios y vendedores según decathlon.es. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sf-again">Nuevo cliente</button>`;
+ const fpz=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&Number.isFinite(s.pr)).map(s=>s.pr),fMin=fpz.length?Math.floor(Math.min(...fpz)):0,fMax=fpz.length?Math.ceil(Math.max(...fpz)):0;
+ out.innerHTML=fltHtml("sf","Rango de precio",`<p class="note" style="margin:0 0 6px">Si no marcas nada, salen todas las fijaciones recomendadas.</p>${rngHtml("sf-p","Rango de precio","€",fMin,fMax)}`)+`<div id="sf-list"></div><p class="note">Flex y nivel de las fijaciones de otras marcas son orientativos. Precios y vendedores según decathlon.es. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sf-again">Nuevo cliente</button>`;
+ function drawSf(){
+  const [pn,px]=rngVal("sf-p"),act=isFinite(pn)||isFinite(px);
+  document.getElementById("sf-fs").textContent=act?`Rango activo entre ${isFinite(pn)?pn:fMin} y ${isFinite(px)?px:fMax} €`:(st.open?"Ocultar":"Rango de precio");
+  document.getElementById("sf-list").innerHTML=fijBlock({...q,pmin:pn,pmax:px,pact:act});
+ }
+ const st=fltWire("sf",drawSf,["sf-p"]);
+ drawSf();
  out.classList.remove("show");void out.offsetWidth;out.classList.add("show");
  out.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
  document.getElementById("sf-again").onclick=()=>{e.target.reset();out.innerHTML="";window.scrollTo({top:0})};
