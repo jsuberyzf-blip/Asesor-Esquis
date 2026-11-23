@@ -169,3 +169,8 @@
 - (22/11/2026) NITRO Hombre Snowboard Backcountry Freestyle Rígido Alternator | 741,99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-backcountry-freestyle-rigido-alternator/ef3b32a4-476f-4985-a563-b74753e4d256/novar
 - (22/11/2026) RAVEN Tabla de snowboard PRO Carbon Series Beta Gold | 379,9 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-pro-carbon-series-beta-gold/fb47e13e-f030-404a-9b07-4be805bd87ac/c1c250
 - (22/11/2026) K2 Tabla de snowboard para excavadora K2 | 904,99 € | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-para-excavadora-k2/b4237032-1c9a-4d3b-afd2-cd9d78a9b4ee/novar
+- (23/11/2026) NIDECKER Snowboard Nidecker Alpha 2027 | 519 € | https://www.decathlon.es/es/p/mp/snowboard-nidecker-alpha-2027/14f358bc-d6b3-446b-a7b9-8923ee22e5fe/c4
+- (23/11/2026) BURTON Mujer snowboard all-mountain Flying V Feelgood | 645.99 € | https://www.decathlon.es/es/p/mp/mujer-snowboard-all-mountain-flying-v-feelgood/3e691cd2-1298-4fc5-8478-1d1249890548/novar
+- (23/11/2026) BURTON Hombre Snowboard All-mountain Surf Camber Alekesam | 619.99 € | https://www.decathlon.es/es/p/mp/hombre-snowboard-all-mountain-surf-camber-alekesam/b1e0d6eb-9d5d-43cf-8a15-a28642a85037/novar
+- (23/11/2026) NITRO Mujer Snowboard freestyle asimétrico Optisym | 557.99 € | https://www.decathlon.es/es/p/mp/mujer-snowboard-freestyle-asimetrico-optisym/c43d4332-e5ff-4e33-8cae-9e8624aa37aa/novar
+- (23/11/2026) BURTON Mujer snowboard all-mountain versátil Feelgood Flying V | 645.99 € | https://www.decathlon.es/es/p/mp/mujer-snowboard-all-mountain-versatil-feelgood-flying-v/dc3e5e56-834b-4f45-9224-73eb654c0fa3/novar

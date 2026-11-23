@@ -1,6 +1,6 @@
 # Novedades detectadas (esquís con fijaciones no incluidos en esquis.json)
 
-## Pendientes (revisado el 22/11/2026)
+## Pendientes (revisado el 23/11/2026)
 
 - esquis de descenso infantil nordica team j r 70 90 fijaciones j4 5 fdt | 165 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-de-descenso-infantil-nordica-team-j-r-70-90-fijaciones-j4-5-fdt/83cc5aa7-d6e6-4120-9e12-73e67acf8b76/c1
 - pack de esqui nordica team g fdt 70 90 fijaciones jr 4 5 fdt azul para nino | 182 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/pack-de-esqui-nordica-team-g-fdt-70-90-fijaciones-jr-4-5-fdt-azul-para-nino/a3693051-a194-46af-8ebd-f2a43f1b2677/c5
@@ -126,3 +126,19 @@
 - DYNASTAR Esquís Dynastar M-VERTICAL 88 con fijaciones HT RADICAL 10 | 909 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-dynastar-m-vertical-88-con-fijaciones-ht-radical-10/ad932a63-001c-4d12-8738-4804a68105d0/c9
 - KASTLE Esquís alpinos Kästle MX84 + K12 PRW GW verdes | 1152,7 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/mp/esquis-alpinos-kastle-mx84-k12-prw-gw-verdes/eba83656-c594-446f-ae02-2ed7def9563e/c9
 - pack de esquis blur 76 w fijaciones m3 10 compact quikclik mujer | 569 € | vendedor: marketplace Decathlon (Snow Concept) | https://www.decathlon.es/es/p/mp/pack-de-esquis-blur-76-w-fijaciones-m3-10-compact-quikclik-mujer/e4cf5baf-7c42-4cc5-bbbe-9600b6074748/c5
+- (23/11/2026) DYNASTAR Esquís de travesía Dynastar M-Vertical 82 con fijaciones | 726 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/esquis-de-travesia-dynastar-m-vertical-82-con-fijaciones/443ec9ff-b1bd-4fd8-aca4-033bfee22554/c5c4
+- (23/11/2026) NORDICA Esquís alpinos para mujer Nordica Wild Belle 78 + fijaciones TP2COMP10 FDT | 601.99 € | vendedor: Sportano EU | https://www.decathlon.es/es/p/mp/esquis-alpinos-para-mujer-nordica-wild-belle-78-fijaciones-tp2comp10-fdt/600d2dea-2e86-4412-9e77-9055b3a44220/c1
+- (23/11/2026) NORDICA Esquís alpinos para mujer Nordica Belle Prime + fijaciones TP2COMP10 FDT | 327.99 € | vendedor: Sportano EU | https://www.decathlon.es/es/p/mp/esquis-alpinos-para-mujer-nordica-belle-prime-fijaciones-tp2comp10-fdt/c961a77f-b936-4027-8d93-8e152ca135cc/c251
+- (23/11/2026) DYNASTAR Sac à ski Dynastar M-Tour 100 con fijaciones Ridge 12 Azul | 1272 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/sac-a-ski-dynastar-m-tour-100-con-fijaciones-ridge-12-azul/22218e64-946d-40e9-90e9-8d6824887b59/c5
+- (23/11/2026) DYNASTAR Pack de esquí de travesía M-Vertical 88 + fijaciones HT 10 RTL Hombre | 931 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/pack-de-esqui-de-travesia-m-vertical-88-fijaciones-ht-10-rtl-hombre/1fceb527-2e48-4e15-8131-43c9666e535c/c9
+- (23/11/2026) SALOMON Hombre esquí alpino carve fijaciones E Addikt Pro | 1076.99 € | vendedor: ekwip | https://www.decathlon.es/es/p/mp/hombre-esqui-alpino-carve-fijaciones-e-addikt-pro/ef7391bf-7a72-4dba-b05b-c88e802da36e/c4c5
+- (23/11/2026) DYNASTAR Pack de esquí de travesía M-Grand Mont + fijaciones HT 10 hombre | 814 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/pack-de-esqui-de-travesia-m-grand-mont-fijaciones-ht-10-hombre/01f9ef95-ea73-4c5c-a21e-2c87b5119e8e/c1
+- (23/11/2026) NORDICA Esquís alpinos para mujer Nordica Belle DC 72 + fijaciones TP2LT11 FDT | 814.99 € | vendedor: Sportano EU | https://www.decathlon.es/es/p/mp/esquis-alpinos-para-mujer-nordica-belle-dc-72-fijaciones-tp2lt11-fdt/fdcfa4b6-70dd-4fcb-96c2-19a2e66b0688/c251
+- (23/11/2026) HEAD Esquí de travesía Crux Pro + y pieles hombre | 1372 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/esqui-de-travesia-crux-pro-y-pieles-hombre/8606d924-759f-4283-80cc-4e56301eb94a/c251
+- (23/11/2026) HEAD Esquí de travesía Crux Pro + y pieles hombre | 1372 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/esqui-de-travesia-crux-pro-y-pieles-hombre/83eccc43-6ec1-4fe8-b7dd-5a9cca5d0b94/c251
+- (23/11/2026) SIMOND Esquí de travesía fijaciones y pieles, WILDER 102 | 699.99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/esqui-de-travesia-fijaciones-y-pieles-wilder-102/335496/m8666898
+- (23/11/2026) SIMOND Esquí de travesía fijaciones y pieles, WILDER 102 | 849.99 € | vendedor: marketplace Decathlon (no leído) | https://www.decathlon.es/es/p/esqui-de-travesia-fijaciones-y-pieles-wilder-102/335496/m8958389
+- (23/11/2026) HEAD Pack De Skis Shape Cx R + Fixations Pr 10 Gw Promo Homme | 417 € | vendedor: Snow Concept | https://www.decathlon.es/es/p/mp/pack-de-skis-shape-cx-r-fixations-pr-10-gw-promo-homme/0e9cdf1b-48c2-4aa0-8586-d01fdaacc974/c4
+- (23/11/2026) ROSSIGNOL Mujer esquí alpino carving fijaciones NX 12 Super Forza | 1043.99 € | vendedor: ekwip | https://www.decathlon.es/es/p/mp/mujer-esqui-alpino-carving-fijaciones-nx-12-super-forza/55b0f107-5fb5-42e4-9ecb-1fb188e09261/novar
+- (23/11/2026) ATOMIC Mujer esquí alpino pack esquís fijaciones Maven 86 | 749.99 € | vendedor: ekwip | https://www.decathlon.es/es/p/mp/mujer-esqui-alpino-pack-esquis-fijaciones-maven-86/63ee8516-0213-4880-8c11-baa05a490a5e/novar
+- (23/11/2026) SALOMON Skis Salomon E S/MAX X7 Ti + M10 GW L80 Negro/Neon Punch | 641.15 € | vendedor: Sports Lab ES | https://www.decathlon.es/es/p/mp/skis-salomon-e-s-max-x7-ti-m10-gw-l80-negro-neon-punch/b910bc2b-8940-408b-bc0b-771bbb139990/c1
