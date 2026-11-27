@@ -1,72 +1,63 @@
-# Novedades fijaciones snow — 26/11/2026
-69 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (22 nuevas el 26/11). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
+# Novedades fijaciones snow — 27/11/2026
+60 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (7 nuevas el 27/11). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
 
+- JONES Sangle de snowboard Jones Comfort Flex Mujer Negro — 24,95 € — https://www.decathlon.es/es/p/mp/sangle-de-snowboard-jones-comfort-flex-mujer-negro/c534649d-1a18-4740-97f9-71ddf44908fe/c1
+- THIRTYTWO Fijaciones de snowboard Thirtytwo Basin FASE Negro — 269,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-basin-fase-negro/5ad82367-ebdd-4279-b174-a40fb36a521e/c3
 - SP BINDINGS SP KIDDO BLACK — 139,90 € — https://www.decathlon.es/es/p/mp/sp-kiddo-black/46529507-3546-402b-b232-5b343f0a2965/c1c5
-- K2 Splitboard Bindings K2 Far Out 2023 — 524,49 € — https://www.decathlon.es/es/p/mp/splitboard-bindings-k2-far-out-2023/e3eec7d8-6df4-4859-a960-1a4659999fce/c1
-- UNION Fijaciones UNION Flite Pro BLACK — 194,65 € — https://www.decathlon.es/es/p/mp/fijaciones-union-flite-pro-black/0fd6e786-ee6a-46d8-ac8d-29a16754538c/c1
+- NITRO Fijaciones de snowboard Nitro Step On negras — 301 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-nitro-step-on-negras/ad1b97a8-9ee0-49ea-9a9f-7afb93b6e639/c1
+- BATALEON Fijaciones de snowboard Bataleon Blaster Pro AW FASE® Tor Gray — 389,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-blaster-pro-aw-fase-tor-gray/ab611602-6f5b-4b48-96c6-ce1d445acaef/c1c4
+- K2 Splitboard Bindings K2 Far Out 2023 — 537,45 € — https://www.decathlon.es/es/p/mp/splitboard-bindings-k2-far-out-2023/e3eec7d8-6df4-4859-a960-1a4659999fce/c1
+- BATALEON Fijaciones de snowboard Bataleon Men's Blaster Neon Yellow — 359,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-men-s-blaster-neon-yellow/b8518710-7ea4-4b88-ab22-6d4935ee34cf/c251
+- BURTON Fijaciones de snowboard Burton Mission Smalls Plata — 213,60 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-mission-smalls-plata/a4205e4f-7b44-40ae-b04f-b0cf8b29a493/c249
+- UNION Hombre snowboard fijación ajustable Falcor — 405,99 € — https://www.decathlon.es/es/p/mp/hombre-snowboard-fijacion-ajustable-falcor/4f72bda7-e5af-4be4-8cc3-7159c9d79eb6/c1c4
+- ROME Fijaciones - All-mountain - Hombre - Katana AW FASE - Blanco — 472,99 € — https://www.decathlon.es/es/p/mp/fijaciones-all-mountain-hombre-katana-aw-fase-blanco/d5cfba36-76a9-4aa4-806d-90717c513175/c4
+- BURTON Hombre snowboard fijación Step On Re:Flex Burton — 454,99 € — https://www.decathlon.es/es/p/mp/hombre-snowboard-fijacion-step-on-re-flex-burton/dfd78cd0-a940-4aed-90a9-abc409444117/c1
+- BURTON Fijaciones De Snowboard Lexa Black Mujer — 368,05 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-lexa-black-mujer/72fedd5b-9e55-4fbf-b754-2812a419c0bd/c255
+- UNION Fijaciones UNION Flite Pro BLACK — 213,60 € — https://www.decathlon.es/es/p/mp/fijaciones-union-flite-pro-black/0fd6e786-ee6a-46d8-ac8d-29a16754538c/c1
+- THIRTYTWO Fijaciones de snowboard ThirtyTwo Fase negras para hombre — 294 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-fase-negras-para-hombre/f6fd5a41-61b1-48b6-99f6-2ad9810dcefb/c255
+- BATALEON Fijaciones de snowboard Bataleon Blaster AW FASE Negro — 359,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-blaster-aw-fase-negro/c0fb64dd-c5bb-4f7f-8939-e8a317d1112f/c1
+- BURTON Fijaciones de snowboard Burton Genesis Re:Flex Blancas — 467,05 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-genesis-re-flex-blancas/a9d3ae62-f1a6-4232-b28d-ab9092bd74f5/c4
+- THIRTYTWO Fijaciones de snowboard ThirtyTwo T32M Fase negras para hombre — 322 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-t32m-fase-negras-para-hombre/ae087e03-6212-448b-9839-2e9e69b4e088/c1
+- BURTON Fijaciones de snowboard Burton Cartel X Re:Flex Azules — 402 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-cartel-x-re-flex-azules/1f939ddc-a1f3-4b53-a84c-29d1befa51c9/c5
+- BURTON Fijaciones de snowboard Burton Freestyle Re:Flex Black — 190 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-freestyle-re-flex-black/4284a916-5a3c-4a2c-a15e-bb4fd04c5d39/c1
+- BURTON Fijaciones de snowboard Burton Step On Genesis Re:Flex Blanc — 473,20 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-genesis-re-flex-blanc/687097bc-457c-4cfd-8b5e-7c0699152fce/c4
+- ROME Fijaciones - Snowboard - Hombre - Katana AW FASE - Blanco — 472,99 € — https://www.decathlon.es/es/p/mp/fijaciones-snowboard-hombre-katana-aw-fase-blanco/2e520092-1cd0-4262-8ca8-ff08cd1129a8/c4
+- CLEW Fijaciones de snowboard Clew Independence Sage Green — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-sage-green/c3245fb1-f3e1-4776-a7d4-f4011614b85b/c1
+- BURTON Fijaciones de snowboard Burton Cartel X Re:Flex Azul — 402,10 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-cartel-x-re-flex-azul/ddbcdc53-6c32-4242-ac3f-61077039e73d/c5
+- BATALEON Fijaciones de snowboard Bataleon Men's Blaster AW FASE® Sky Gray — 359,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-men-s-blaster-aw-fase-sky-gray/55db9149-ccc1-4439-b5d9-5ebd8bdaa879/c4c2
+- ROSSIGNOL Fijación De Snowboard Rookie Xs Niño — 143 € — https://www.decathlon.es/es/p/mp/fijacion-de-snowboard-rookie-xs-nino/7c75547c-eec3-497b-8d41-081a29dc6a07/c1
+- ROME Fijaciones snowboard hombre Trace — 305,99 € — https://www.decathlon.es/es/p/mp/fijaciones-snowboard-hombre-trace/1e23d73e-daa9-456d-9c6b-8387dae8b03c/novar
+- JONES Fijaciones de snowboard Jones Mercury FASE MTN Black Silver — 330 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-jones-mercury-fase-mtn-black-silver/976c6ee1-6137-4b05-9b61-0c080cd91d26/c1c4
+- JONES Snowboard Bindings Jones Youth Asteroid 2027 — 229,45 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-youth-asteroid-2027/fe1749ae-e14a-495a-98b6-22ae23707c3a/c1
+- BURTON Mujer snowboard fijación Re:Flex Step On Orchid — 405,99 € — https://www.decathlon.es/es/p/mp/mujer-snowboard-fijacion-re-flex-step-on-orchid/4c423f2d-c005-4b2e-92c0-23bfa26e45e5/novar
+- BURTON Fijaciones de snowboard Burton Step On® Re:Flex Multicolor — 377,55 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-multicolor/e58c5708-ba64-46c7-96a1-5fa7ef42ba06/c255
+- BURTON Fijaciones de snowboard Burton Genesis Re:Flex Blanca — 482,45 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-genesis-re-flex-blanca/ce8e18e8-04a8-490e-aeba-9d91f890a9c9/c4
+- UNION Fijaciones de splitboard Union Charger Blancas — 501,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-splitboard-union-charger-blancas/663d5fb0-5711-4406-a389-b2444ac41276/c4
+- BURTON Fijaciones de snowboard Burton Step On Genesis Re:Flex Blanc — 473,20 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-genesis-re-flex-blanc/a6831149-dd52-498e-b61c-4847b1224790/c4
+- BURTON Fijaciones de snowboard Burton Step On Azul — 394,35 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-azul/8d2d81a3-ff5d-4c23-b3e1-1cf799ffc7a5/c5
 - BATALEON snowboard Bataleon Fly — 239,95 € — https://www.decathlon.es/es/p/mp/snowboard-bataleon-fly/18da1863-1d63-4a89-a1f7-197e84c2063e/c1
+- FLOW Snowboard Bindings Flow Micron 2025 — 180,40 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-flow-micron-2025/2ce3bac2-2ef0-49d3-a5d7-7954bcef5643/c1
+- BURTON Fijaciones de snowboard Burton Hitchhiker Negras — 636,90 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-hitchhiker-negras/30cf8180-39b5-4877-9b51-6c029df5da7b/c1
 - BURTON Fijaciones de snowboard Burton Freestyle Re:Flex Black — 190 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-freestyle-re-flex-black/317570e3-082f-4ae7-b571-af22615e6515/c1
 - CLEW Fijaciones de snowboard Clew Independence Sage Green — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-sage-green/3a6f7bee-80dd-4e2b-8dda-c71591ecda33/c1
-- BURTON Fijaciones de snowboard Burton Freestyle Re:Flex Black — 190 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-freestyle-re-flex-black/4284a916-5a3c-4a2c-a15e-bb4fd04c5d39/c1
-- NITRO Fijaciones de snowboard Nitro Team Pro negras — 409,90 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-nitro-team-pro-negras/4a68d17c-2861-4b2d-867a-659900a7d78b/c1
-- THIRTYTWO Fijaciones de snowboard Thirtytwo Basin FASE Negro2 colores — 269,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-basin-fase-negro/5ad82367-ebdd-4279-b174-a40fb36a521e/c3
-- JONES Fijaciones de snowboard Jones Mercury FASE® Black Surf Series3 colores — 349 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-jones-mercury-fase-black-surf-series/976c6ee1-6137-4b05-9b61-0c080cd91d26/c3
-- THIRTYTWO Fijaciones snowboard Thirtytwo Fase volcom Blanco Hombre — 338 € — https://www.decathlon.es/es/p/mp/fijaciones-snowboard-thirtytwo-fase-volcom-blanco-hombre/9d9004b3-b00a-471a-904e-6e2b459ed717/c1
+- FLOW Snowboard Bindings Flow Nx2-Carbon 2025 — 486,55 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-flow-nx2-carbon-2025/3bc2f8fa-e6b1-4540-9eaa-bfaa3a31e46e/c1
+- BURTON Fijaciones de snowboard Burton Smalls Azul — 214,90 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-smalls-azul/4f2b5167-2e1c-4eaa-a273-91a78fb01794/c5
+- BURTON Fijaciones de snowboard Burton Lexa Re:Flex Negra — 341,50 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-lexa-re-flex-negra/62917f29-6e9d-4a6f-809a-8d4f2ec84012/c255
+- BURTON Fijaciones de snowboard Burton Lexa Mujer Negro — 341,50 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-lexa-mujer-negro/707a8a4a-3c84-4826-8c5a-761a5cfbcbed/c1
+- JONES Snowboard Bindings Jones Eclipse 2027 — 160,40 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-eclipse-2027/83b036f5-8550-43a2-b6d0-34fbb5944e28/c1
+- CLEW Fijaciones de snowboard Clew Independence Blanco — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-blanco/9a563125-381f-4fc4-a75a-369a7f1c091c/c1
 - BURTON Fijaciones de snowboard Burton Step On® Re:Flex Pink Outline — 280 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-pink-outline/a4c74f8b-eca0-435f-aea2-72da47e88516/c2c84
-- NITRO Fijaciones de snowboard Nitro Step On negras — 300,25 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-nitro-step-on-negras/ad1b97a8-9ee0-49ea-9a9f-7afb93b6e639/c1
+- NIDECKER Snowboard Bindings Nidecker OG Supermatic® 2027 — 428 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-og-supermatic-2027/a6840ee9-794f-4afa-b8bc-68230d9de941/c24
 - BURTON Fijaciones de snowboard Burton Step On® Re:Flex Pink Outline — 280 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-pink-outline/afa97411-b3e9-4cad-8df5-39c434ef9433/c2c84
 - THIRTYTWO Fijaciones de snowboard Thirtytwo T32M FASE Bone Black — 329,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-t32m-fase-bone-black/afca62d5-febf-4bf0-b866-d4769db66f8b/c1
-- CLEW Fijaciones de snowboard Clew Independence Sage Green — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-sage-green/c3245fb1-f3e1-4776-a7d4-f4011614b85b/c1
-- JONES Sangle de snowboard Jones Comfort Flex Mujer Negro — 24,90 € — https://www.decathlon.es/es/p/mp/sangle-de-snowboard-jones-comfort-flex-mujer-negro/c534649d-1a18-4740-97f9-71ddf44908fe/c1
+- BURTON Fijaciones de snowboard Burton Smalls Neo Mint/White — 191,55 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-smalls-neo-mint-white/b293c6d1-872d-4dd1-9834-0cda71e3effb/c4
+- JONES Snowboard Bindings Jones Apollo Pro 2027 — 727,85 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-apollo-pro-2027/b6aab334-7a5f-452e-80a4-a9b17072f28c/c1
+- CLEW Fijaciones de snowboard Clew Independence Black — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-black/be136d8b-ca5d-447e-8b07-fee2a98e9d64/c1
+- NIDECKER Snowboard Bindings Nidecker Kaon Plus 2027 — 297,05 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-kaon-plus-2027/c86877c6-c9a2-4c83-b306-10be211dd5bb/c4
+- NIDECKER Snowboard Bindings Nidecker Flow Nx2 2027 — 411,85 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-flow-nx2-2027/d1b2bb95-e21c-4b9e-8f63-b8a38a6d5e5b/c4
 - CLEW Fijaciones de snowboard Clew Independence Black — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-black/ef09b64f-287a-41f5-ad3f-be53e3b13b1c/c1
 - BURTON Fijaciones de snowboard Burton Freestyle Re:Flex Airstream Blue — 190 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-freestyle-re-flex-airstream-blue/f49f1bd1-ac54-4752-8ff2-e153d7f62fc6/c2
+- JONES Snowboard Bindings Jones Men's Meteorite 2027 — 350,80 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-men-s-meteorite-2027/f5338506-a951-4eb8-a611-c1cf35501b84/c5
 - BURTON Fijaciones de snowboard Burton Step On Re:Flex Gray Green Voltage — 280 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-gray-green-voltage/f577297c-225d-4317-8e5b-c222029b70b6/c251
-- THIRTYTWO Fijaciones de snowboard Thirtytwo Fase negras para hombre — 294 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-thirtytwo-fase-negras-para-hombre/f6fd5a41-61b1-48b6-99f6-2ad9810dcefb/c1
+- BURTON Fijaciones de snowboard Burton Freestyle Re:flex Negro — 238,75 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-freestyle-re-flex-negro/f687f4d5-c226-4a72-8de7-b9259369d2c5/c255
 - CLEW Fijaciones de snowboard Clew Independence Purple — 379,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-purple/fff27fee-9425-4a58-a542-c58309f61417/c1
-- ROSSIGNOL Fijación De Snowboard Rookie Xs Niño — 143 € — https://www.decathlon.es/es/p/mp/fijacion-de-snowboard-rookie-xs-nino/7c75547c-eec3-497b-8d41-081a29dc6a07/c1
-- THIRTYTWO Snowboard Bindings Thirtytwo T32M Fase 2027 — 322 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-thirtytwo-t32m-fase-2027/ae087e03-6212-448b-9839-2e9e69b4e088/c1
-- SP BINDINGS Fijaciones SP Core Multientry NEGRO — 347,85 € — https://www.decathlon.es/es/p/mp/fijaciones-sp-core-multientry-negro/fdd0b171-2352-407d-8d0f-421465d4a881/c255
-- ROME Fijaciones snowboard hombre Trace — 305,99 € — https://www.decathlon.es/es/p/mp/fijaciones-snowboard-hombre-trace/1e23d73e-daa9-456d-9c6b-8387dae8b03c/novar
-- FLOW Snowboard Bindings Flow Micron 2025 — 178 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-flow-micron-2025/2ce3bac2-2ef0-49d3-a5d7-7954bcef5643/c1
-- FLOW Snowboard Bindings Flow Nx2-Carbon 2025 — 468 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-flow-nx2-carbon-2025/3bc2f8fa-e6b1-4540-9eaa-bfaa3a31e46e/c1
-- BURTON Mujer snowboard fijación Re:Flex Step On Orchid — 405,99 € — https://www.decathlon.es/es/p/mp/mujer-snowboard-fijacion-re-flex-step-on-orchid/4c423f2d-c005-4b2e-92c0-23bfa26e45e5/novar
-- UNION Hombre snowboard fijación ajustable Falcor — 405,99 € — https://www.decathlon.es/es/p/mp/hombre-snowboard-fijacion-ajustable-falcor/4f72bda7-e5af-4be4-8cc3-7159c9d79eb6/c1c4
-- NIDECKER Snowboard Bindings Nidecker Kaon Plus 2027 — 298 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-kaon-plus-2027/c86877c6-c9a2-4c83-b306-10be211dd5bb/c4
-- FLOW Snowboard Bindings Nidecker Flow Nx2 2027 — 398 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-flow-nx2-2027/d1b2bb95-e21c-4b9e-8f63-b8a38a6d5e5b/c4
-- BURTON Hombre snowboard fijación Step On Re:Flex Burton — 454,99 € — https://www.decathlon.es/es/p/mp/hombre-snowboard-fijacion-step-on-re-flex-burton/dfd78cd0-a940-4aed-90a9-abc409444117/c1
-- fijaciones de snowboard bataleon men s blaster neon yellow — 439,99 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-men-s-blaster-neon-yellow/b8518710-7ea4-4b88-ab22-6d4935ee34cf/c251
-- fijaciones de snowboard bataleon blaster aw fase negro — 439,99 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-blaster-aw-fase-negro/c0fb64dd-c5bb-4f7f-8939-e8a317d1112f/c1
-- fijaciones de snowboard bataleon men s blaster aw fase sky gray — 439,99 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-men-s-blaster-aw-fase-sky-gray/55db9149-ccc1-4439-b5d9-5ebd8bdaa879/c4c2
-- fijaciones de snowboard lexa black mujer — 367,40 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-lexa-black-mujer/72fedd5b-9e55-4fbf-b754-2812a419c0bd/c255
-- fijaciones de snowboard burton cartel x re flex azules — 418,20 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-cartel-x-re-flex-azules/1f939ddc-a1f3-4b53-a84c-29d1befa51c9/c5
-- fijaciones de snowboard burton step on genesis re flex blanc — 469,10 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-genesis-re-flex-blanc/687097bc-457c-4cfd-8b5e-7c0699152fce/c4
-- fijaciones de snowboard burton step on re flex multicolore — 378,85 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-multicolore/84771c86-48ec-43bc-9955-91d5f2afc90d/c255
-- fijaciones de snowboard burton step on azul — 394,70 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-azul/8d2d81a3-ff5d-4c23-b3e1-1cf799ffc7a5/c5
-- fijaciones de snowboard burton mission smalls plata — 213,75 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-mission-smalls-plata/a4205e4f-7b44-40ae-b04f-b0cf8b29a493/c249
-- fijaciones de snowboard burton step on genesis re flex blanc — 469,10 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-genesis-re-flex-blanc/a6831149-dd52-498e-b61c-4847b1224790/c4
-- fijaciones de snowboard burton genesis re flex blancas — 489,90 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-genesis-re-flex-blancas/a9d3ae62-f1a6-4232-b28d-ab9092bd74f5/c4
-- fijaciones de snowboard burton genesis re flex blanca — 489,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-genesis-re-flex-blanca/ce8e18e8-04a8-490e-aeba-9d91f890a9c9/c4
-- fijaciones de snowboard burton cartel x re flex azul — 416,50 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-cartel-x-re-flex-azul/ddbcdc53-6c32-4242-ac3f-61077039e73d/c5
-- fijaciones de snowboard burton step on re flex multicolor — 377,45 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-step-on-re-flex-multicolor/e58c5708-ba64-46c7-96a1-5fa7ef42ba06/c255
-- DREAMSCAPE Fijaciones snowboard all mountain / freestyle Adulto Dreamscape SNB500 — 109,99 € — https://www.decathlon.es/es/p/fijaciones-snowboard-all-mountain-freestyle-adulto-dreamscape-snb500/336603/c227m8668654
-- QUECHUA Fijaciones de snowboard all mountain adulto - SNB 100 negro — 89,99 € — https://www.decathlon.es/es/p/fijaciones-de-snowboard-all-mountain-adulto-snb-100-negro/362055/c1c179m8941307
-- QUECHUA 2 straps dedos para 1 par de fijaciones de snowboard talla M (36/42) — 7,99 € — https://www.decathlon.es/es/p/2-straps-dedos-para-1-par-de-fijaciones-de-snowboard-talla-m-36-42/341730/c382c344m8903363
-- BATALEON Fijaciones de snowboard Bataleon Blaster Pro AW FASE® Tor Gray — 389,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-bataleon-blaster-pro-aw-fase-tor-gray/ab611602-6f5b-4b48-96c6-ce1d445acaef/c1c4
-- UNION Fijaciones de splitboard Union Charger Blancas — 488,95 € — https://www.decathlon.es/es/p/mp/fijaciones-de-splitboard-union-charger-blancas/663d5fb0-5711-4406-a389-b2444ac41276/c4
-- QUECHUA 2 straps dedos del pie 1 par de fijaciones de snowboard talla L (43/48) — 7,99 € — https://www.decathlon.es/es/p/2-straps-dedos-del-pie-1-par-de-fijaciones-de-snowboard-talla-l-43-48/341657/c1c344m8903364
-- QUECHUA Fijaciones snowboard rápidas niños - Faky S - negro y rojo — 59,99 € — https://www.decathlon.es/es/p/fijaciones-snowboard-rapidas-ninos-faky-s-negro-y-rojo/122171/c1c14m8590386
-- UNION Fijaciones de snowboard Union Falcor Negro — 386 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-union-falcor-negro/3a50592a-9519-4a90-974c-e5125761ec5e/c1
-- BURTON Fijaciones de snowboard Burton Smalls Azul — 214,8 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-smalls-azul/4f2b5167-2e1c-4eaa-a273-91a78fb01794/c5
-- UNION Fijaciones de snowboard Union Atlas Step On® Naranja — 386 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-union-atlas-step-on-naranja/56d86e43-8847-45c5-9e77-6cada04c909b/c20
-- UNION Fixaciones de snowboard Union Atlas Pro Negro — 432 € — https://www.decathlon.es/es/p/mp/fixaciones-de-snowboard-union-atlas-pro-negro/6c86ad75-f524-479f-a4dc-c30e3432eba5/c1
-- JONES Snowboard Bindings Jones Eclipse 2027 — 159,3 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-eclipse-2027/83b036f5-8550-43a2-b6d0-34fbb5944e28/c1
-- UNION Fijaciones de snowboard Union Atlas Step On® Negras — 386 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-union-atlas-step-on-negras/88b984a0-53a1-4c04-8f49-9a4bd8c631c8/c1
-- CLEW Fijaciones de snowboard Clew Independence Blanco — 383,75 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-blanco/9a563125-381f-4fc4-a75a-369a7f1c091c/c1
-- NIDECKER Snowboard Bindings Nidecker OG Supermatic® 2027 — 429,5 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-nidecker-og-supermatic-2027/a6840ee9-794f-4afa-b8bc-68230d9de941/c24
-- UNION Fixaciones de snowboard Union STR Negras — 202 € — https://www.decathlon.es/es/p/mp/fixaciones-de-snowboard-union-str-negras/af2cda4f-9a74-490f-b34c-ee6e42ff89a1/c1
-- BURTON Fijaciones de snowboard Burton Smalls Neo Mint/White — 189,55 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-smalls-neo-mint-white/b293c6d1-872d-4dd1-9834-0cda71e3effb/c4
-- JONES Snowboard Bindings Jones Apollo Pro 2027 — 730,6 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-apollo-pro-2027/b6aab334-7a5f-452e-80a4-a9b17072f28c/c1
-- UNION Fijaciones de snowboard Union Atlas Step On Naranja — 386 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-union-atlas-step-on-naranja/b6e210d4-6d2e-47b4-9212-c70668dfec58/c20
-- CLEW Fijaciones de snowboard Clew Independence Black — 383,75 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-clew-independence-black/be136d8b-ca5d-447e-8b07-fee2a98e9d64/c1
-- UNION Fijaciones de snowboard Union Atlas Step On Blancas — 386 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-union-atlas-step-on-blancas/c936482d-4827-4365-ab1f-e3a1d7d0b081/c4
-- JONES Snowboard Bindings Jones Men's Meteorite 2027 — 350,75 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-men-s-meteorite-2027/f5338506-a951-4eb8-a611-c1cf35501b84/c5
