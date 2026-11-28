@@ -214,3 +214,6 @@
 - (27/11/2026) Rossignol XV negra para hombre | 708 € | vendedor: marketplace Decathlon | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-xv-negra-para-hombre/719dd321-c0b5-4d92-a255-a124c50bc19d/c1
 - (27/11/2026) Rossignol After Hours negra para mujer | 558 € | vendedor: marketplace Decathlon | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-after-hours-negra-para-mujer/ad0d2a22-af8d-49dd-b672-6ef6f8de0179/c1
 - (27/11/2026) Rossignol XV Wide negra para hombre | 708 € | vendedor: marketplace Decathlon | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-rossignol-xv-wide-negra-para-hombre/c17faccc-2170-4a61-a4ca-f3b3a26bd524/c1
+
+## 28/11/2026
+- RIDE Warpig All Mountain Hombre | 557 € | vendedor: ver ficha | https://www.decathlon.es/es/p/mp/tabla-de-snowboard-warpig-all-mountain-hombre/0a300b47-ce31-4b93-9e7f-86e59f167920/c1
