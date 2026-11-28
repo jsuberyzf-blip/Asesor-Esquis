@@ -106,12 +106,15 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
 .linkbtn{background:transparent;color:var(--accent);padding:10px 4px;text-decoration:underline}
 .count{font-weight:600;margin:4px 0 14px}
 .flt-p[hidden]{display:none}
+.testmode{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:.9rem;color:var(--muted);cursor:pointer}
+.testmode input{width:18px;height:18px;margin:0}
 </style>
 </head>
 <body>
 <main>
 <h1>Asesor Decathlon</h1>
 <p class="lead">Elige el deporte del cliente y te propongo el material que mejor encaja.</p>
+<label class="testmode"><input type="checkbox" id="modoPrueba"><span>Modo prueba (la búsqueda no cuenta como cliente real)</span></label>
 <fieldset class="pickapp"><legend>¿Qué busca el cliente?</legend>
 <div class="seg">
 <label><input type="radio" name="app" value="ski"><span>Esquí<small>esquís con fijaciones</small></span></label>
@@ -268,6 +271,22 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0 0 22px}
 <script>
 (function(){
 const apps={ski:document.getElementById("app-ski"),snow:document.getElementById("app-snow")};
+/* Registro anónimo de búsquedas: solo el perfil, nunca nombre ni correo */
+const FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSdWmnCf6qHv7grMfPrvEiI4-y0wFZtvP1ltYm7R1arA8nCoXg/formResponse";
+const FORM_E={uso:"entry.951303442",prod:"entry.368723389",g:"entry.1563224177",h:"entry.529571114",kg:"entry.1124057803",ft:"entry.1505514445",l:"entry.518530304",c:"entry.1543348264",bt:"entry.492928209",s:"entry.370057035"};
+let lastLog="",lastLogT=0;
+window.logBusq=function(prod,q){
+ try{
+  const b=new URLSearchParams(),t=document.getElementById("modoPrueba");
+  const set=(k,v)=>{if(v!==undefined&&v!==null&&v!==""&&!(typeof v==="number"&&isNaN(v)))b.set(FORM_E[k],String(v))};
+  set("uso",t&&t.checked?"Prueba":"Real");set("prod",prod);set("g",q.g);set("h",q.h);set("kg",q.kg);set("ft",q.ft);
+  set("l",q.l===null||q.l===undefined?"":["Debutante","Intermedio","Avanzado","Experto"][q.l]);set("c",q.c);set("bt",q.bt);set("s",q.s);
+  const k=b.toString(),n=Date.now();
+  if(k===lastLog&&n-lastLogT<5000)return;
+  lastLog=k;lastLogT=n;
+  fetch(FORM_URL,{method:"POST",mode:"no-cors",credentials:"omit",body:b}).catch(()=>{});
+ }catch(_){}
+};
 document.querySelectorAll('input[name="app"]').forEach(r=>r.addEventListener("change",()=>{
  apps.ski.hidden=r.value!=="ski";apps.snow.hidden=r.value!=="snow";document.getElementById("sep").hidden=false;
  apps[r.value].scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
@@ -352,6 +371,7 @@ const q={g:fd.get("g"),h:+document.getElementById("sk-h").value,l:fd.get("l")===
 const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(q.l===null)miss.push("el nivel");if(!q.s)miss.push("la sensación");if(!q.c)miss.push("dónde quiere esquiar");
 if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
 err.textContent="";
+logBusq("Esquí",q);
 const mkPool=q=>SKIS.filter(s=>(s.c===q.c||(q.c==="Pista"&&wideShort(s)&&s.s!=="Surf / flotación"))&&(s.p===q.g||s.p==="Unisex")&&!(s.r>=30)&&!(q.s==="surf"&&q.c==="Pista"&&!(s.r>15))).map(s=>{const t=fitSize(s,q);return {...s,t,sc:score(s,q,t)-(t===null?1:0)}}).filter(s=>s.sc>=0&&s.t!==-1).sort((a,b)=>b.sc-a.sc||a.pr-b.pr);
 const pool=mkPool(q);
 let o=pick(pool.filter(s=>own(s.m)),3), x=pick(pool.filter(s=>!own(s.m)),5);
@@ -528,6 +548,7 @@ document.getElementById("sn-f").addEventListener("submit",e=>{
  const miss=[];if(!q.g)miss.push("para quién es");if(!(q.h>=130&&q.h<=215))miss.push("la altura (entre 130 y 215 cm)");if(!(q.kg>=30&&q.kg<=150))miss.push("el peso (entre 30 y 150 kg)");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de pie (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.s)miss.push("la sensación");if(!q.bt)miss.push("el tipo de fijación");
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
+ logBusq("Snow tabla",q);
  const R=run(q);
  const [lmin,lmax]=length(q);
  const out=document.getElementById("sn-out");
@@ -656,6 +677,7 @@ document.getElementById("sf-f").addEventListener("submit",e=>{
  const miss=[];if(!q.g)miss.push("para quién es");if(!(q.ft>=34&&q.ft<=50))miss.push("la talla de bota (entre 34 y 50)");if(q.l===null)miss.push("el nivel");if(!q.c)miss.push("dónde quiere hacer snow");if(!q.bt)miss.push("el tipo de fijación");
  if(miss.length){err.textContent="Falta indicar "+miss.join(", ")+".";return}
  err.textContent="";
+ logBusq("Snow fijaciones",q);
  const out=document.getElementById("sf-out");
  const fpz=FIJ.filter(s=>!s.hide&&s.tipo==="Fijación"&&s.disp!==false&&Number.isFinite(s.pr)).map(s=>s.pr),fMin=fpz.length?Math.floor(Math.min(...fpz)):0,fMax=fpz.length?Math.ceil(Math.max(...fpz)):0;
  out.innerHTML=fltHtml("sf","Rango de precio",`<p class="note" style="margin:0 0 6px">Si no marcas nada, salen todas las fijaciones recomendadas.</p>${rngHtml("sf-p","Rango de precio","€",fMin,fMax)}`)+`<div id="sf-list"></div><p class="note">Flex y nivel de las fijaciones de otras marcas son orientativos. Precios y vendedores según decathlon.es. Comprueba stock y talla antes de cerrar la venta.</p><button class="reset" type="button" id="sf-again">Nuevo cliente</button>`;
