@@ -1,5 +1,5 @@
-# Novedades fijaciones snow — 27/11/2026
-13 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (7 nuevas el 27/11). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
+# Novedades fijaciones snow — 28/11/2026
+21 fichas del listado de decathlon.es/es/deportes/snowboard/fijaciones que no están en Fijaciones_Snow.json (8 nuevas el 28/11). Pendiente que Javier valide flex, talla y anclaje. Varias son el mismo modelo en distintos colores.
 
 - JONES Sangle de snowboard Jones Comfort Flex Mujer Negro — 24,95 € — https://www.decathlon.es/es/p/mp/sangle-de-snowboard-jones-comfort-flex-mujer-negro/c534649d-1a18-4740-97f9-71ddf44908fe/c1
 - SP BINDINGS SP KIDDO BLACK — 139,90 € — https://www.decathlon.es/es/p/mp/sp-kiddo-black/46529507-3546-402b-b232-5b343f0a2965/c1c5
@@ -14,3 +14,11 @@
 - JONES Snowboard Bindings Jones Eclipse 2027 — 160,40 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-eclipse-2027/83b036f5-8550-43a2-b6d0-34fbb5944e28/c1
 - BURTON Fijaciones de snowboard Burton Smalls Neo Mint/White — 191,55 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-burton-smalls-neo-mint-white/b293c6d1-872d-4dd1-9834-0cda71e3effb/c4
 - JONES Snowboard Bindings Jones Apollo Pro 2027 — 727,85 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-apollo-pro-2027/b6aab334-7a5f-452e-80a4-a9b17072f28c/c1
+- fijaciones de snowboard nitro team pro negras y rojas para mujer — 359,90 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-nitro-team-pro-negras-y-rojas-para-mujer/0f910b7b-5687-4ec1-8c48-f4c8a2183b8b/c1c14
+- talent fijaciones de snowboard — 179,90 € — https://www.decathlon.es/es/p/mp/talent-fijaciones-de-snowboard/28820ab6-3e77-42ac-aa50-8193dc4d90db/c1
+- one fijaciones de snowboard — 299,90 € — https://www.decathlon.es/es/p/mp/one-fijaciones-de-snowboard/5ce066d6-458c-436a-a5dd-bf1b566f44fb/c255
+- fijaciones de snowboard negras nitro team pro — 386,20 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-negras-nitro-team-pro/7939f3b7-ea40-4f5d-8fc1-96ebfacd90fa/c1
+- snowboard bindings jones nebula fase 2027 — 278,00 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-jones-nebula-fase-2027/bbe5b6ca-8dff-43da-859a-95456ae242a4/c5
+- fijaciones de snowboard nitro team pro negras y rojas — 391,55 € — https://www.decathlon.es/es/p/mp/fijaciones-de-snowboard-nitro-team-pro-negras-y-rojas/c4aa68b5-4ad6-4ad5-9b72-fe7f08762dd5/c1c14
+- snowboard bindings rome trace hw 2026 — 249,95 € — https://www.decathlon.es/es/p/mp/snowboard-bindings-rome-trace-hw-2026/dcb64a0f-e364-462f-9722-daf269d7e5e8/novar
+- talent fijaciones de snowboard — 179,90 € — https://www.decathlon.es/es/p/mp/talent-fijaciones-de-snowboard/e78a88fd-e797-4bbc-bb89-d48c0df74c13/c255
